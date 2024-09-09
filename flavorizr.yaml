@@ -1,0 +1,33 @@
+flavors:
+  dev:
+    app:
+      name: "Secure Access dev"
+    android:
+      applicationId: "progressive.app.secure_access.dev"
+    ios:
+      bundleId: "progressive.app.secureaccess.dev"
+    macos:
+      bundleId: "progressive.app.secure_access.deve"
+
+
+  uat:
+    app:
+      name: "Secure Access uat"
+
+    android:
+      applicationId: "progressive.app.secure_access.uat"
+    ios:
+      bundleId: "progressive.app.secureaccess.uat"
+    macos:
+      bundleId: "progressive.app.secure_access.uat"
+
+  prod:
+    app:
+      name: "Secure Access prod"
+
+    android:
+      applicationId: "progressive.app.secure_access.prod"
+    ios:
+      bundleId: "progressive.app.secureaccess.prod"
+    macos:
+      bundleId: "progressive.app.secure_access.prod"
