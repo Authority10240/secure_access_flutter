@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_auth_platform_interface/src/providers/email_auth.dart';
 import 'package:injectable/injectable.dart';
 import 'package:secure_access/features/sign_up/data/source/remote/sign_up_service.dart';
 

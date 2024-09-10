@@ -26,7 +26,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "appName": MessageLookupByLibrary.simpleMessage("Secure Access "),
         "authenticateUsingBiometrics": MessageLookupByLibrary.simpleMessage(
             "Authenticate using biometrics "),
+        "bike": MessageLookupByLibrary.simpleMessage("Bike"),
         "biometrics": MessageLookupByLibrary.simpleMessage("Biometrics"),
+        "bus": MessageLookupByLibrary.simpleMessage("Bus"),
+        "car": MessageLookupByLibrary.simpleMessage("Car"),
+        "complexName": MessageLookupByLibrary.simpleMessage("Complex name"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password "),
         "createYourSecureAccount":
@@ -50,13 +54,35 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forgot your Password? "),
         "haveAnAccount":
             MessageLookupByLibrary.simpleMessage("Have an account? "),
+        "id": MessageLookupByLibrary.simpleMessage("ID"),
+        "license": MessageLookupByLibrary.simpleMessage("License"),
         "logout": MessageLookupByLibrary.simpleMessage("Log out"),
+        "manual": MessageLookupByLibrary.simpleMessage("Manual"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password "),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "passport": MessageLookupByLibrary.simpleMessage("Passport"),
         "password": MessageLookupByLibrary.simpleMessage("Password "),
+        "passwordMustContainAtLeastOneDigit":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one digit\n"),
+        "passwordMustContainAtLeastOneSymbol":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one symbol\n"),
+        "passwordMustContainAtLeastOneUppercaseCharacter":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one uppercase letter\n"),
+        "passwordMustContainOneLowercaseCharacter":
+            MessageLookupByLibrary.simpleMessage(
+                "Password must contain at least one lowercase letter\n"),
+        "passwordMustHaveAtLeast8characters":
+            MessageLookupByLibrary.simpleMessage(
+                "Choose a password with at least 8 characters\n"),
+        "passwordTooShort":
+            MessageLookupByLibrary.simpleMessage("Password too short"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "person": MessageLookupByLibrary.simpleMessage("Person"),
         "personalDetails":
             MessageLookupByLibrary.simpleMessage("Personal details"),
         "pleaseEnterAPassword":
@@ -69,6 +95,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please enter an email address"),
         "pleaseReenterAPassword":
             MessageLookupByLibrary.simpleMessage("Please re-enter a password"),
+        "profileCreationSuccessful": MessageLookupByLibrary.simpleMessage(
+            "Profile creation successful, Please sign in to continue"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset "),
         "resetYourPassword":
             MessageLookupByLibrary.simpleMessage("Reset Your Password "),
@@ -81,12 +109,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "signinUsingEmailAddress":
             MessageLookupByLibrary.simpleMessage("Sign in using email address"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit "),
+        "success": MessageLookupByLibrary.simpleMessage("Success!"),
         "surname": MessageLookupByLibrary.simpleMessage("Surname"),
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("Terms & Conditions "),
+        "truck": MessageLookupByLibrary.simpleMessage("Truck"),
         "username": MessageLookupByLibrary.simpleMessage("Username "),
+        "vehicle": MessageLookupByLibrary.simpleMessage("Vehicle"),
         "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
         "wcontinue": MessageLookupByLibrary.simpleMessage("Continue"),
-        "welcomeTo": MessageLookupByLibrary.simpleMessage("Welcome to ")
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+        "welcomeTo": MessageLookupByLibrary.simpleMessage("Welcome to "),
+        "whatKindOfIdentificationDoTheyHave":
+            MessageLookupByLibrary.simpleMessage(
+                "What kind of identification do they have?"),
+        "whatTypeOfVehicleAreTheyDriving": MessageLookupByLibrary.simpleMessage(
+            "What type of vehicle are they driving?"),
+        "whoIsVisitingToday":
+            MessageLookupByLibrary.simpleMessage("Who is visiting today?")
       };
 }

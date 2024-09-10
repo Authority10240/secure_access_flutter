@@ -15,3 +15,7 @@ class SignUpClickedState extends SignUpPageState{
   SignUpClickedState({super.errorCode, super.errorMessage,this.userCredential});
 }
 
+class SignUpPasswordVisibleState extends SignUpPageState{
+
+  SignUpPasswordVisibleState({super.visiblePassword});
+}

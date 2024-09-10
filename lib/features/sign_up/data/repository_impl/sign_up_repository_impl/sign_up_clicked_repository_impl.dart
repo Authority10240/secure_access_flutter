@@ -16,7 +16,7 @@ class SignUpClickedRepositoryImpl extends SignUpClickedRepository {
   Future<void> call({SignUpClickedRepositoryParams? params,
     required Function(UserCredential? model)? onSuccess,
     required Function(BaseFailure? error)? onError}) async{
-    safeBackEndCalls(
+    await safeBackEndCalls(
         apiRequest: signUpService.signUpClicked(email: params!.username,
             password: params.password),
         onSuccess: (model)=> onSuccess!(model),

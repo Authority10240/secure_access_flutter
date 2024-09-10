@@ -481,6 +481,236 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Success!`
+  String get success {
+    return Intl.message(
+      'Success!',
+      name: 'success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile creation successful, Please sign in to continue`
+  String get profileCreationSuccessful {
+    return Intl.message(
+      'Profile creation successful, Please sign in to continue',
+      name: 'profileCreationSuccessful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password too short`
+  String get passwordTooShort {
+    return Intl.message(
+      'Password too short',
+      name: 'passwordTooShort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose a password with at least 8 characters\n`
+  String get passwordMustHaveAtLeast8characters {
+    return Intl.message(
+      'Choose a password with at least 8 characters\n',
+      name: 'passwordMustHaveAtLeast8characters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one lowercase letter\n`
+  String get passwordMustContainOneLowercaseCharacter {
+    return Intl.message(
+      'Password must contain at least one lowercase letter\n',
+      name: 'passwordMustContainOneLowercaseCharacter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one uppercase letter\n`
+  String get passwordMustContainAtLeastOneUppercaseCharacter {
+    return Intl.message(
+      'Password must contain at least one uppercase letter\n',
+      name: 'passwordMustContainAtLeastOneUppercaseCharacter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one digit\n`
+  String get passwordMustContainAtLeastOneDigit {
+    return Intl.message(
+      'Password must contain at least one digit\n',
+      name: 'passwordMustContainAtLeastOneDigit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one symbol\n`
+  String get passwordMustContainAtLeastOneSymbol {
+    return Intl.message(
+      'Password must contain at least one symbol\n',
+      name: 'passwordMustContainAtLeastOneSymbol',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complex name`
+  String get complexName {
+    return Intl.message(
+      'Complex name',
+      name: 'complexName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Who is visiting today?`
+  String get whoIsVisitingToday {
+    return Intl.message(
+      'Who is visiting today?',
+      name: 'whoIsVisitingToday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome`
+  String get welcome {
+    return Intl.message(
+      'Welcome',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Truck`
+  String get truck {
+    return Intl.message(
+      'Truck',
+      name: 'truck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Car`
+  String get car {
+    return Intl.message(
+      'Car',
+      name: 'car',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bike`
+  String get bike {
+    return Intl.message(
+      'Bike',
+      name: 'bike',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Person`
+  String get person {
+    return Intl.message(
+      'Person',
+      name: 'person',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Vehicle`
+  String get vehicle {
+    return Intl.message(
+      'Vehicle',
+      name: 'vehicle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passport`
+  String get passport {
+    return Intl.message(
+      'Passport',
+      name: 'passport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `License`
+  String get license {
+    return Intl.message(
+      'License',
+      name: 'license',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ID`
+  String get id {
+    return Intl.message(
+      'ID',
+      name: 'id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Manual`
+  String get manual {
+    return Intl.message(
+      'Manual',
+      name: 'manual',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bus`
+  String get bus {
+    return Intl.message(
+      'Bus',
+      name: 'bus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What type of vehicle are they driving?`
+  String get whatTypeOfVehicleAreTheyDriving {
+    return Intl.message(
+      'What type of vehicle are they driving?',
+      name: 'whatTypeOfVehicleAreTheyDriving',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What kind of identification do they have?`
+  String get whatKindOfIdentificationDoTheyHave {
+    return Intl.message(
+      'What kind of identification do they have?',
+      name: 'whatKindOfIdentificationDoTheyHave',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

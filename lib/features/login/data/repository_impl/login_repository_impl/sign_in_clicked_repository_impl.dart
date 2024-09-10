@@ -16,7 +16,7 @@ class SignInClickedRepositoryImpl extends SignInClickedRepository {
     SignInClickedRepositoryParams? params,
     required Function(UserCredential? model)? onSuccess,
     required Function(BaseFailure? error)? onError})async {
-    safeBackEndCalls(apiRequest: signInService.signInClicked(
+    await safeBackEndCalls(apiRequest: signInService.signInClicked(
         username: params!.username,
         password: params.password),
         onSuccess: (model)=> onSuccess!(model),

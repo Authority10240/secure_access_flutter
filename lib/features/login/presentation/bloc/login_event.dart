@@ -8,3 +8,7 @@ class SignInClickedEvent extends LoginPageEvent{
 
   SignInClickedEvent({required this.password, required this.username});
 }
+
+class PasswordVisibleEvent extends LoginPageEvent{
+
+}

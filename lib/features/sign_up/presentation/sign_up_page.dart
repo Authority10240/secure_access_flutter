@@ -47,17 +47,24 @@ class _SignUpPageState extends BasePageState<SignUpPage, SignUpBloc> {
   Widget buildView(BuildContext context) {
     return BlocConsumer<SignUpBloc, SignUpPageState>(
       listener: (context, state){
-        if(state is SignUpPageState && state.dataState == DataState.loading){
+        if(state is SignUpClickedState && state.dataState == DataState.loading){
           preloaderWidgetOverlay(context);
+
         }
 
-        if(state is SignUpPageState && state.dataState == DataState.success){
+        if(state is SignUpClickedState && state.dataState == DataState.success){
           Navigator.pop(context);
+          Get.back();
+          Get.snackbar(getLocalization().success, getLocalization().profileCreationSuccessful!,onTap:(snackbar){
+
+          });
+
         }
 
-        if(state is SignUpPageState && state.dataState == DataState.error){
+        if(state is SignUpClickedState && state.dataState == DataState.error){
           Navigator.pop(context);
           Get.snackbar(getLocalization().error, state.errorMessage!);
+
         }
 
       },
@@ -95,51 +102,52 @@ class _SignUpPageState extends BasePageState<SignUpPage, SignUpBloc> {
                        Center(child: Text(appLocalizations.and, style:  textStyleDirectives(),)),
                        smallSpacer,
                        CustomTextField(
+                         obscure: !state.visiblePassword,
                          controller: _passWordController,
                          labelText: getLocalization().password,
                          validator: (value ) {
-                           String? errors = '';
-                           if(value!.isEmpty){
-                             return getLocalization().pleaseEnterAPassword;
+                           String? missings = '';
+                           if (value!.length < 8) {
+                             missings += getLocalization().passwordMustHaveAtLeast8characters;
                            }
-                           if(!RegExp(r"^(?=.*[A-Z])")
-                               .hasMatch(value??"")){
-                                errors = "Should contain at least one upper case";
+                           if (!RegExp("(?=.*[a-z])").hasMatch(value)) {
+                             missings += getLocalization().passwordMustContainOneLowercaseCharacter;
                            }
-                           if(!RegExp(r"^(?=.*?[a-z])")
-                               .hasMatch(value??"")){
-                             errors = "$errors \nShould contain at least one lower case";
+                           if (!RegExp("(?=.*[A-Z])").hasMatch(value)) {
+                             missings += getLocalization().passwordMustContainAtLeastOneUppercaseCharacter;
                            }
-                           if(!RegExp(r"^(?=.*?[0-9]) ")
-                               .hasMatch(value??"")){
-                             errors = "$errors \nShould contain at least one digit";
+                           if (!RegExp((r'\d')).hasMatch(value)) {
+                             missings += getLocalization().passwordMustContainAtLeastOneDigit;
                            }
-                           if(!RegExp(r"^(?=.*?[!@#\$&*~])")
-                               .hasMatch(value??"")){
-                             errors = "$errors \nShould contain at least one Special character";
+                           if (!RegExp((r'\W')).hasMatch(value)) {
+                             missings += getLocalization().passwordMustContainAtLeastOneSymbol;
                            }
-                           if(!RegExp(r".{8,}")
-                               .hasMatch(value??"")){
-                             errors = "$errors \nMust be at least 8 characters in length";
+                           //if there is password input errors return error string
+                           if (missings != "") {
+                             return missings;
                            }
 
-                           return errors.isEmpty ? null : errors;
+                           return missings.isEmpty ? null : missings;
 
                          },
-                         suffixIcon: HeroIcon(state.visiblePassword!? HeroIcons.eye: HeroIcons.eyeSlash, color: AppColorScheme.primary,),
+                         suffixIcon: InkWell(onTap: (){
+                           getBloc().add(SignUpPasswordVisibleEvent());
+                         },child: HeroIcon(state.visiblePassword? HeroIcons.eye: HeroIcons.eyeSlash, color: AppColorScheme.primary,)),
                        ),
                        smallSpacer,
                        CustomTextField(
+                         obscure: !state.visiblePassword,
                          controller: _confirmPasswordController,
                          labelText: getLocalization().confirmPassword,
                          validator: (value ) {
                           return value != _passWordController.text?
                                getLocalization().passwordsDoNotMatch: null;
                          },
-                         suffixIcon: HeroIcon(state.visiblePassword!? HeroIcons.eye: HeroIcons.eyeSlash, color: AppColorScheme.primary,),
+                         suffixIcon: InkWell(onTap: (){
+                           getBloc().add(SignUpPasswordVisibleEvent());
+                         },child: HeroIcon(state.visiblePassword? HeroIcons.eye: HeroIcons.eyeSlash, color: AppColorScheme.primary,)),
                        ),
                        largeSpacer,
-
                        CustomFormButton(isActive: true, onPressed: (){
                          if(_formKey.currentState!.validate()){
                            getBloc().add(SignUpClickedEvent(

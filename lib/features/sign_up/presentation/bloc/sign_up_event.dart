@@ -8,3 +8,7 @@ class SignUpClickedEvent extends SignUpPageEvent{
 
   SignUpClickedEvent({required this.password, required this.username});
 }
+
+class SignUpPasswordVisibleEvent extends SignUpPageEvent{
+
+}

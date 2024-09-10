@@ -14,11 +14,11 @@ import 'package:secure_access/core/utils.dart';
 import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
+import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
 import 'package:secure_access/features/login/data/data_source/local/hive/sign_in_local_storage/sign_in_local_model.dart';
 import 'package:secure_access/features/login/presentation/bloc/login_bloc.dart';
 import 'package:secure_access/features/sign_up/presentation/sign_up_page.dart';
 import 'package:secure_access/generated/l10n.dart';
-
 import '../data/data_source/local/hive/biometrics_local_storage/model/biometrics_local_model.dart';
 
 
@@ -62,6 +62,8 @@ class _LoginPageState extends BasePageState<LoginPage, LoginBloc> {
 
         if(state is SignInClickedState && state.dataState == DataState.success){
           Navigator.pop(context);
+          Get.snackbar(getLocalization().welcome, state.userCredential?.user?.displayName?? state.userCredential?.user?.email?? "user");
+          Get.offAll(const DashboardPage());
         }
 
         if(state is SignInClickedState && state.dataState == DataState.error){
@@ -103,12 +105,15 @@ class _LoginPageState extends BasePageState<LoginPage, LoginBloc> {
                      Center(child: Text(appLocalizations.and, style:  textStyleDirectives(),)),
                      smallSpacer,
                      CustomTextField(
+                       obscure: state.visiblePassword,
                        controller: _passWordController,
                        labelText: getLocalization().password,
                        validator: (value ) {
                          return value!.isEmpty? getLocalization().pleaseEnterAPassword: null;
                        },
-                       suffixIcon: HeroIcon(state.visiblePassword!? HeroIcons.eye: HeroIcons.eyeSlash, color: AppColorScheme.primary,),
+                       suffixIcon: InkWell(onTap: (){
+                          getBloc().add(PasswordVisibleEvent());
+                       },child: HeroIcon(state.visiblePassword? HeroIcons.eye: HeroIcons.eyeSlash, color: AppColorScheme.primary,)),
                      ),
                      smallSpacer,
                      Row(

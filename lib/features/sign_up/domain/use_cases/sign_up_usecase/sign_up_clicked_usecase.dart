@@ -14,7 +14,7 @@ class SignUpClickedUseCase extends BaseUseCase<SignUpClickedUseCaseParams, UserC
 
   @override
   Future<void> call({required Function(UserCredential? model)? onSuccess, required Function(BaseFailure? error)? onError, SignUpClickedUseCaseParams? params}) async {
-    signUpClickedRepository.call(onSuccess: (model)=> onSuccess!(model),
+   await  signUpClickedRepository.call(onSuccess: (model)=> onSuccess!(model),
         onError: (error)=> onError!(error),
     params: SignUpClickedRepositoryParams(password: params!.password, username: params!.username));
   }

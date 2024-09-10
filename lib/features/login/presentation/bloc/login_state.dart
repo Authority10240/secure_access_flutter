@@ -13,4 +13,8 @@ class SignInClickedState extends LoginPageState{
   UserCredential? userCredential;
   SignInClickedState({this.userCredential,super.errorCode,super.visiblePassword, super.errorMessage});
 }
+class PasswordVisibleState extends LoginPageState{
+
+  PasswordVisibleState({super.visiblePassword});
+}
 

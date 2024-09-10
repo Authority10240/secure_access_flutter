@@ -15,6 +15,14 @@ class LoginBloc
     extends BaseBloc<LoginPageEvent, LoginPageState> {
     LoginBloc({required this.signInClickedUseCase}): super(LoginPageInitState()) {
         on<SignInClickedEvent>((event, emit)=> _onSignInClickedEvent(event, emit));
+        on<PasswordVisibleEvent>((event, emit)=> _onPasswordVisibleEvent(event, emit));
+    }
+
+    Future<void> _onPasswordVisibleEvent(
+        PasswordVisibleEvent event,
+        Emitter<LoginPageState>emit
+        )async{
+        emit(PasswordVisibleState(visiblePassword: !state.visiblePassword)..dataState = DataState.success);
     }
 
     Future<void > _onSignInClickedEvent(

@@ -11,7 +11,7 @@ class SignInServiceImpl extends SignInService{
   @override
   Future<UserCredential> signInClicked({required String username, required String password}) async{
     try{
-      return  firebaseAuth.signInWithEmailAndPassword(email: username, password: password);
+      return  await firebaseAuth.signInWithEmailAndPassword(email: username, password: password);
     }catch(ex){
       rethrow;
     }

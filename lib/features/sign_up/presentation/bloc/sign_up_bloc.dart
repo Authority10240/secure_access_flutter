@@ -15,17 +15,24 @@ class SignUpBloc
     extends BaseBloc<SignUpPageEvent, SignUpPageState> {
     SignUpBloc({required this.signUpClickedUseCase}): super(SignUpPageInitState()) {
         on<SignUpClickedEvent>((event,emit)=> _onSignUpClickedEvent(event,emit));
-
+        on<SignUpPasswordVisibleEvent>((event, emit)=> _onPasswordVisibleEvent(event, emit));
     }
 
     final SignUpClickedUseCase signUpClickedUseCase;
+
+    Future<void> _onPasswordVisibleEvent(
+        SignUpPasswordVisibleEvent event,
+        Emitter<SignUpPageState>emit
+        )async{
+        emit(SignUpPasswordVisibleState(visiblePassword: !state.visiblePassword)..dataState = DataState.success);
+    }
 
     Future<void> _onSignUpClickedEvent(
         SignUpClickedEvent event,
         Emitter<SignUpPageState> emit
         )async{
         emit(SignUpClickedState()..dataState = DataState.loading);
-        signUpClickedUseCase.call(onSuccess: (model){
+        await signUpClickedUseCase.call(onSuccess: (model){
             emit(SignUpClickedState(userCredential: model)..dataState = DataState.success);
         }, onError: (error){
             emit(SignUpClickedState(errorCode:  error?.errorCode!, errorMessage:error?.message )..dataState = DataState.error);
