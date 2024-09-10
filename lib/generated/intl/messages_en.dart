@@ -29,12 +29,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "bike": MessageLookupByLibrary.simpleMessage("Bike"),
         "biometrics": MessageLookupByLibrary.simpleMessage("Biometrics"),
         "bus": MessageLookupByLibrary.simpleMessage("Bus"),
+        "captureVehicleDetails":
+            MessageLookupByLibrary.simpleMessage("Capture vehicle details"),
         "car": MessageLookupByLibrary.simpleMessage("Car"),
+        "carDetails": MessageLookupByLibrary.simpleMessage("Car details:"),
+        "color": MessageLookupByLibrary.simpleMessage("Color"),
         "complexName": MessageLookupByLibrary.simpleMessage("Complex name"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password "),
         "createYourSecureAccount":
             MessageLookupByLibrary.simpleMessage("Create your secure account"),
+        "description": MessageLookupByLibrary.simpleMessage("Description"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email Address "),
@@ -42,10 +47,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enable biometrics?"),
         "enableDisableBiometrics":
             MessageLookupByLibrary.simpleMessage("Enable/Disable Biometrics"),
+        "engineNumber": MessageLookupByLibrary.simpleMessage("Engine Number"),
         "enterANewPasswordBelowToChangeYourPassword":
             MessageLookupByLibrary.simpleMessage(
                 "Enter a new password below to change your password "),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
+        "expirationYear":
+            MessageLookupByLibrary.simpleMessage("Expiration Year"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password "),
         "forgotPasswordQ":
@@ -57,10 +65,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "id": MessageLookupByLibrary.simpleMessage("ID"),
         "license": MessageLookupByLibrary.simpleMessage("License"),
         "logout": MessageLookupByLibrary.simpleMessage("Log out"),
+        "make": MessageLookupByLibrary.simpleMessage("Make"),
         "manual": MessageLookupByLibrary.simpleMessage("Manual"),
+        "model": MessageLookupByLibrary.simpleMessage("Model"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password "),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "noLicenseDiskScannedTryEnteringVehicleDetailsManually":
+            MessageLookupByLibrary.simpleMessage(
+                "No License disk scanned, Try entering vehicle details manually "),
+        "noScan": MessageLookupByLibrary.simpleMessage("No Scan"),
         "passport": MessageLookupByLibrary.simpleMessage("Passport"),
         "password": MessageLookupByLibrary.simpleMessage("Password "),
         "passwordMustContainAtLeastOneDigit":
@@ -97,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please re-enter a password"),
         "profileCreationSuccessful": MessageLookupByLibrary.simpleMessage(
             "Profile creation successful, Please sign in to continue"),
+        "registrationNumber":
+            MessageLookupByLibrary.simpleMessage("Registration Number"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset "),
         "resetYourPassword":
             MessageLookupByLibrary.simpleMessage("Reset Your Password "),
@@ -117,6 +133,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "username": MessageLookupByLibrary.simpleMessage("Username "),
         "vehicle": MessageLookupByLibrary.simpleMessage("Vehicle"),
         "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
+        "vin": MessageLookupByLibrary.simpleMessage("VIN"),
+        "visitorIsDrivingA":
+            MessageLookupByLibrary.simpleMessage("Visitor is driving a"),
         "wcontinue": MessageLookupByLibrary.simpleMessage("Continue"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "welcomeTo": MessageLookupByLibrary.simpleMessage("Welcome to "),

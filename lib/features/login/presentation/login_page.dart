@@ -78,7 +78,7 @@ class _LoginPageState extends BasePageState<LoginPage, LoginBloc> {
              child: Form(
                key: _formKey,
                child: Padding(
-                 padding:  EdgeInsets.all(pagePadding),
+                 padding:  EdgeInsets.only(left: pagePadding, right: pagePadding),
                  child: Column(
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: [

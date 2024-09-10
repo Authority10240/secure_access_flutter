@@ -43,7 +43,11 @@ dependencies:
   heroicons: ^0.10.0
   flutter_flavorizr: ^2.2.3
   firebase_auth: ^5.2.0
-  native_qr: ^0.0.3
+  barcode_scan2: ^4.3.3
+  image_picker: ^1.1.2
+  cached_network_image: ^3.4.1
+
+
 
 
 

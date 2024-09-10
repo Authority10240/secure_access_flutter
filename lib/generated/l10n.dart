@@ -711,6 +711,136 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Car details:`
+  String get carDetails {
+    return Intl.message(
+      'Car details:',
+      name: 'carDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `VIN`
+  String get vin {
+    return Intl.message(
+      'VIN',
+      name: 'vin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Engine Number`
+  String get engineNumber {
+    return Intl.message(
+      'Engine Number',
+      name: 'engineNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expiration Year`
+  String get expirationYear {
+    return Intl.message(
+      'Expiration Year',
+      name: 'expirationYear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Registration Number`
+  String get registrationNumber {
+    return Intl.message(
+      'Registration Number',
+      name: 'registrationNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Capture vehicle details`
+  String get captureVehicleDetails {
+    return Intl.message(
+      'Capture vehicle details',
+      name: 'captureVehicleDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Visitor is driving a`
+  String get visitorIsDrivingA {
+    return Intl.message(
+      'Visitor is driving a',
+      name: 'visitorIsDrivingA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Make`
+  String get make {
+    return Intl.message(
+      'Make',
+      name: 'make',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Model`
+  String get model {
+    return Intl.message(
+      'Model',
+      name: 'model',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Color`
+  String get color {
+    return Intl.message(
+      'Color',
+      name: 'color',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Scan`
+  String get noScan {
+    return Intl.message(
+      'No Scan',
+      name: 'noScan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No License disk scanned, Try entering vehicle details manually `
+  String get noLicenseDiskScannedTryEnteringVehicleDetailsManually {
+    return Intl.message(
+      'No License disk scanned, Try entering vehicle details manually ',
+      name: 'noLicenseDiskScannedTryEnteringVehicleDetailsManually',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
