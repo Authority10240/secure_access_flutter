@@ -6,7 +6,7 @@
   "signIn": "Sign In ",
   "signUp": "Sign Up ",
   "username": "Username ",
-  "emailAddress" : "Email Address ",
+  "emailAddress" : "Email Address * ",
   "password": "Password ",
   "forgotPassword": "Forgot Password ",
   "dontHaveAnAccount": "Don't have an account? ",
@@ -27,8 +27,8 @@
   "pleaseReenterAPassword": "Please re-enter a password",
   "passwordsDoNotMatch": "Passwords do not match",
   "wcontinue": "Continue",
-  "name": "Name",
-  "surname": "Surname",
+  "name": "Name *",
+  "surname": "Surname *",
   "error": "Error",
   "next": "Next",
   "personalDetails": "Personal details",
@@ -62,7 +62,7 @@
   "vehicle": "Vehicle",
   "passport": "Passport",
   "license": "License",
-  "id": "ID",
+  "id": "ID *",
   "manual": "Manual",
   "bus": "Bus",
   "whatTypeOfVehicleAreTheyDriving": "What type of vehicle are they driving?",
@@ -79,5 +79,10 @@
   "model": "Model",
   "color": "Color",
   "noScan": "No Scan",
-  "noLicenseDiskScannedTryEnteringVehicleDetailsManually": "No License disk scanned, Try entering vehicle details manually "
+  "noLicenseDiskScannedTryEnteringVehicleDetailsManually": "No License disk scanned, Try entering vehicle details manually ",
+  "phoneNumber":"Phone number *",
+  "captureVisitorsIDDetails": "Capture visitor's ID details",
+  "captureVisitorsPassportDetails": "Capture visitor's passport details",
+  "captureVisitorsLicenseDetails": "Capture visitor's license details"
+
 }

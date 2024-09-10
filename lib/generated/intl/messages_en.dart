@@ -31,6 +31,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "bus": MessageLookupByLibrary.simpleMessage("Bus"),
         "captureVehicleDetails":
             MessageLookupByLibrary.simpleMessage("Capture vehicle details"),
+        "captureVisitorsIDDetails": MessageLookupByLibrary.simpleMessage(
+            "Capture visitor\'s ID details"),
+        "captureVisitorsLicenseDetails": MessageLookupByLibrary.simpleMessage(
+            "Capture visitor\'s license details"),
+        "captureVisitorsPassportDetails": MessageLookupByLibrary.simpleMessage(
+            "Capture visitor\'s passport details"),
         "car": MessageLookupByLibrary.simpleMessage("Car"),
         "carDetails": MessageLookupByLibrary.simpleMessage("Car details:"),
         "color": MessageLookupByLibrary.simpleMessage("Color"),
@@ -42,7 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
-        "emailAddress": MessageLookupByLibrary.simpleMessage("Email Address "),
+        "emailAddress":
+            MessageLookupByLibrary.simpleMessage("Email Address * "),
         "enableBiometrics":
             MessageLookupByLibrary.simpleMessage("Enable biometrics?"),
         "enableDisableBiometrics":
@@ -62,13 +69,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forgot your Password? "),
         "haveAnAccount":
             MessageLookupByLibrary.simpleMessage("Have an account? "),
-        "id": MessageLookupByLibrary.simpleMessage("ID"),
+        "id": MessageLookupByLibrary.simpleMessage("ID *"),
         "license": MessageLookupByLibrary.simpleMessage("License"),
         "logout": MessageLookupByLibrary.simpleMessage("Log out"),
         "make": MessageLookupByLibrary.simpleMessage("Make"),
         "manual": MessageLookupByLibrary.simpleMessage("Manual"),
         "model": MessageLookupByLibrary.simpleMessage("Model"),
-        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "name": MessageLookupByLibrary.simpleMessage("Name *"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password "),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noLicenseDiskScannedTryEnteringVehicleDetailsManually":
@@ -99,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "person": MessageLookupByLibrary.simpleMessage("Person"),
         "personalDetails":
             MessageLookupByLibrary.simpleMessage("Personal details"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number *"),
         "pleaseEnterAPassword":
             MessageLookupByLibrary.simpleMessage("Please enter a password"),
         "pleaseEnterAValidEmailAddress": MessageLookupByLibrary.simpleMessage(
@@ -126,7 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sign in using email address"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit "),
         "success": MessageLookupByLibrary.simpleMessage("Success!"),
-        "surname": MessageLookupByLibrary.simpleMessage("Surname"),
+        "surname": MessageLookupByLibrary.simpleMessage("Surname *"),
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("Terms & Conditions "),
         "truck": MessageLookupByLibrary.simpleMessage("Truck"),

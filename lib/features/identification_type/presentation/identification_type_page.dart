@@ -9,6 +9,8 @@ import 'package:secure_access/core/locator.dart';
 import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
 import 'package:secure_access/features/dashboard/presentation/widgets/transport_type_card.dart';
+import 'package:secure_access/features/manual_details/presentation/manual_details_page.dart';
+import 'package:secure_access/features/person_details/presentation/person_details_page.dart';
 import 'package:secure_access/generated/l10n.dart';
 
 import 'bloc/identification_type_bloc.dart';
@@ -60,27 +62,33 @@ class _IdentificationTypePageState extends BasePageState<IdentificationTypePage,
                       caption: getLocalization().id,
                       iconWidget: Icon(Icons.perm_identity, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-
+                        Get.to(const PersonDetailsPage(identificationType: IdentificationType.id,));
                       },
                     ),
 
                     TransportTypeCard(
                       caption: getLocalization().license,
                       iconWidget: HeroIcon(HeroIcons.creditCard, size: 50, color: AppColorScheme.primary),
-                      ontap: (){},
+                      ontap: (){
+                        Get.to(const PersonDetailsPage(identificationType: IdentificationType.license));
+                      },
                     ),
 
                     TransportTypeCard(
                       caption: getLocalization().passport,
                       iconWidget: HeroIcon(HeroIcons.wallet, size: 50, color: AppColorScheme.primary),
-                      ontap: (){},
+                      ontap: (){
+                        Get.to(const PersonDetailsPage(identificationType: IdentificationType.passport));
+                      },
                     ),
 
-                    TransportTypeCard(
+                  /*  TransportTypeCard(
                       caption: getLocalization().manual,
                       iconWidget: HeroIcon(HeroIcons.camera, size: 50, color: AppColorScheme.primary),
-                      ontap: (){},
-                    ),
+                      ontap: (){
+                        Get.to(const ManualDetailsPage());
+                      },
+                    ),*/
 
 
 

@@ -10,6 +10,7 @@ import 'package:secure_access/core/text_styles.dart';
 import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
+import 'package:secure_access/features/identification_type/presentation/identification_type_page.dart';
 import 'package:secure_access/generated/l10n.dart';
 import 'bloc/scanner_bloc.dart';
 
@@ -67,7 +68,8 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
 
       },
       builder: (context, state) {
-         return state is ScanQrState && state.dataState == DataState.loading?
+         return (state is ScannerPageInitState)
+             ||(state is ScanQrState && state.dataState == DataState.loading)?
              preloaderWidget():
              SingleChildScrollView(
                child: Padding(padding: EdgeInsets.only(left: pagePadding, right: pagePadding),
@@ -143,6 +145,7 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
                    CustomFormButton(
                        isActive: true,
                        onPressed: (){
+                         Get.to(const IdentificationTypePage());
                        },
                        buttonText: getLocalization().wcontinue),
 

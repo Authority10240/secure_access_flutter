@@ -110,10 +110,10 @@ class AppLocalizations {
     );
   }
 
-  /// `Email Address `
+  /// `Email Address * `
   String get emailAddress {
     return Intl.message(
-      'Email Address ',
+      'Email Address * ',
       name: 'emailAddress',
       desc: '',
       args: [],
@@ -312,20 +312,20 @@ class AppLocalizations {
     );
   }
 
-  /// `Name`
+  /// `Name *`
   String get name {
     return Intl.message(
-      'Name',
+      'Name *',
       name: 'name',
       desc: '',
       args: [],
     );
   }
 
-  /// `Surname`
+  /// `Surname *`
   String get surname {
     return Intl.message(
-      'Surname',
+      'Surname *',
       name: 'surname',
       desc: '',
       args: [],
@@ -662,10 +662,10 @@ class AppLocalizations {
     );
   }
 
-  /// `ID`
+  /// `ID *`
   String get id {
     return Intl.message(
-      'ID',
+      'ID *',
       name: 'id',
       desc: '',
       args: [],
@@ -837,6 +837,46 @@ class AppLocalizations {
     return Intl.message(
       'No License disk scanned, Try entering vehicle details manually ',
       name: 'noLicenseDiskScannedTryEnteringVehicleDetailsManually',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number *`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone number *',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Capture visitor's ID details`
+  String get captureVisitorsIDDetails {
+    return Intl.message(
+      'Capture visitor\'s ID details',
+      name: 'captureVisitorsIDDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Capture visitor's passport details`
+  String get captureVisitorsPassportDetails {
+    return Intl.message(
+      'Capture visitor\'s passport details',
+      name: 'captureVisitorsPassportDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Capture visitor's license details`
+  String get captureVisitorsLicenseDetails {
+    return Intl.message(
+      'Capture visitor\'s license details',
+      name: 'captureVisitorsLicenseDetails',
       desc: '',
       args: [],
     );

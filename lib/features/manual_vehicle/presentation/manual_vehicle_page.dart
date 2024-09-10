@@ -1,4 +1,5 @@
 
+import 'package:get/get.dart';
 import 'package:secure_access/core/base_classes/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,6 +10,7 @@ import 'package:secure_access/core/text_styles.dart';
 import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/features/dashboard/presentation/widgets/transport_type_card.dart';
+import 'package:secure_access/features/identification_type/presentation/identification_type_page.dart';
 import 'package:secure_access/generated/l10n.dart';
 import 'package:image_picker/image_picker.dart';
 import 'bloc/manual_vehicle_bloc.dart';
@@ -37,11 +39,7 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
   }
 
   final TextEditingController _descriptionController = TextEditingController();
-  final TextEditingController _engineController = TextEditingController();
   final TextEditingController _licenseController = TextEditingController();
-  final TextEditingController _regNoController = TextEditingController();
-  final TextEditingController _vinController = TextEditingController();
-  final TextEditingController _yearController = TextEditingController();
   final TextEditingController _makeController = TextEditingController();
   final TextEditingController _modelController = TextEditingController();
   final TextEditingController _colorController = TextEditingController();
@@ -119,6 +117,7 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
                     CustomFormButton(
                         isActive: true,
                         onPressed: (){
+                          Get.to(const IdentificationTypePage());
                         },
                         buttonText: getLocalization().wcontinue),
 
