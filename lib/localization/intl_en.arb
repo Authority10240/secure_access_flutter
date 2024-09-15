@@ -83,6 +83,9 @@
   "phoneNumber":"Phone number *",
   "captureVisitorsIDDetails": "Capture visitor's ID details",
   "captureVisitorsPassportDetails": "Capture visitor's passport details",
-  "captureVisitorsLicenseDetails": "Capture visitor's license details"
+  "captureVisitorsLicenseDetails": "Capture visitor's license details",
+  "scanError": "Scan Error",
+  "scanAgain": "Scan again",
+  "invalidLicenseDiskPleaseScanLicenseDiskPresentedOnCarWindShield": "Invalid license disk, please scan License disk presented on car wind shield"
 
 }

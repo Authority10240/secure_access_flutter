@@ -23,8 +23,9 @@ class ScannerBloc
         )async{
         emit(ScanQrState()..dataState = DataState.loading);
         List<String> qrdata = event.qrCode.split('%');
-        emit(ScanQrState(
-          description: qrdata.elementAt(8),
+        try {
+          emit(ScanQrState(
+            description: qrdata.elementAt(8),
             engine: qrdata.elementAt(13),
             licenseNo: qrdata.elementAt(6),
             make: qrdata.elementAt(9),
@@ -32,6 +33,10 @@ class ScannerBloc
             regNo: qrdata.elementAt(7),
             vin: qrdata.elementAt(12),
             year: qrdata.elementAt(14),
-        )..dataState = DataState.success);
+          )
+            ..dataState = DataState.success);
+        }catch(ex){
+        emit(ScanQrState(errorMessage: ex.toString(), errorCode: "001")..dataState = DataState.error);
+      }
     }
 } 

@@ -107,7 +107,7 @@ class _SignUpPageState extends BasePageState<SignUpPage, SignUpBloc> {
                          labelText: getLocalization().password,
                          validator: (value ) {
                            String? missings = '';
-                           if (value!.length < 8) {
+                           if (value!.trim().length < 8) {
                              missings += getLocalization().passwordMustHaveAtLeast8characters;
                            }
                            if (!RegExp("(?=.*[a-z])").hasMatch(value)) {
@@ -140,7 +140,7 @@ class _SignUpPageState extends BasePageState<SignUpPage, SignUpBloc> {
                          controller: _confirmPasswordController,
                          labelText: getLocalization().confirmPassword,
                          validator: (value ) {
-                          return value != _passWordController.text?
+                          return value?.trim() != _passWordController.text.trim()?
                                getLocalization().passwordsDoNotMatch: null;
                          },
                          suffixIcon: InkWell(onTap: (){
@@ -151,8 +151,8 @@ class _SignUpPageState extends BasePageState<SignUpPage, SignUpBloc> {
                        CustomFormButton(isActive: true, onPressed: (){
                          if(_formKey.currentState!.validate()){
                            getBloc().add(SignUpClickedEvent(
-                               password: _passWordController.text,
-                               username: _usernameController.text));
+                               password: _passWordController.text.trim(),
+                               username: _usernameController.text.trim()));
                          }
                        }, buttonText: getLocalization().signUp),
                        smallSpacer,

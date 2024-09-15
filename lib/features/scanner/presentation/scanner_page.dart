@@ -65,12 +65,28 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
           _engineController.text = state.engine!;
           _licenseController.text = state.licenseNo!;
         }
+        
+        if(state.dataState == DataState.error && state is ScanQrState){
+          Get.snackbar(appLocalizations.error, appLocalizations.invalidLicenseDiskPleaseScanLicenseDiskPresentedOnCarWindShield);
+        }
 
       },
       builder: (context, state) {
          return (state is ScannerPageInitState)
              ||(state is ScanQrState && state.dataState == DataState.loading)?
-             preloaderWidget():
+             preloaderWidget(): (state is ScanQrState && state.dataState == DataState.error)?
+             Padding(padding: EdgeInsets.only(left: pagePadding, right: pagePadding), child: Center(child: CustomFormButton(
+                  isActive: true,
+                  onPressed: ()async{
+                    var result = await BarcodeScanner.scan();
+                    if(result.rawContent.isEmpty){
+                      Get.back();
+                      Get.snackbar(getLocalization().noScan, getLocalization().noLicenseDiskScannedTryEnteringVehicleDetailsManually);
+                    }else {
+                      getBloc().add(ScanQrEvent(qrCode: result.rawContent));
+                    }
+                  },
+                  buttonText: getLocalization().scanAgain),)):
              SingleChildScrollView(
                child: Padding(padding: EdgeInsets.only(left: pagePadding, right: pagePadding),
                  child:Column(

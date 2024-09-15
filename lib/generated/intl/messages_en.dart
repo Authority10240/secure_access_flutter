@@ -70,6 +70,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "haveAnAccount":
             MessageLookupByLibrary.simpleMessage("Have an account? "),
         "id": MessageLookupByLibrary.simpleMessage("ID *"),
+        "invalidLicenseDiskPleaseScanLicenseDiskPresentedOnCarWindShield":
+            MessageLookupByLibrary.simpleMessage(
+                "Invalid license disk, please scan License disk presented on car wind shield"),
         "license": MessageLookupByLibrary.simpleMessage("License"),
         "logout": MessageLookupByLibrary.simpleMessage("Log out"),
         "make": MessageLookupByLibrary.simpleMessage("Make"),
@@ -124,6 +127,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset": MessageLookupByLibrary.simpleMessage("Reset "),
         "resetYourPassword":
             MessageLookupByLibrary.simpleMessage("Reset Your Password "),
+        "scanAgain": MessageLookupByLibrary.simpleMessage("Scan again"),
+        "scanError": MessageLookupByLibrary.simpleMessage("Scan Error"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In "),
         "signInUsing": MessageLookupByLibrary.simpleMessage("Sign in using"),

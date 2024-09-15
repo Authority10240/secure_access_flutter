@@ -881,6 +881,36 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Scan Error`
+  String get scanError {
+    return Intl.message(
+      'Scan Error',
+      name: 'scanError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scan again`
+  String get scanAgain {
+    return Intl.message(
+      'Scan again',
+      name: 'scanAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid license disk, please scan License disk presented on car wind shield`
+  String get invalidLicenseDiskPleaseScanLicenseDiskPresentedOnCarWindShield {
+    return Intl.message(
+      'Invalid license disk, please scan License disk presented on car wind shield',
+      name: 'invalidLicenseDiskPleaseScanLicenseDiskPresentedOnCarWindShield',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

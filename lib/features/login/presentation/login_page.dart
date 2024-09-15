@@ -139,8 +139,8 @@ class _LoginPageState extends BasePageState<LoginPage, LoginBloc> {
                          onPressed: (){
                            if(_formKey.currentState!.validate()){
                              getBloc().add(SignInClickedEvent(
-                                 password: _passWordController.text,
-                                 username: _usernameController.text));
+                                 password: _passWordController.text.trim(),
+                                 username: _usernameController.text.trim()));
                            }
                          },
                          buttonText: getLocalization().signIn),
