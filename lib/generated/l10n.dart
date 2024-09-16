@@ -991,6 +991,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Mobile number`
+  String get mobileNumber {
+    return Intl.message(
+      'Mobile number',
+      name: 'mobileNumber',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

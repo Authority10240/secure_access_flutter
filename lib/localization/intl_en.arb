@@ -94,6 +94,7 @@
   "invalidIdCode": "Invalid ID code, Please scan a valid Identification card or document.",
   "invalidPassport": "Invalid passport code, Please scan a valid passport document",
   "noIdentificationDocumentScanned": "No identification document scanned",
-  "walkIn": "Walk in"
+  "walkIn": "Walk in",
+  "mobileNumber":"Mobile number"
 
 }

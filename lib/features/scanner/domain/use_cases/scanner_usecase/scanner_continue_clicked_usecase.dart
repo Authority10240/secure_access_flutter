@@ -15,9 +15,13 @@ class ScannerContinueClickedUseCase extends BaseUseCase<ScannerContinueClickedUs
   @override
   Future<void> call({required Function(bool? model)? onSuccess,
     required Function(BaseFailure? error)? onError,
-    ScannerContinueClickedUseCaseParams? params}) {
-    // TODO: implement call
-    throw UnimplementedError();
+    ScannerContinueClickedUseCaseParams? params})async {
+    await scannerContinueClickedRepository.call(
+        onSuccess: (model)=> onSuccess!(model),
+        onError: (error)=>onError!(error),
+    params: ScannerContinueClickedRepositoryParams(
+      scannerContinueClickedModel: params!.scannerContinueClickedModel
+    ));
   }
 }
 

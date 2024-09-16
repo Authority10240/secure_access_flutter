@@ -1,4 +1,5 @@
 
+import 'package:get/get.dart';
 import 'package:secure_access/core/base_classes/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,6 +9,7 @@ import 'package:secure_access/core/text_styles.dart';
 import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/features/person_details/presentation/bloc/person_details_bloc.dart';
+import 'package:secure_access/features/vehicle_type/presentation/vehicle_type_page.dart';
 import 'package:secure_access/generated/l10n.dart';
 
 
@@ -40,6 +42,8 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
 
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
     @override
   PreferredSizeWidget? buildAppbar() {
     return null;
@@ -55,7 +59,7 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
             padding:  EdgeInsets.all(borderRadius),
             child:  Padding(
               padding:  EdgeInsets.all(pagePadding),
-              child: Column(
+              child:Form(key: _formKey,child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     smallSpacer,
@@ -130,6 +134,7 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
                     CustomFormButton(
                         isActive: true,
                         onPressed: (){
+                          getBloc().add(Person)
                         },
                         buttonText: getLocalization().wcontinue),
 
@@ -138,6 +143,7 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
                   ]
               ),
             ),
+          ),
           ),
         );
       },

@@ -9,3 +9,10 @@ class ScanQrEvent extends PersonnelScanPageEvent{
 
  ScanQrEvent({required this.qrCode, required this.identificationType});
 }
+
+class PersonnelScanContinueClickedEvent extends PersonnelScanPageEvent{
+
+  PersonnelScanContinueClickedEvent({required this.personnelScanContinueClickedModel});
+
+  final PersonnelScanContinueClickedModel personnelScanContinueClickedModel;
+}

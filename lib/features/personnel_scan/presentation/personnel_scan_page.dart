@@ -11,15 +11,20 @@ import 'package:secure_access/core/text_styles.dart';
 import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
+import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
 import 'package:secure_access/features/person_details/presentation/person_details_page.dart';
+import 'package:secure_access/features/personnel_scan/data/models/personnel_scan_model_response/personnel_scan_continue_clicked_model.dart';
 import 'package:secure_access/generated/l10n.dart';
 
 import 'bloc/personnel_scan_bloc.dart';
 
 
 class PersonnelScanPage extends BasePage {
-  const PersonnelScanPage({super.key, required this.identificationType});
+  const PersonnelScanPage({super.key,
+    required this.identificationType
+  });
   final IdentificationType identificationType;
+
 
   @override
   _PersonnelScanPageState createState() => _PersonnelScanPageState();
@@ -30,6 +35,10 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _middleNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
+  final TextEditingController _mobileController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -79,7 +88,7 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
              buttonText: getLocalization().scanAgain),)):
          SingleChildScrollView(
              child: Padding(padding: EdgeInsets.only(left: pagePadding, right: pagePadding),
-               child:Column(
+               child:Form(key: _formKey,child: Column(
                  crossAxisAlignment: CrossAxisAlignment.start,
                  children: [
                    smallMediumSpacer,
@@ -108,11 +117,20 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
 
                    ),
                    smallMediumSpacer,
-                   Text(appLocalizations.lastName, style:  textStyleDescription(),),
+                   Text(appLocalizations.emailAddress, style:  textStyleDescription(),),
                    labelSpacer,
                    CustomTextField(
-                     controller: _lastNameController,
-                     labelText: getLocalization().lastName,
+                     controller: _emailController,
+                     labelText: getLocalization().emailAddress,
+                     validator: (value ) {
+                     },
+                   ),
+                   smallMediumSpacer,
+                   Text(appLocalizations.mobileNumber, style:  textStyleDescription(),),
+                   labelSpacer,
+                   CustomTextField(
+                     controller: _mobileController,
+                     labelText: getLocalization().mobileNumber,
                      validator: (value ) {
                      },
                    ),
@@ -121,11 +139,25 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
                    CustomFormButton(
                        isActive: true,
                        onPressed: (){
+                         getBloc().add(PersonnelScanContinueClickedEvent(
+                             personnelScanContinueClickedModel:
+                         PersonnelScanContinueClickedModel(
+                             identificationNumber: state.idNUmber,
+                             identificationType: widget.identificationType == IdentificationType.id ? "id": "passport",
+                             firstName: _firstNameController.text.trim(),
+                             middleName: _middleNameController.text.trim(),
+                             lastName: _lastNameController.text.trim(),
+                             transportationType: "",
+                             mobileNumber: _mobileController.text.trim(),
+                             email: _emailController.text.trim())
+                         )
+                         );
                        },
                        buttonText: getLocalization().wcontinue),
 
                  ],
                ),
+             ),
              )
          );
       },

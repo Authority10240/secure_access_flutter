@@ -13,3 +13,8 @@ class ScanQrState extends PersonnelScanPageState{
 
   ScanQrState({super.errorCode,super.errorMessage,super.idNUmber});
 }
+
+class PersonnelScanContinueClickedState extends PersonnelScanPageState{
+
+  PersonnelScanContinueClickedState({super.errorCode, super.errorMessage,super.idNUmber});
+}

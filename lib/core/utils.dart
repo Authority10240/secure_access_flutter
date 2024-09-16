@@ -8,6 +8,8 @@ import 'package:open_filex/open_filex.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:encrypt/encrypt.dart' as cypher;
 
+String currentDate = "${DateTime.now().year}/${DateTime.now().month}/${DateTime.now().day}";
+
 final LocalAuthentication auth = LocalAuthentication();
 
 openDocument({required String attachementUrl}) async {

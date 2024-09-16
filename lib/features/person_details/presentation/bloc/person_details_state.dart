@@ -4,3 +4,6 @@ abstract class PersonDetailsPageState extends BaseState {}
 
 class PersonDetailsPageInitState extends PersonDetailsPageState  {}
 
+class PeronalDetailsContinueClickedState extends PersonDetailsPageState{
+
+}

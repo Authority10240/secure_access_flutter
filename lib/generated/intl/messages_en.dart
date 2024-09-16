@@ -84,6 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "make": MessageLookupByLibrary.simpleMessage("Make"),
         "manual": MessageLookupByLibrary.simpleMessage("Manual"),
         "middleName": MessageLookupByLibrary.simpleMessage("Middle Name"),
+        "mobileNumber": MessageLookupByLibrary.simpleMessage("Mobile number"),
         "model": MessageLookupByLibrary.simpleMessage("Model"),
         "name": MessageLookupByLibrary.simpleMessage("Name *"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password "),
