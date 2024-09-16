@@ -61,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("Error"),
         "expirationYear":
             MessageLookupByLibrary.simpleMessage("Expiration Year"),
+        "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password "),
         "forgotPasswordQ":
@@ -70,17 +71,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "haveAnAccount":
             MessageLookupByLibrary.simpleMessage("Have an account? "),
         "id": MessageLookupByLibrary.simpleMessage("ID *"),
+        "invalidIdCode": MessageLookupByLibrary.simpleMessage(
+            "Invalid ID code, Please scan a valid Identification card or document."),
         "invalidLicenseDiskPleaseScanLicenseDiskPresentedOnCarWindShield":
             MessageLookupByLibrary.simpleMessage(
                 "Invalid license disk, please scan License disk presented on car wind shield"),
+        "invalidPassport": MessageLookupByLibrary.simpleMessage(
+            "Invalid passport code, Please scan a valid passport document"),
+        "lastName": MessageLookupByLibrary.simpleMessage("last Name"),
         "license": MessageLookupByLibrary.simpleMessage("License"),
         "logout": MessageLookupByLibrary.simpleMessage("Log out"),
         "make": MessageLookupByLibrary.simpleMessage("Make"),
         "manual": MessageLookupByLibrary.simpleMessage("Manual"),
+        "middleName": MessageLookupByLibrary.simpleMessage("Middle Name"),
         "model": MessageLookupByLibrary.simpleMessage("Model"),
         "name": MessageLookupByLibrary.simpleMessage("Name *"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password "),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "noIdentificationDocumentScanned": MessageLookupByLibrary.simpleMessage(
+            "No identification document scanned"),
         "noLicenseDiskScannedTryEnteringVehicleDetailsManually":
             MessageLookupByLibrary.simpleMessage(
                 "No License disk scanned, Try entering vehicle details manually "),
@@ -109,6 +118,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "person": MessageLookupByLibrary.simpleMessage("Person"),
         "personalDetails":
             MessageLookupByLibrary.simpleMessage("Personal details"),
+        "personnelDetails":
+            MessageLookupByLibrary.simpleMessage("Personnel Details"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number *"),
         "pleaseEnterAPassword":
             MessageLookupByLibrary.simpleMessage("Please enter a password"),

@@ -911,6 +911,76 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `First Name`
+  String get firstName {
+    return Intl.message(
+      'First Name',
+      name: 'firstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Middle Name`
+  String get middleName {
+    return Intl.message(
+      'Middle Name',
+      name: 'middleName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `last Name`
+  String get lastName {
+    return Intl.message(
+      'last Name',
+      name: 'lastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Personnel Details`
+  String get personnelDetails {
+    return Intl.message(
+      'Personnel Details',
+      name: 'personnelDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid ID code, Please scan a valid Identification card or document.`
+  String get invalidIdCode {
+    return Intl.message(
+      'Invalid ID code, Please scan a valid Identification card or document.',
+      name: 'invalidIdCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid passport code, Please scan a valid passport document`
+  String get invalidPassport {
+    return Intl.message(
+      'Invalid passport code, Please scan a valid passport document',
+      name: 'invalidPassport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No identification document scanned`
+  String get noIdentificationDocumentScanned {
+    return Intl.message(
+      'No identification document scanned',
+      name: 'noIdentificationDocumentScanned',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

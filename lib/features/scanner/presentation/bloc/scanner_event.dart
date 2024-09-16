@@ -7,5 +7,6 @@ class ScanQrEvent extends ScannerPageEvent{
 
   final String qrCode;
 
+
   ScanQrEvent({required this.qrCode});
 }

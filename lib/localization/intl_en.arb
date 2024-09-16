@@ -86,6 +86,13 @@
   "captureVisitorsLicenseDetails": "Capture visitor's license details",
   "scanError": "Scan Error",
   "scanAgain": "Scan again",
-  "invalidLicenseDiskPleaseScanLicenseDiskPresentedOnCarWindShield": "Invalid license disk, please scan License disk presented on car wind shield"
+  "invalidLicenseDiskPleaseScanLicenseDiskPresentedOnCarWindShield": "Invalid license disk, please scan License disk presented on car wind shield",
+  "firstName": "First Name",
+  "middleName": "Middle Name",
+  "lastName": "last Name",
+  "personnelDetails": "Personnel Details",
+  "invalidIdCode": "Invalid ID code, Please scan a valid Identification card or document.",
+  "invalidPassport": "Invalid passport code, Please scan a valid passport document",
+  "noIdentificationDocumentScanned": "No identification document scanned"
 
 }

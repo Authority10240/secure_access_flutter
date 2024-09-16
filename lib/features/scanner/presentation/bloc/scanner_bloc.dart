@@ -4,6 +4,7 @@ import 'package:secure_access/core/base_classes/base_event.dart';
 import 'package:secure_access/core/base_classes/base_state.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
+import 'package:secure_access/features/person_details/presentation/person_details_page.dart';
 
 
 part 'scanner_event.dart';
