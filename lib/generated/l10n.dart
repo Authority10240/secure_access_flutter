@@ -981,6 +981,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Walk in`
+  String get walkIn {
+    return Intl.message(
+      'Walk in',
+      name: 'walkIn',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

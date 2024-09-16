@@ -9,4 +9,12 @@ class ScanQrEvent extends ScannerPageEvent{
 
 
   ScanQrEvent({required this.qrCode});
+
+}
+
+class ScannerContinueClickedEvent extends ScannerPageEvent{
+
+   final ScannerContinueClickedModel scannerContinueClickedModel;
+
+   ScannerContinueClickedEvent({required this.scannerContinueClickedModel});
 }

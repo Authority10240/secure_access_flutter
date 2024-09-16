@@ -8,6 +8,7 @@ import 'package:secure_access/core/colors.dart';
 import 'package:secure_access/core/locator.dart';
 import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
+import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
 import 'package:secure_access/features/dashboard/presentation/widgets/transport_type_card.dart';
 import 'package:secure_access/features/person_details/presentation/person_details_page.dart';
 import 'package:secure_access/features/personnel_scan/presentation/personnel_scan_page.dart';
@@ -17,8 +18,9 @@ import 'bloc/identification_type_bloc.dart';
 
 
 class IdentificationTypePage extends BasePage {
-  const IdentificationTypePage({super.key});
+  const IdentificationTypePage({super.key,required this.transportationType });
 
+  final TransportationType transportationType;
   @override
   _IdentificationTypePageState createState() => _IdentificationTypePageState();
 }
@@ -52,7 +54,7 @@ class _IdentificationTypePageState extends BasePageState<IdentificationTypePage,
                   children: [
                     smallSpacer,
 
-                    Center(child: Text(appLocalizations.person, style: textStyleTitle(),)),
+                    Center(child: Text(widget.transportationType == TransportationType.walkIn?appLocalizations.walkIn: appLocalizations.vehicle, style: textStyleTitle(),)),
                     smallSpacer,
                     Center(child: Text(appLocalizations.whatKindOfIdentificationDoTheyHave, style: textStyleDirectives(),)),
                     mediumSpacer,

@@ -11,12 +11,17 @@ import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
 import 'package:secure_access/features/identification_type/presentation/identification_type_page.dart';
+import 'package:secure_access/features/scanner/data/models/scanner_model_response/scanner_continue_clicked_model.dart';
 import 'package:secure_access/generated/l10n.dart';
 import 'bloc/scanner_bloc.dart';
 
 
 class ScannerPage extends BasePage {
-  const ScannerPage({super.key});
+  const ScannerPage({required this.identificationNumber,super.key});
+
+  final String identificationNumber;
+
+
 
   @override
   _ScannerPageState createState() => _ScannerPageState();
@@ -31,12 +36,13 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
   final TextEditingController _vinController = TextEditingController();
   final TextEditingController _yearController = TextEditingController();
 
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-
     WidgetsBinding.instance.addPostFrameCallback((_)async{
       var result = await BarcodeScanner.scan();
       if(result.rawContent.isEmpty){
@@ -46,11 +52,6 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
         getBloc().add(ScanQrEvent(qrCode: result.rawContent));
       }
     });
-  }
-
-    @override
-  PreferredSizeWidget? buildAppbar() {
-    return null;
   }
 
   @override
@@ -68,6 +69,22 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
         
         if(state.dataState == DataState.error && state is ScanQrState){
           Get.snackbar(appLocalizations.error, appLocalizations.invalidLicenseDiskPleaseScanLicenseDiskPresentedOnCarWindShield);
+        }
+
+        if(state is ScannerContinueClickedState && state.dataState == DataState.success){
+          Navigator.pop(context);
+          Get.snackbar(appLocalizations.error, state.errorMessage!);
+        }
+
+        if(state is ScannerContinueClickedState && state.dataState == DataState.error){
+          Navigator.pop(context);
+          Get.snackbar(appLocalizations.error, state.errorMessage!);
+
+        }
+
+        if(state is ScannerContinueClickedState && state.dataState == DataState.loading){
+          preloaderWidgetOverlay(context);
+
         }
 
       },
@@ -89,7 +106,7 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
                   buttonText: getLocalization().scanAgain),)):
              SingleChildScrollView(
                child: Padding(padding: EdgeInsets.only(left: pagePadding, right: pagePadding),
-                 child:Column(
+                 child:Form( key: _formKey , child:Column(
                    crossAxisAlignment: CrossAxisAlignment.start,
                  children: [
                    smallMediumSpacer,
@@ -161,11 +178,23 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
                    CustomFormButton(
                        isActive: true,
                        onPressed: (){
-                         Get.to(const IdentificationTypePage());
+                         if(_formKey.currentState!.validate()){
+                           getBloc().add(ScannerContinueClickedEvent(
+                               scannerContinueClickedModel: ScannerContinueClickedModel(
+                                 identificationNumber: widget.identificationNumber,
+                                   engineNumber: _engineController.text.trim(),
+                                   licenseNumber: _licenseController.text.trim(),
+                                   regNumber: _regNoController.text.trim(),
+                                   vinNumber: _vinController.text.trim(),
+                                   expiryYear: _yearController.text.trim(),
+                                   make: state.make,
+                                   model: state.model)));
+                         }
                        },
                        buttonText: getLocalization().wcontinue),
 
                  ],
+               ),
                ),
                )
              );

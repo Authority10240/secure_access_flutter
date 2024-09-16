@@ -5,6 +5,8 @@ import 'package:secure_access/core/base_classes/base_state.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
 import 'package:secure_access/features/person_details/presentation/person_details_page.dart';
+import 'package:secure_access/features/scanner/data/models/scanner_model_response/scanner_continue_clicked_model.dart';
+import 'package:secure_access/features/scanner/domain/use_cases/scanner_usecase/scanner_continue_clicked_usecase.dart';
 
 
 part 'scanner_event.dart';
@@ -13,9 +15,31 @@ part 'scanner_state.dart';
 @injectable
 class ScannerBloc
     extends BaseBloc<ScannerPageEvent, ScannerPageState> {
-    ScannerBloc(): super(ScannerPageInitState()) {
+    ScannerBloc({
+      required this.scannerContinueClickedUseCase
+}): super(ScannerPageInitState()) {
 
         on<ScanQrEvent>((event, emit)=> _onScanQrEvent(event, emit));
+        on<ScannerContinueClickedEvent>((event, emit)=> _ScannerContinueClickedEvent(event, emit));
+
+    }
+
+    final ScannerContinueClickedUseCase scannerContinueClickedUseCase;
+
+    Future<void> _ScannerContinueClickedEvent(
+        ScannerContinueClickedEvent event,
+        Emitter<ScannerPageState> emit
+        )async{
+      emit(ScannerContinueClickedState()..dataState = DataState.loading);
+      await scannerContinueClickedUseCase.call(onSuccess: (model){
+        emit(ScannerContinueClickedState()..dataState = DataState.success);
+      }, onError: (error){
+        emit(ScannerContinueClickedState(
+            errorCode: state.errorCode,
+            errorMessage: error!.message)..dataState = DataState.error);
+      },
+      params: ScannerContinueClickedUseCaseParams(
+          scannerContinueClickedModel: event.scannerContinueClickedModel));
     }
 
     Future<void> _onScanQrEvent(

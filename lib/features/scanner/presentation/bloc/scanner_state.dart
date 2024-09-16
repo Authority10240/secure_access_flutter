@@ -19,3 +19,7 @@ class ScanQrState extends ScannerPageState{
 
   ScanQrState({super.errorCode,super.errorMessage,super.model,super.description, super.engine, super.licenseNo, super.make, super.regNo, super.vin, super.year});
 }
+
+class ScannerContinueClickedState extends ScannerPageState{
+  ScannerContinueClickedState({ super.errorCode, super.errorMessage});
+}

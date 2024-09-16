@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
@@ -22,4 +23,6 @@ abstract class RegisterModules{
   AppLocalizations get appLocalizations;
 
   FirebaseAuth get firebaseAuth => FirebaseAuth.instance;
+
+  FirebaseFirestore get firebaseFireStore => FirebaseFirestore.instance;
 }

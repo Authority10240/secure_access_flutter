@@ -46,6 +46,8 @@ dependencies:
   barcode_scan2: ^4.3.3
   image_picker: ^1.1.2
   cached_network_image: ^3.4.1
+  freezed: ^2.5.7
+  cloud_firestore: ^5.4.1
 
 
 

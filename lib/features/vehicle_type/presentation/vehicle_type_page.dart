@@ -16,7 +16,8 @@ import 'package:secure_access/generated/l10n.dart';
 
 
 class VehicleTypePage extends BasePage {
-  const VehicleTypePage({super.key});
+  const VehicleTypePage({required this.identificationNumber, super.key});
+  final String identificationNumber;
 
   @override
   _VehicleTypePageState createState() => _VehicleTypePageState();
@@ -60,7 +61,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().car,
                       iconWidget: Icon(Icons.car_crash_outlined, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to(const ScannerPage());
+                        Get.to( ScannerPage(identificationNumber: widget.identificationNumber,));
                       },
                     ),
 
@@ -68,7 +69,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().truck,
                       iconWidget: HeroIcon(HeroIcons.truck, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to(const ScannerPage());
+                        Get.to( ScannerPage(identificationNumber: widget.identificationNumber,));
                       },
                     ),
 
@@ -76,7 +77,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().bike,
                       iconWidget: Icon(Icons.directions_bike_sharp, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to(const ScannerPage());
+                        Get.to( ScannerPage(identificationNumber: widget.identificationNumber,));
                       },
                     ),
 
@@ -84,7 +85,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().bus,
                       iconWidget: Icon(Icons.bus_alert, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to(const ScannerPage());
+                        Get.to( ScannerPage(identificationNumber: widget.identificationNumber,));
                       },
                     ),
 

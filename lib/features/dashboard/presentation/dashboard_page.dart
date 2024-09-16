@@ -62,15 +62,15 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
                         caption: getLocalization().vehicle,
                         iconWidget: Icon(Icons.car_crash_sharp, size: 50, color: AppColorScheme.primary),
                         ontap: (){
-                          Get.to(VehicleTypePage());
+                          Get.to(const IdentificationTypePage(transportationType: TransportationType.driveIn,));
                         },
                       ),
 
                       TransportTypeCard(
-                        caption: getLocalization().person,
-                        iconWidget: HeroIcon(HeroIcons.user, size: 50, color: AppColorScheme.primary),
+                        caption: getLocalization().walkIn,
+                        iconWidget:Icon(Icons.directions_walk_outlined, size: 50, color: AppColorScheme.primary),
                         ontap: (){
-                          Get.to(IdentificationTypePage());
+                          Get.to(const IdentificationTypePage(transportationType: TransportationType.walkIn,));
                         },
                       ),
 
@@ -97,4 +97,9 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
   }
 
 
+}
+
+enum TransportationType{
+  walkIn,
+  driveIn
 }

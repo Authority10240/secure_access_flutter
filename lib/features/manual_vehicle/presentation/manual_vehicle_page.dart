@@ -117,7 +117,7 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
                     CustomFormButton(
                         isActive: true,
                         onPressed: (){
-                          Get.to(const IdentificationTypePage());
+
                         },
                         buttonText: getLocalization().wcontinue),
 
