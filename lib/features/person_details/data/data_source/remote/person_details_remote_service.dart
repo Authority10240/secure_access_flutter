@@ -2,5 +2,5 @@ import 'package:secure_access/features/person_details/data/models/person_details
 
 abstract class PersonDetailsRemoteService{
 
-  Future<bool> personDetailsContinueClicked({required PersonDetailsContinueClickedModel personDetailsContinueClickedModel});
+  Future<String> personDetailsContinueClicked({required PersonDetailsContinueClickedModel personDetailsContinueClickedModel});
 }

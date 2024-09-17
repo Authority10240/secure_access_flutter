@@ -72,7 +72,7 @@ class _IdentificationTypePageState extends BasePageState<IdentificationTypePage,
                       caption: getLocalization().license,
                       iconWidget: HeroIcon(HeroIcons.creditCard, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to(const PersonDetailsPage(identificationType: IdentificationType.license));
+                        Get.to( PersonDetailsPage(transportationType: widget.transportationType  ,identificationType: IdentificationType.license));
                       },
                     ),
 

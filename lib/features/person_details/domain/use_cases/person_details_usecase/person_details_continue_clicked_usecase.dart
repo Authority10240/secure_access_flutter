@@ -6,7 +6,7 @@ import 'package:secure_access/features/person_details/data/models/person_details
 import 'package:secure_access/features/person_details/domain/repository/person_details_repository/person_details_continue_clicked_repository.dart';
 
 @Injectable()
-class PersonDetailsContinueClickedUseCase extends BaseUseCase<PersonDetailsContinueClickedUseCaseParams, bool>{
+class PersonDetailsContinueClickedUseCase extends BaseUseCase<PersonDetailsContinueClickedUseCaseParams, String>{
 
   final PersonDetailsContinueClickedRepository personDetailsContinueClickedRepository;
 
@@ -14,7 +14,7 @@ class PersonDetailsContinueClickedUseCase extends BaseUseCase<PersonDetailsConti
 
   @override
   Future<void> call({
-    required Function(bool? model)? onSuccess,
+    required Function(String? model)? onSuccess,
     required Function(BaseFailure? error)? onError,
     PersonDetailsContinueClickedUseCaseParams? params})async {
    await personDetailsContinueClickedRepository.call(

@@ -11,7 +11,7 @@ class PersonDetailsContinueClickedRepositoryImpl extends PersonDetailsContinueCl
   final PersonDetailsRemoteService personDetailsRemoteService;
   @override
   Future<void> call({PersonDetailsContinueClickedRepositoryParams? params,
-    required Function(bool? model)? onSuccess,
+    required Function(String? model)? onSuccess,
     required Function(BaseFailure? error)? onError})async {
 
     await safeBackEndCalls(apiRequest: personDetailsRemoteService.personDetailsContinueClicked(
