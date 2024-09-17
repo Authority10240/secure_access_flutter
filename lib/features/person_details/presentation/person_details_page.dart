@@ -73,7 +73,7 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
           if(widget.transportationType == TransportationType.walkIn){
             Get.offAll(const DashboardPage());
           }else{
-            Get.to(VehicleTypePage(identificationNumber: state.referenceId!));
+            Get.off(VehicleTypePage(identificationNumber: state.referenceId!));
           }
         }
       },

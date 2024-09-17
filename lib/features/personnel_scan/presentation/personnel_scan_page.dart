@@ -14,6 +14,7 @@ import 'package:secure_access/core/widgets/preloader_widget.dart';
 import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
 import 'package:secure_access/features/person_details/presentation/person_details_page.dart';
 import 'package:secure_access/features/personnel_scan/data/models/personnel_scan_model_response/personnel_scan_continue_clicked_model.dart';
+import 'package:secure_access/features/vehicle_type/presentation/vehicle_type_page.dart';
 import 'package:secure_access/generated/l10n.dart';
 
 import 'bloc/personnel_scan_bloc.dart';
@@ -21,9 +22,11 @@ import 'bloc/personnel_scan_bloc.dart';
 
 class PersonnelScanPage extends BasePage {
   const PersonnelScanPage({super.key,
+    required this.transportationType,
     required this.identificationType
   });
   final IdentificationType identificationType;
+  final TransportationType transportationType;
 
 
   @override
@@ -68,6 +71,24 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
 
         if(state.dataState == DataState.error && state is ScanQrState){
           Get.snackbar(appLocalizations.error, widget.identificationType == IdentificationType.id?appLocalizations.invalidIdCode: appLocalizations.invalidPassport);
+        }
+
+        if(state is PersonnelScanContinueClickedState && state.dataState == DataState.loading){
+          preloaderWidgetOverlay(context);
+        }
+
+        if(state is PersonnelScanContinueClickedState && state.dataState == DataState.success){
+          Navigator.pop(context);
+          if(widget.transportationType == TransportationType.walkIn){
+            Get.offAll(const DashboardPage());
+          }else{
+            Get.off(VehicleTypePage(identificationNumber: state.referenceId!));
+          }
+        }
+
+        if(state is PersonnelScanContinueClickedState && state.dataState == DataState.error){
+          Navigator.pop(context);
+          Get.snackbar(appLocalizations.error, state.errorMessage!);
         }
       },
       builder: (context, state) {
@@ -147,7 +168,7 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
                              identificationType: widget.identificationType == IdentificationType.id ? "id": "passport",
                              firstName: _firstNameController.text.trim(),
                              middleName: _middleNameController.text.trim(),
-                             lastName: _lastNameController.text.trim(),
+                             lastName: _middleNameController.text.trim(),
                              transportationType: "",
                              mobileNumber: _mobileController.text.trim(),
                              email: _emailController.text.trim())

@@ -64,7 +64,7 @@ class _IdentificationTypePageState extends BasePageState<IdentificationTypePage,
                       caption: getLocalization().id,
                       iconWidget: Icon(Icons.perm_identity, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to(const PersonnelScanPage(identificationType: IdentificationType.id,));
+                        Get.to( PersonnelScanPage(transportationType: widget.transportationType,identificationType: IdentificationType.id,));
                       },
                     ),
 
@@ -80,7 +80,7 @@ class _IdentificationTypePageState extends BasePageState<IdentificationTypePage,
                       caption: getLocalization().passport,
                       iconWidget: HeroIcon(HeroIcons.wallet, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to(const PersonnelScanPage(identificationType: IdentificationType.passport));
+                        Get.to( PersonnelScanPage(transportationType: widget.transportationType,identificationType: IdentificationType.passport));
                       },
                     ),
 
