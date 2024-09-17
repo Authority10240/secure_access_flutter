@@ -29,6 +29,7 @@ mixin _$PersonnelScanContinueClickedModel {
   String? get transportationType => throw _privateConstructorUsedError;
   String? get mobileNumber => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
+  DateTime? get dateTime => throw _privateConstructorUsedError;
 
   /// Serializes this PersonnelScanContinueClickedModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -56,7 +57,8 @@ abstract class $PersonnelScanContinueClickedModelCopyWith<$Res> {
       String? lastName,
       String? transportationType,
       String? mobileNumber,
-      String? email});
+      String? email,
+      DateTime? dateTime});
 }
 
 /// @nodoc
@@ -83,6 +85,7 @@ class _$PersonnelScanContinueClickedModelCopyWithImpl<$Res,
     Object? transportationType = freezed,
     Object? mobileNumber = freezed,
     Object? email = freezed,
+    Object? dateTime = freezed,
   }) {
     return _then(_value.copyWith(
       identificationNumber: freezed == identificationNumber
@@ -117,6 +120,10 @@ class _$PersonnelScanContinueClickedModelCopyWithImpl<$Res,
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
+      dateTime: freezed == dateTime
+          ? _value.dateTime
+          : dateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -138,7 +145,8 @@ abstract class _$$PersonnelScanContinueClickedModelImplCopyWith<$Res>
       String? lastName,
       String? transportationType,
       String? mobileNumber,
-      String? email});
+      String? email,
+      DateTime? dateTime});
 }
 
 /// @nodoc
@@ -164,6 +172,7 @@ class __$$PersonnelScanContinueClickedModelImplCopyWithImpl<$Res>
     Object? transportationType = freezed,
     Object? mobileNumber = freezed,
     Object? email = freezed,
+    Object? dateTime = freezed,
   }) {
     return _then(_$PersonnelScanContinueClickedModelImpl(
       identificationNumber: freezed == identificationNumber
@@ -198,6 +207,10 @@ class __$$PersonnelScanContinueClickedModelImplCopyWithImpl<$Res>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
+      dateTime: freezed == dateTime
+          ? _value.dateTime
+          : dateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -215,7 +228,8 @@ class _$PersonnelScanContinueClickedModelImpl
       required this.lastName,
       required this.transportationType,
       required this.mobileNumber,
-      required this.email});
+      required this.email,
+      required this.dateTime});
 
   factory _$PersonnelScanContinueClickedModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -237,10 +251,12 @@ class _$PersonnelScanContinueClickedModelImpl
   final String? mobileNumber;
   @override
   final String? email;
+  @override
+  final DateTime? dateTime;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PersonnelScanContinueClickedModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email)';
+    return 'PersonnelScanContinueClickedModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, dateTime: $dateTime)';
   }
 
   @override
@@ -255,7 +271,8 @@ class _$PersonnelScanContinueClickedModelImpl
       ..add(DiagnosticsProperty('lastName', lastName))
       ..add(DiagnosticsProperty('transportationType', transportationType))
       ..add(DiagnosticsProperty('mobileNumber', mobileNumber))
-      ..add(DiagnosticsProperty('email', email));
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('dateTime', dateTime));
   }
 
   @override
@@ -277,7 +294,9 @@ class _$PersonnelScanContinueClickedModelImpl
                 other.transportationType == transportationType) &&
             (identical(other.mobileNumber, mobileNumber) ||
                 other.mobileNumber == mobileNumber) &&
-            (identical(other.email, email) || other.email == email));
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.dateTime, dateTime) ||
+                other.dateTime == dateTime));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -291,7 +310,8 @@ class _$PersonnelScanContinueClickedModelImpl
       lastName,
       transportationType,
       mobileNumber,
-      email);
+      email,
+      dateTime);
 
   /// Create a copy of PersonnelScanContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.
@@ -314,14 +334,16 @@ class _$PersonnelScanContinueClickedModelImpl
 abstract class _PersonnelScanContinueClickedModel
     implements PersonnelScanContinueClickedModel {
   const factory _PersonnelScanContinueClickedModel(
-      {required final String? identificationNumber,
-      required final String? identificationType,
-      required final String? firstName,
-      required final String? middleName,
-      required final String? lastName,
-      required final String? transportationType,
-      required final String? mobileNumber,
-      required final String? email}) = _$PersonnelScanContinueClickedModelImpl;
+          {required final String? identificationNumber,
+          required final String? identificationType,
+          required final String? firstName,
+          required final String? middleName,
+          required final String? lastName,
+          required final String? transportationType,
+          required final String? mobileNumber,
+          required final String? email,
+          required final DateTime? dateTime}) =
+      _$PersonnelScanContinueClickedModelImpl;
 
   factory _PersonnelScanContinueClickedModel.fromJson(
           Map<String, dynamic> json) =
@@ -343,6 +365,8 @@ abstract class _PersonnelScanContinueClickedModel
   String? get mobileNumber;
   @override
   String? get email;
+  @override
+  DateTime? get dateTime;
 
   /// Create a copy of PersonnelScanContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.

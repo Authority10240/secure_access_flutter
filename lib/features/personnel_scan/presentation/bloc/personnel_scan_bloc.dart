@@ -32,7 +32,7 @@ class PersonnelScanBloc
         emit(PersonnelScanContinueClickedState(idNUmber: state.idNUmber)..dataState = DataState.loading);
         await personnelScanContinueClickedUseCase.call(
             onSuccess: (model){
-                emit(PersonnelScanContinueClickedState()..dataState = DataState.success);
+                emit(PersonnelScanContinueClickedState(refId: model)..dataState = DataState.success);
         }, onError:(error){
             emit(PersonnelScanContinueClickedState(idNUmber: state.idNUmber,errorMessage: error!.message, errorCode: error.errorCode)..dataState = DataState.error);
         },

@@ -142,6 +142,7 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
                          getBloc().add(PersonnelScanContinueClickedEvent(
                              personnelScanContinueClickedModel:
                          PersonnelScanContinueClickedModel(
+                           dateTime: DateTime.now(),
                              identificationNumber: state.idNUmber,
                              identificationType: widget.identificationType == IdentificationType.id ? "id": "passport",
                              firstName: _firstNameController.text.trim(),

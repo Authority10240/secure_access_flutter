@@ -14,11 +14,11 @@ class PersonnelScanContinueClickedRepositoryImpl extends PersonnelScanContinueCl
   @override
   Future<void> call({
     PersonnelScanContinueClickedRepositoryParams? params,
-    required Function(bool? model)? onSuccess,
+    required Function(String? model)? onSuccess,
     required Function(BaseFailure? error)? onError}) async{
     await safeBackEndCalls(
         apiRequest: personnelScanRemoteService.personnelScanContinueClicked(
-            personScanContinueClickedModel: params!.personnelScanContinueClickedModel),
+            personnelScanContinueClickedModel: params!.personnelScanContinueClickedModel),
         onSuccess: (model)=> onSuccess!(model),
         onError:(error)=> onError!(error));
   }

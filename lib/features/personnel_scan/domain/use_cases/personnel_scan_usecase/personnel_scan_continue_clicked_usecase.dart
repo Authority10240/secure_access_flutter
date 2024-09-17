@@ -6,7 +6,7 @@ import 'package:secure_access/features/personnel_scan/data/models/personnel_scan
 import 'package:secure_access/features/personnel_scan/domain/repository/personnel_scan_repository/personnel_scan_continue_clicked_repository.dart';
 
 @Injectable()
-class PersonnelScanContinueClickedUseCase extends BaseUseCase<PersonnelScanContinueClickedUseCaseParams, bool>{
+class PersonnelScanContinueClickedUseCase extends BaseUseCase<PersonnelScanContinueClickedUseCaseParams, String>{
 
   final PersonnelScanContinueClickedRepository personnelScanContinueClickedRepository;
 
@@ -14,7 +14,7 @@ class PersonnelScanContinueClickedUseCase extends BaseUseCase<PersonnelScanConti
 
   @override
   Future<void> call({
-    required Function(bool? model)? onSuccess,
+    required Function(String? model)? onSuccess,
     required Function(BaseFailure? error)? onError,
     PersonnelScanContinueClickedUseCaseParams? params})async {
    await personnelScanContinueClickedRepository.call(onSuccess: (model)=>

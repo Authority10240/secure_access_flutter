@@ -2,5 +2,5 @@ import 'package:secure_access/features/personnel_scan/data/models/personnel_scan
 
 abstract class PersonnelScanRemoteService {
 
-  Future<bool> personnelScanContinueClicked({required PersonnelScanContinueClickedModel personScanContinueClickedModel});
+  Future<String> personnelScanContinueClicked({required PersonnelScanContinueClickedModel personnelScanContinueClickedModel});
 }

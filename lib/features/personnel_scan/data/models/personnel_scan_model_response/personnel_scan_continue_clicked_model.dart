@@ -14,7 +14,8 @@ class PersonnelScanContinueClickedModel with _$PersonnelScanContinueClickedModel
     required String? lastName,
     required String? transportationType,
     required String? mobileNumber,
-    required String? email
+    required String? email,
+    required DateTime? dateTime
   }) = _PersonnelScanContinueClickedModel;
 
   factory PersonnelScanContinueClickedModel.fromJson(
