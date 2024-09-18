@@ -16,5 +16,6 @@ class ScannerContinueClickedEvent extends ScannerPageEvent{
 
    final ScannerContinueClickedModel scannerContinueClickedModel;
 
+
    ScannerContinueClickedEvent({required this.scannerContinueClickedModel});
 }

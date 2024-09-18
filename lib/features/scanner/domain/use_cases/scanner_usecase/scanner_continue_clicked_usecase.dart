@@ -6,14 +6,14 @@ import 'package:secure_access/features/scanner/data/models/scanner_model_respons
 import 'package:secure_access/features/scanner/domain/repository/scanner_repository/scanner_continue_clicked_repository.dart';
 
 @Injectable()
-class ScannerContinueClickedUseCase extends BaseUseCase<ScannerContinueClickedUseCaseParams, bool>{
+class ScannerContinueClickedUseCase extends BaseUseCase<ScannerContinueClickedUseCaseParams, String>{
 
   final ScannerContinueClickedRepository scannerContinueClickedRepository;
 
   ScannerContinueClickedUseCase({required this.scannerContinueClickedRepository});
 
   @override
-  Future<void> call({required Function(bool? model)? onSuccess,
+  Future<void> call({required Function(String? model)? onSuccess,
     required Function(BaseFailure? error)? onError,
     ScannerContinueClickedUseCaseParams? params})async {
     await scannerContinueClickedRepository.call(
@@ -27,6 +27,7 @@ class ScannerContinueClickedUseCase extends BaseUseCase<ScannerContinueClickedUs
 
 class ScannerContinueClickedUseCaseParams extends BaseUseCaseParams{
   final ScannerContinueClickedModel scannerContinueClickedModel;
+
 
   ScannerContinueClickedUseCaseParams({
     required this.scannerContinueClickedModel

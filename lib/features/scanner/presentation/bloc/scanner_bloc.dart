@@ -32,7 +32,7 @@ class ScannerBloc
         )async{
       emit(ScannerContinueClickedState()..dataState = DataState.loading);
       await scannerContinueClickedUseCase.call(onSuccess: (model){
-        emit(ScannerContinueClickedState()..dataState = DataState.success);
+        emit(ScannerContinueClickedState(referenceId: model)..dataState = DataState.success);
       }, onError: (error){
         emit(ScannerContinueClickedState(
             errorCode: state.errorCode,

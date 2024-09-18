@@ -71,9 +71,10 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
         if(state is PersonalDetailsContinueClickedState && state.dataState == DataState.success){
           Navigator.pop(context);
           if(widget.transportationType == TransportationType.walkIn){
+            Get.snackbar(appLocalizations.visitationLoggedSuccessfully, state.referenceId!);
             Get.offAll(const DashboardPage());
           }else{
-            Get.off(VehicleTypePage(identificationNumber: state.referenceId!));
+            Get.off(VehicleTypePage(referenceId: state.referenceId!));
           }
         }
       },

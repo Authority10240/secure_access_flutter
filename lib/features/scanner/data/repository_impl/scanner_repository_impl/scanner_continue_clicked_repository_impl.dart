@@ -16,7 +16,7 @@ class ScannerContinueClickedRepositoryImpl extends ScannerContinueClickedReposit
   @override
   Future<void> call({
     ScannerContinueClickedRepositoryParams? params,
-    required Function(bool? model)? onSuccess,
+    required Function(String? model)? onSuccess,
     required Function(BaseFailure? error)? onError})async {
    await safeBackEndCalls(apiRequest: scannerRemoteDataSource.scannerContinueClicked(
        scannerContinueClickedModel: params!.scannerContinueClickedModel),

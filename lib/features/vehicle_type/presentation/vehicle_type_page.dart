@@ -16,8 +16,8 @@ import 'package:secure_access/generated/l10n.dart';
 
 
 class VehicleTypePage extends BasePage {
-  const VehicleTypePage({required this.identificationNumber, super.key});
-  final String identificationNumber;
+  const VehicleTypePage({required this.referenceId, super.key});
+  final String referenceId;
 
   @override
   _VehicleTypePageState createState() => _VehicleTypePageState();
@@ -61,7 +61,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().car,
                       iconWidget: Icon(Icons.car_crash_outlined, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to( ScannerPage(identificationNumber: widget.identificationNumber,));
+                        Get.to( ScannerPage(referenceId: widget.referenceId,));
                       },
                     ),
 
@@ -69,7 +69,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().truck,
                       iconWidget: HeroIcon(HeroIcons.truck, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to( ScannerPage(identificationNumber: widget.identificationNumber,));
+                        Get.to( ScannerPage(referenceId: widget.referenceId,));
                       },
                     ),
 
@@ -77,7 +77,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().bike,
                       iconWidget: Icon(Icons.directions_bike_sharp, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to( ScannerPage(identificationNumber: widget.identificationNumber,));
+                        Get.to( ScannerPage(referenceId: widget.referenceId,));
                       },
                     ),
 
@@ -85,7 +85,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().bus,
                       iconWidget: Icon(Icons.bus_alert, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to( ScannerPage(identificationNumber: widget.identificationNumber,));
+                        Get.to( ScannerPage(referenceId: widget.referenceId,));
                       },
                     ),
 

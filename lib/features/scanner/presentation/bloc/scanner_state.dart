@@ -21,5 +21,7 @@ class ScanQrState extends ScannerPageState{
 }
 
 class ScannerContinueClickedState extends ScannerPageState{
-  ScannerContinueClickedState({ super.errorCode, super.errorMessage});
+
+  String? referenceId;
+  ScannerContinueClickedState({this.referenceId, super.errorCode, super.errorMessage});
 }

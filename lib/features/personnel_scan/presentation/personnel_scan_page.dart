@@ -80,9 +80,10 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
         if(state is PersonnelScanContinueClickedState && state.dataState == DataState.success){
           Navigator.pop(context);
           if(widget.transportationType == TransportationType.walkIn){
+            Get.snackbar(appLocalizations.visitationLoggedSuccessfully, state.referenceId!);
             Get.offAll(const DashboardPage());
           }else{
-            Get.off(VehicleTypePage(identificationNumber: state.referenceId!));
+            Get.off(VehicleTypePage(referenceId: state.referenceId!));
           }
         }
 

@@ -3,12 +3,15 @@ import 'package:get/get.dart';
 import 'package:secure_access/core/base_classes/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:secure_access/core/base_classes/base_state.dart';
 import 'package:secure_access/core/colors.dart';
 import 'package:secure_access/core/locator.dart';
 import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
 import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
+import 'package:secure_access/core/widgets/preloader_widget.dart';
+import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
 import 'package:secure_access/features/dashboard/presentation/widgets/transport_type_card.dart';
 import 'package:secure_access/features/identification_type/presentation/identification_type_page.dart';
 import 'package:secure_access/generated/l10n.dart';
@@ -48,7 +51,23 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
   @override
   Widget buildView(BuildContext context) {
     return BlocConsumer<ManualVehicleBloc, ManualVehiclePageState>(
-      listener: (context, state){},
+      listener: (context, state){
+        if(state is ManualVehicleContinueClickedState && state.dataState == DataState.loading){
+          preloaderWidgetOverlay(context);
+        }
+
+        if(state is ManualVehicleContinueClickedState && state.dataState == DataState.error){
+          Navigator.pop(context);
+          Get.snackbar(appLocalizations.error, state.errorMessage!);
+
+        }
+
+        if(state is ManualVehicleContinueClickedState && state.dataState == DataState.success){
+          Navigator.pop(context);
+          Get.snackbar(appLocalizations.visitationLoggedSuccessfully, state.referenceId!);
+          Get.offAll(const DashboardPage());
+        }
+      },
       builder: (context, state) {
         return SingleChildScrollView(
           child: Padding(

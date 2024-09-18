@@ -1001,6 +1001,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Visitation logged successfully`
+  String get visitationLoggedSuccessfully {
+    return Intl.message(
+      'Visitation logged successfully',
+      name: 'visitationLoggedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

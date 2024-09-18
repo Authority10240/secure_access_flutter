@@ -2,5 +2,5 @@ import 'package:secure_access/features/scanner/data/models/scanner_model_respons
 
 abstract class ScannerRemoteDataSource{
 
-  Future<bool> scannerContinueClicked({required ScannerContinueClickedModel scannerContinueClickedModel});
+  Future<String> scannerContinueClicked({required ScannerContinueClickedModel scannerContinueClickedModel});
 }

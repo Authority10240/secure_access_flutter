@@ -159,6 +159,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "vehicle": MessageLookupByLibrary.simpleMessage("Vehicle"),
         "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
         "vin": MessageLookupByLibrary.simpleMessage("VIN"),
+        "visitationLoggedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Visitation logged successfully"),
         "visitorIsDrivingA":
             MessageLookupByLibrary.simpleMessage("Visitor is driving a"),
         "walkIn": MessageLookupByLibrary.simpleMessage("Walk in"),

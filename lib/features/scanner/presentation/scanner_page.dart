@@ -10,6 +10,7 @@ import 'package:secure_access/core/text_styles.dart';
 import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
+import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
 import 'package:secure_access/features/identification_type/presentation/identification_type_page.dart';
 import 'package:secure_access/features/scanner/data/models/scanner_model_response/scanner_continue_clicked_model.dart';
 import 'package:secure_access/generated/l10n.dart';
@@ -17,9 +18,9 @@ import 'bloc/scanner_bloc.dart';
 
 
 class ScannerPage extends BasePage {
-  const ScannerPage({required this.identificationNumber,super.key});
+  const ScannerPage({required this.referenceId,super.key});
 
-  final String identificationNumber;
+  final String referenceId;
 
 
 
@@ -73,7 +74,9 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
 
         if(state is ScannerContinueClickedState && state.dataState == DataState.success){
           Navigator.pop(context);
-          Get.snackbar(appLocalizations.error, state.errorMessage!);
+          Get.snackbar(appLocalizations.visitationLoggedSuccessfully, state.referenceId!);
+          Get.offAll(const DashboardPage());
+
         }
 
         if(state is ScannerContinueClickedState && state.dataState == DataState.error){
@@ -181,7 +184,7 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
                          if(_formKey.currentState!.validate()){
                            getBloc().add(ScannerContinueClickedEvent(
                                scannerContinueClickedModel: ScannerContinueClickedModel(
-                                 identificationNumber: widget.identificationNumber,
+                                 identificationNumber: widget.referenceId,
                                    engineNumber: _engineController.text.trim(),
                                    licenseNumber: _licenseController.text.trim(),
                                    regNumber: _regNoController.text.trim(),
