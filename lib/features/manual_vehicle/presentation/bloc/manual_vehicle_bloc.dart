@@ -26,7 +26,7 @@ class ManualVehicleBloc
         )async{
         emit(ManualVehicleContinueClickedState()..dataState = DataState.loading);
         await manualVehicleContinueClickedUseCase.call(onSuccess: (model){
-            emit(ManualVehicleContinueClickedState(referenceId: model)..dataState = DataState.loading);
+            emit(ManualVehicleContinueClickedState(referenceId: model)..dataState = DataState.success);
         }, onError:(error){
             emit(ManualVehicleContinueClickedState(errorMessage: error!.message, errorCode: error.errorCode)..dataState = DataState.error);
         },

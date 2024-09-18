@@ -15,7 +15,7 @@ class PersonDetailsRemoteServiceImpl extends PersonDetailsRemoteService{
         toFirestore:(personDetailsContinueClickedModel, _ )=> personDetailsContinueClickedModel.toJson());
   }
   final FirebaseFirestore firebaseFirestore;
-  late final CollectionReference _visitationsRef;
+  late  CollectionReference _visitationsRef;
 
   @override
   Future<String> personDetailsContinueClicked({required PersonDetailsContinueClickedModel personDetailsContinueClickedModel})async {

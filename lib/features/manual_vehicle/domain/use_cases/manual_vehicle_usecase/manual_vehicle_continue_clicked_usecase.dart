@@ -16,9 +16,12 @@ class ManualVehicleContinueClickedUseCase extends BaseUseCase<ManualVehicleConti
   Future<void> call({
     required Function(String? model)? onSuccess,
     required Function(BaseFailure? error)? onError,
-    ManualVehicleContinueClickedUseCaseParams? params}) {
-    // TODO: implement call
-    throw UnimplementedError();
+    ManualVehicleContinueClickedUseCaseParams? params})async {
+    await manualVehicleContinueClickedRepository.call(
+        onSuccess: (model)=>onSuccess!(model),
+        onError:(error)=> onError!(error),
+    params: ManualVehicleContinueClickedRepositoryParams(
+        manualVehicleContinueClickedModel: params!.manualVehicleContinueClickedModel));
   }
 }
 

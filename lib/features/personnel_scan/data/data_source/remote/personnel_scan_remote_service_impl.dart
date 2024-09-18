@@ -17,7 +17,7 @@ class PersonnelScanRemoteServiceImpl extends PersonnelScanRemoteService{
   }
 
   final FirebaseFirestore firebaseFirestore;
-  late final CollectionReference _visitationsRef;
+  late  CollectionReference _visitationsRef;
 
   @override
   Future<String> personnelScanContinueClicked({required PersonnelScanContinueClickedModel personnelScanContinueClickedModel}) async{

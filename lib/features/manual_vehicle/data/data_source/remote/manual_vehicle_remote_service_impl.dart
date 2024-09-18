@@ -11,7 +11,7 @@ class ManualVehicleRemoteServiceIMpl extends ManualVehicleRemoteService{
 
   ManualVehicleRemoteServiceIMpl({required this.firebaseFirestore});
   final FirebaseFirestore firebaseFirestore;
-  late final CollectionReference _visitationsRef;
+  late  CollectionReference _visitationsRef;
 
 
   @override

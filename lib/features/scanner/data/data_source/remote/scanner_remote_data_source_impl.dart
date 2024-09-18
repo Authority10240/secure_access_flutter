@@ -14,7 +14,7 @@ class ScannerRemoteDataSourceImpl extends ScannerRemoteDataSource{
   ScannerRemoteDataSourceImpl({required this.firebaseFirestore});
 
   final FirebaseFirestore firebaseFirestore;
-  late final CollectionReference _visitationsRef;
+  late  CollectionReference _visitationsRef;
   @override
   Future<String> scannerContinueClicked({required ScannerContinueClickedModel scannerContinueClickedModel}) async{
     try {
