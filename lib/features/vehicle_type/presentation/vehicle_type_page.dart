@@ -93,7 +93,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().manual,
                       iconWidget: HeroIcon(HeroIcons.camera, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to(const ManualVehiclePage());
+                        Get.to( ManualVehiclePage(referenceId: widget.referenceId,));
                       },
                     ),
 

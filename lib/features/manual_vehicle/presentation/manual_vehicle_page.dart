@@ -4,7 +4,6 @@ import 'package:secure_access/core/base_classes/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secure_access/core/base_classes/base_state.dart';
-import 'package:secure_access/core/colors.dart';
 import 'package:secure_access/core/locator.dart';
 import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
@@ -12,16 +11,17 @@ import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
 import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
-import 'package:secure_access/features/dashboard/presentation/widgets/transport_type_card.dart';
-import 'package:secure_access/features/identification_type/presentation/identification_type_page.dart';
+import 'package:secure_access/features/manual_vehicle/data/models/manual_vehicle_model_response/manual_vehicle_continue_clicked_model.dart';
 import 'package:secure_access/generated/l10n.dart';
-import 'package:image_picker/image_picker.dart';
+
 import 'bloc/manual_vehicle_bloc.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+
 
 
 class ManualVehiclePage extends BasePage {
-  const ManualVehiclePage({super.key});
+  const ManualVehiclePage({required this.referenceId, super.key});
+
+  final String referenceId;
 
   @override
   _ManualVehiclePageState createState() => _ManualVehiclePageState();
@@ -46,6 +46,8 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
   final TextEditingController _makeController = TextEditingController();
   final TextEditingController _modelController = TextEditingController();
   final TextEditingController _colorController = TextEditingController();
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
 
   @override
@@ -74,7 +76,7 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
             padding:  EdgeInsets.all(borderRadius),
             child:  Padding(
               padding:  EdgeInsets.all(pagePadding),
-              child: Column(
+              child: Form(key: _formKey ,child:Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     smallSpacer,
@@ -136,7 +138,19 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
                     CustomFormButton(
                         isActive: true,
                         onPressed: (){
-
+                          if(_formKey.currentState!.validate()){
+                            getBloc().add(ManualVehicleContinueClickedEvent(
+                                manualVehicleContinueClickedModel:
+                                ManualVehicleContinueClickedModel(
+                                    engineNumber: "",
+                                    licenseNumber: _licenseController.text.trim(),
+                                    regNumber: "",
+                                    vinNumber: "",
+                                    expiryYear: "",
+                                    make: _makeController.text.trim(),
+                                    model:_modelController.text.trim(),
+                                    identificationNumber: widget.referenceId)));
+                          }
                         },
                         buttonText: getLocalization().wcontinue),
 
@@ -145,6 +159,7 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
                   ]
               ),
             ),
+          ),
           ),
         );
       },
