@@ -155,6 +155,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("Terms & Conditions "),
         "truck": MessageLookupByLibrary.simpleMessage("Truck"),
+        "unitVisited": MessageLookupByLibrary.simpleMessage("Unit visited"),
         "username": MessageLookupByLibrary.simpleMessage("Username "),
         "vehicle": MessageLookupByLibrary.simpleMessage("Vehicle"),
         "viewAll": MessageLookupByLibrary.simpleMessage("View All"),

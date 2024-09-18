@@ -40,6 +40,7 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
   final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _mobileController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _unitController = TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -156,6 +157,15 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
                      validator: (value ) {
                      },
                    ),
+                   smallMediumSpacer,
+                   Text(appLocalizations.unitVisited, style:  textStyleDescription(),),
+                   labelSpacer,
+                   CustomTextField(
+                     controller: _unitController,
+                     labelText: getLocalization().unitVisited,
+                     validator: (value ) {
+                     },
+                   ),
 
                    largeSpacer,
                    CustomFormButton(
@@ -164,6 +174,7 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
                          getBloc().add(PersonnelScanContinueClickedEvent(
                              personnelScanContinueClickedModel:
                          PersonnelScanContinueClickedModel(
+                           unitVisited: _unitController.text.trim(),
                            dateTime: DateTime.now(),
                              identificationNumber: state.idNUmber,
                              identificationType: widget.identificationType == IdentificationType.id ? "id": "passport",

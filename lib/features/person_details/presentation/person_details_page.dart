@@ -46,6 +46,7 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
   final TextEditingController _idNumberController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _unitController = TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -155,12 +156,23 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
 
                     ),
 
+                    smallMediumSpacer,
+                    Text(appLocalizations.unitVisited, style:  textStyleDescription(),),
+                    labelSpacer,
+                    CustomTextField(
+                      controller: _unitController,
+                      labelText: getLocalization().unitVisited,
+                      validator: (value ) {
+                      },
+                    ),
+
                     largeSpacer,
                     CustomFormButton(
                         isActive: true,
                         onPressed: (){
                           getBloc().add(PersonDetailsContinueClickedEvent(
                               personDetailsContinueClickedModel:PersonDetailsContinueClickedModel(
+                                unitVisited: _unitController.text.trim(),
                                 dateTime: DateTime.now(),
                                   identificationNumber: _idNumberController.text.trim(),
                                   identificationType: IdentificationType.manual.toString() ,

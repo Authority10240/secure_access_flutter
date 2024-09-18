@@ -96,6 +96,8 @@
   "noIdentificationDocumentScanned": "No identification document scanned",
   "walkIn": "Walk in",
   "mobileNumber":"Mobile number",
-  "visitationLoggedSuccessfully": "Visitation logged successfully"
+  "visitationLoggedSuccessfully": "Visitation logged successfully",
+  "unitVisited": "Unit visited",
+
 
 }

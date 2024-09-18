@@ -21,6 +21,7 @@ _$PersonDetailsContinueClickedModelImpl
           dateTime: json['dateTime'] == null
               ? null
               : DateTime.parse(json['dateTime'] as String),
+          unitVisited: json['unitVisited'] as String?,
         );
 
 Map<String, dynamic> _$$PersonDetailsContinueClickedModelImplToJson(
@@ -35,4 +36,5 @@ Map<String, dynamic> _$$PersonDetailsContinueClickedModelImplToJson(
       'mobileNumber': instance.mobileNumber,
       'email': instance.email,
       'dateTime': instance.dateTime?.toIso8601String(),
+      'unitVisited': instance.unitVisited,
     };

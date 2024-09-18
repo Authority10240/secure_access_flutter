@@ -30,6 +30,7 @@ mixin _$PersonDetailsContinueClickedModel {
   String? get mobileNumber => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   DateTime? get dateTime => throw _privateConstructorUsedError;
+  String? get unitVisited => throw _privateConstructorUsedError;
 
   /// Serializes this PersonDetailsContinueClickedModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -58,7 +59,8 @@ abstract class $PersonDetailsContinueClickedModelCopyWith<$Res> {
       String? transportationType,
       String? mobileNumber,
       String? email,
-      DateTime? dateTime});
+      DateTime? dateTime,
+      String? unitVisited});
 }
 
 /// @nodoc
@@ -86,6 +88,7 @@ class _$PersonDetailsContinueClickedModelCopyWithImpl<$Res,
     Object? mobileNumber = freezed,
     Object? email = freezed,
     Object? dateTime = freezed,
+    Object? unitVisited = freezed,
   }) {
     return _then(_value.copyWith(
       identificationNumber: freezed == identificationNumber
@@ -124,6 +127,10 @@ class _$PersonDetailsContinueClickedModelCopyWithImpl<$Res,
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      unitVisited: freezed == unitVisited
+          ? _value.unitVisited
+          : unitVisited // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -146,7 +153,8 @@ abstract class _$$PersonDetailsContinueClickedModelImplCopyWith<$Res>
       String? transportationType,
       String? mobileNumber,
       String? email,
-      DateTime? dateTime});
+      DateTime? dateTime,
+      String? unitVisited});
 }
 
 /// @nodoc
@@ -173,6 +181,7 @@ class __$$PersonDetailsContinueClickedModelImplCopyWithImpl<$Res>
     Object? mobileNumber = freezed,
     Object? email = freezed,
     Object? dateTime = freezed,
+    Object? unitVisited = freezed,
   }) {
     return _then(_$PersonDetailsContinueClickedModelImpl(
       identificationNumber: freezed == identificationNumber
@@ -211,6 +220,10 @@ class __$$PersonDetailsContinueClickedModelImplCopyWithImpl<$Res>
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      unitVisited: freezed == unitVisited
+          ? _value.unitVisited
+          : unitVisited // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -229,7 +242,8 @@ class _$PersonDetailsContinueClickedModelImpl
       required this.transportationType,
       required this.mobileNumber,
       required this.email,
-      required this.dateTime});
+      required this.dateTime,
+      required this.unitVisited});
 
   factory _$PersonDetailsContinueClickedModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -253,10 +267,12 @@ class _$PersonDetailsContinueClickedModelImpl
   final String? email;
   @override
   final DateTime? dateTime;
+  @override
+  final String? unitVisited;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PersonDetailsContinueClickedModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, dateTime: $dateTime)';
+    return 'PersonDetailsContinueClickedModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, dateTime: $dateTime, unitVisited: $unitVisited)';
   }
 
   @override
@@ -272,7 +288,8 @@ class _$PersonDetailsContinueClickedModelImpl
       ..add(DiagnosticsProperty('transportationType', transportationType))
       ..add(DiagnosticsProperty('mobileNumber', mobileNumber))
       ..add(DiagnosticsProperty('email', email))
-      ..add(DiagnosticsProperty('dateTime', dateTime));
+      ..add(DiagnosticsProperty('dateTime', dateTime))
+      ..add(DiagnosticsProperty('unitVisited', unitVisited));
   }
 
   @override
@@ -296,7 +313,9 @@ class _$PersonDetailsContinueClickedModelImpl
                 other.mobileNumber == mobileNumber) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.dateTime, dateTime) ||
-                other.dateTime == dateTime));
+                other.dateTime == dateTime) &&
+            (identical(other.unitVisited, unitVisited) ||
+                other.unitVisited == unitVisited));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -311,7 +330,8 @@ class _$PersonDetailsContinueClickedModelImpl
       transportationType,
       mobileNumber,
       email,
-      dateTime);
+      dateTime,
+      unitVisited);
 
   /// Create a copy of PersonDetailsContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.
@@ -342,7 +362,8 @@ abstract class _PersonDetailsContinueClickedModel
           required final String? transportationType,
           required final String? mobileNumber,
           required final String? email,
-          required final DateTime? dateTime}) =
+          required final DateTime? dateTime,
+          required final String? unitVisited}) =
       _$PersonDetailsContinueClickedModelImpl;
 
   factory _PersonDetailsContinueClickedModel.fromJson(
@@ -367,6 +388,8 @@ abstract class _PersonDetailsContinueClickedModel
   String? get email;
   @override
   DateTime? get dateTime;
+  @override
+  String? get unitVisited;
 
   /// Create a copy of PersonDetailsContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.

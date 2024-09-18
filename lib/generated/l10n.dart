@@ -1011,6 +1011,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Unit visited`
+  String get unitVisited {
+    return Intl.message(
+      'Unit visited',
+      name: 'unitVisited',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
