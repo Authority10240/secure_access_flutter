@@ -149,7 +149,8 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
                                     expiryYear: "",
                                     make: _makeController.text.trim(),
                                     model:_modelController.text.trim(),
-                                    identificationNumber: widget.referenceId)));
+                                    identificationNumber: widget.referenceId,
+                                color: _colorController.text.trim())));
                           }
                         },
                         buttonText: getLocalization().wcontinue),

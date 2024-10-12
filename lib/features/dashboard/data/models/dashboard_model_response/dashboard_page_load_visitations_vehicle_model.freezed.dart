@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'manual_vehicle_continue_clicked_model.dart';
+part of 'dashboard_page_load_visitations_vehicle_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,14 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-ManualVehicleContinueClickedModel _$ManualVehicleContinueClickedModelFromJson(
-    Map<String, dynamic> json) {
-  return _ManualVehicleContinueClickedModel.fromJson(json);
+DashboardPageLoadVisitationsVehicleModel
+    _$DashboardPageLoadVisitationsVehicleModelFromJson(
+        Map<String, dynamic> json) {
+  return _DashboardPageLoadVisitationsVehicleModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ManualVehicleContinueClickedModel {
+mixin _$DashboardPageLoadVisitationsVehicleModel {
   String? get engineNumber => throw _privateConstructorUsedError;
   String? get licenseNumber => throw _privateConstructorUsedError;
   String? get regNumber => throw _privateConstructorUsedError;
@@ -31,23 +32,24 @@ mixin _$ManualVehicleContinueClickedModel {
   String? get identificationNumber => throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
 
-  /// Serializes this ManualVehicleContinueClickedModel to a JSON map.
+  /// Serializes this DashboardPageLoadVisitationsVehicleModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of ManualVehicleContinueClickedModel
+  /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ManualVehicleContinueClickedModelCopyWith<ManualVehicleContinueClickedModel>
+  $DashboardPageLoadVisitationsVehicleModelCopyWith<
+          DashboardPageLoadVisitationsVehicleModel>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ManualVehicleContinueClickedModelCopyWith<$Res> {
-  factory $ManualVehicleContinueClickedModelCopyWith(
-          ManualVehicleContinueClickedModel value,
-          $Res Function(ManualVehicleContinueClickedModel) then) =
-      _$ManualVehicleContinueClickedModelCopyWithImpl<$Res,
-          ManualVehicleContinueClickedModel>;
+abstract class $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res> {
+  factory $DashboardPageLoadVisitationsVehicleModelCopyWith(
+          DashboardPageLoadVisitationsVehicleModel value,
+          $Res Function(DashboardPageLoadVisitationsVehicleModel) then) =
+      _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
+          DashboardPageLoadVisitationsVehicleModel>;
   @useResult
   $Res call(
       {String? engineNumber,
@@ -62,17 +64,18 @@ abstract class $ManualVehicleContinueClickedModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ManualVehicleContinueClickedModelCopyWithImpl<$Res,
-        $Val extends ManualVehicleContinueClickedModel>
-    implements $ManualVehicleContinueClickedModelCopyWith<$Res> {
-  _$ManualVehicleContinueClickedModelCopyWithImpl(this._value, this._then);
+class _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
+        $Val extends DashboardPageLoadVisitationsVehicleModel>
+    implements $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res> {
+  _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl(
+      this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ManualVehicleContinueClickedModel
+  /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -129,12 +132,12 @@ class _$ManualVehicleContinueClickedModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ManualVehicleContinueClickedModelImplCopyWith<$Res>
-    implements $ManualVehicleContinueClickedModelCopyWith<$Res> {
-  factory _$$ManualVehicleContinueClickedModelImplCopyWith(
-          _$ManualVehicleContinueClickedModelImpl value,
-          $Res Function(_$ManualVehicleContinueClickedModelImpl) then) =
-      __$$ManualVehicleContinueClickedModelImplCopyWithImpl<$Res>;
+abstract class _$$DashboardPageLoadVisitationsVehicleModelImplCopyWith<$Res>
+    implements $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res> {
+  factory _$$DashboardPageLoadVisitationsVehicleModelImplCopyWith(
+          _$DashboardPageLoadVisitationsVehicleModelImpl value,
+          $Res Function(_$DashboardPageLoadVisitationsVehicleModelImpl) then) =
+      __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -150,16 +153,16 @@ abstract class _$$ManualVehicleContinueClickedModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ManualVehicleContinueClickedModelImplCopyWithImpl<$Res>
-    extends _$ManualVehicleContinueClickedModelCopyWithImpl<$Res,
-        _$ManualVehicleContinueClickedModelImpl>
-    implements _$$ManualVehicleContinueClickedModelImplCopyWith<$Res> {
-  __$$ManualVehicleContinueClickedModelImplCopyWithImpl(
-      _$ManualVehicleContinueClickedModelImpl _value,
-      $Res Function(_$ManualVehicleContinueClickedModelImpl) _then)
+class __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>
+    extends _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
+        _$DashboardPageLoadVisitationsVehicleModelImpl>
+    implements _$$DashboardPageLoadVisitationsVehicleModelImplCopyWith<$Res> {
+  __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl(
+      _$DashboardPageLoadVisitationsVehicleModelImpl _value,
+      $Res Function(_$DashboardPageLoadVisitationsVehicleModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ManualVehicleContinueClickedModel
+  /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -174,7 +177,7 @@ class __$$ManualVehicleContinueClickedModelImplCopyWithImpl<$Res>
     Object? identificationNumber = freezed,
     Object? color = freezed,
   }) {
-    return _then(_$ManualVehicleContinueClickedModelImpl(
+    return _then(_$DashboardPageLoadVisitationsVehicleModelImpl(
       engineNumber: freezed == engineNumber
           ? _value.engineNumber
           : engineNumber // ignore: cast_nullable_to_non_nullable
@@ -217,10 +220,10 @@ class __$$ManualVehicleContinueClickedModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ManualVehicleContinueClickedModelImpl
+class _$DashboardPageLoadVisitationsVehicleModelImpl
     with DiagnosticableTreeMixin
-    implements _ManualVehicleContinueClickedModel {
-  const _$ManualVehicleContinueClickedModelImpl(
+    implements _DashboardPageLoadVisitationsVehicleModel {
+  const _$DashboardPageLoadVisitationsVehicleModelImpl(
       {required this.engineNumber,
       required this.licenseNumber,
       required this.regNumber,
@@ -231,9 +234,9 @@ class _$ManualVehicleContinueClickedModelImpl
       required this.identificationNumber,
       required this.color});
 
-  factory _$ManualVehicleContinueClickedModelImpl.fromJson(
+  factory _$DashboardPageLoadVisitationsVehicleModelImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$ManualVehicleContinueClickedModelImplFromJson(json);
+      _$$DashboardPageLoadVisitationsVehicleModelImplFromJson(json);
 
   @override
   final String? engineNumber;
@@ -256,14 +259,15 @@ class _$ManualVehicleContinueClickedModelImpl
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ManualVehicleContinueClickedModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, color: $color)';
+    return 'DashboardPageLoadVisitationsVehicleModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, color: $color)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'ManualVehicleContinueClickedModel'))
+      ..add(DiagnosticsProperty(
+          'type', 'DashboardPageLoadVisitationsVehicleModel'))
       ..add(DiagnosticsProperty('engineNumber', engineNumber))
       ..add(DiagnosticsProperty('licenseNumber', licenseNumber))
       ..add(DiagnosticsProperty('regNumber', regNumber))
@@ -279,7 +283,7 @@ class _$ManualVehicleContinueClickedModelImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ManualVehicleContinueClickedModelImpl &&
+            other is _$DashboardPageLoadVisitationsVehicleModelImpl &&
             (identical(other.engineNumber, engineNumber) ||
                 other.engineNumber == engineNumber) &&
             (identical(other.licenseNumber, licenseNumber) ||
@@ -311,40 +315,42 @@ class _$ManualVehicleContinueClickedModelImpl
       identificationNumber,
       color);
 
-  /// Create a copy of ManualVehicleContinueClickedModel
+  /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ManualVehicleContinueClickedModelImplCopyWith<
-          _$ManualVehicleContinueClickedModelImpl>
-      get copyWith => __$$ManualVehicleContinueClickedModelImplCopyWithImpl<
-          _$ManualVehicleContinueClickedModelImpl>(this, _$identity);
+  _$$DashboardPageLoadVisitationsVehicleModelImplCopyWith<
+          _$DashboardPageLoadVisitationsVehicleModelImpl>
+      get copyWith =>
+          __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<
+              _$DashboardPageLoadVisitationsVehicleModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ManualVehicleContinueClickedModelImplToJson(
+    return _$$DashboardPageLoadVisitationsVehicleModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ManualVehicleContinueClickedModel
-    implements ManualVehicleContinueClickedModel {
-  const factory _ManualVehicleContinueClickedModel(
-      {required final String? engineNumber,
-      required final String? licenseNumber,
-      required final String? regNumber,
-      required final String? vinNumber,
-      required final String? expiryYear,
-      required final String? make,
-      required final String? model,
-      required final String? identificationNumber,
-      required final String? color}) = _$ManualVehicleContinueClickedModelImpl;
+abstract class _DashboardPageLoadVisitationsVehicleModel
+    implements DashboardPageLoadVisitationsVehicleModel {
+  const factory _DashboardPageLoadVisitationsVehicleModel(
+          {required final String? engineNumber,
+          required final String? licenseNumber,
+          required final String? regNumber,
+          required final String? vinNumber,
+          required final String? expiryYear,
+          required final String? make,
+          required final String? model,
+          required final String? identificationNumber,
+          required final String? color}) =
+      _$DashboardPageLoadVisitationsVehicleModelImpl;
 
-  factory _ManualVehicleContinueClickedModel.fromJson(
+  factory _DashboardPageLoadVisitationsVehicleModel.fromJson(
           Map<String, dynamic> json) =
-      _$ManualVehicleContinueClickedModelImpl.fromJson;
+      _$DashboardPageLoadVisitationsVehicleModelImpl.fromJson;
 
   @override
   String? get engineNumber;
@@ -365,11 +371,11 @@ abstract class _ManualVehicleContinueClickedModel
   @override
   String? get color;
 
-  /// Create a copy of ManualVehicleContinueClickedModel
+  /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ManualVehicleContinueClickedModelImplCopyWith<
-          _$ManualVehicleContinueClickedModelImpl>
+  _$$DashboardPageLoadVisitationsVehicleModelImplCopyWith<
+          _$DashboardPageLoadVisitationsVehicleModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

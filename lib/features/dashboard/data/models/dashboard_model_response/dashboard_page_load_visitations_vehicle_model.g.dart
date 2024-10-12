@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'manual_vehicle_continue_clicked_model.dart';
+part of 'dashboard_page_load_visitations_vehicle_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ManualVehicleContinueClickedModelImpl
-    _$$ManualVehicleContinueClickedModelImplFromJson(
+_$DashboardPageLoadVisitationsVehicleModelImpl
+    _$$DashboardPageLoadVisitationsVehicleModelImplFromJson(
             Map<String, dynamic> json) =>
-        _$ManualVehicleContinueClickedModelImpl(
+        _$DashboardPageLoadVisitationsVehicleModelImpl(
           engineNumber: json['engineNumber'] as String?,
           licenseNumber: json['licenseNumber'] as String?,
           regNumber: json['regNumber'] as String?,
@@ -21,8 +21,8 @@ _$ManualVehicleContinueClickedModelImpl
           color: json['color'] as String?,
         );
 
-Map<String, dynamic> _$$ManualVehicleContinueClickedModelImplToJson(
-        _$ManualVehicleContinueClickedModelImpl instance) =>
+Map<String, dynamic> _$$DashboardPageLoadVisitationsVehicleModelImplToJson(
+        _$DashboardPageLoadVisitationsVehicleModelImpl instance) =>
     <String, dynamic>{
       'engineNumber': instance.engineNumber,
       'licenseNumber': instance.licenseNumber,

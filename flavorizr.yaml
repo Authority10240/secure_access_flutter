@@ -7,7 +7,7 @@ flavors:
     ios:
       bundleId: "progressive.app.secureaccess.dev"
     macos:
-      bundleId: "progressive.app.secure_access.deve"
+      bundleId: "progressive.app.secure_access.dev"
 
 
   uat:

@@ -97,7 +97,12 @@
   "walkIn": "Walk in",
   "mobileNumber":"Mobile number",
   "visitationLoggedSuccessfully": "Visitation logged successfully",
-  "unitVisited": "Unit visited"
+  "unitVisited": "Unit visited",
+  "whoHasBeenHereToday": "Who has been here today?",
+  "testMe": "Test me",
+  "wasDrivingA": "Was driving a",
+  "back": "Back",
+  "drivein": "Drive in"
 
 
 }

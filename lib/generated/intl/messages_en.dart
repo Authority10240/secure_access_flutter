@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appName": MessageLookupByLibrary.simpleMessage("Secure Access "),
         "authenticateUsingBiometrics": MessageLookupByLibrary.simpleMessage(
             "Authenticate using biometrics "),
+        "back": MessageLookupByLibrary.simpleMessage("Back"),
         "bike": MessageLookupByLibrary.simpleMessage("Bike"),
         "biometrics": MessageLookupByLibrary.simpleMessage("Biometrics"),
         "bus": MessageLookupByLibrary.simpleMessage("Bus"),
@@ -48,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
+        "drivein": MessageLookupByLibrary.simpleMessage("Drive in"),
         "emailAddress":
             MessageLookupByLibrary.simpleMessage("Email Address * "),
         "enableBiometrics":
@@ -154,6 +156,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "surname": MessageLookupByLibrary.simpleMessage("Surname *"),
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("Terms & Conditions "),
+        "testMe": MessageLookupByLibrary.simpleMessage("Test me"),
         "truck": MessageLookupByLibrary.simpleMessage("Truck"),
         "unitVisited": MessageLookupByLibrary.simpleMessage("Unit visited"),
         "username": MessageLookupByLibrary.simpleMessage("Username "),
@@ -165,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "visitorIsDrivingA":
             MessageLookupByLibrary.simpleMessage("Visitor is driving a"),
         "walkIn": MessageLookupByLibrary.simpleMessage("Walk in"),
+        "wasDrivingA": MessageLookupByLibrary.simpleMessage("Was driving a"),
         "wcontinue": MessageLookupByLibrary.simpleMessage("Continue"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "welcomeTo": MessageLookupByLibrary.simpleMessage("Welcome to "),
@@ -173,6 +177,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "What kind of identification do they have?"),
         "whatTypeOfVehicleAreTheyDriving": MessageLookupByLibrary.simpleMessage(
             "What type of vehicle are they driving?"),
+        "whoHasBeenHereToday":
+            MessageLookupByLibrary.simpleMessage("Who has been here today?"),
         "whoIsVisitingToday":
             MessageLookupByLibrary.simpleMessage("Who is visiting today?")
       };

@@ -1021,6 +1021,56 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Who has been here today?`
+  String get whoHasBeenHereToday {
+    return Intl.message(
+      'Who has been here today?',
+      name: 'whoHasBeenHereToday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Test me`
+  String get testMe {
+    return Intl.message(
+      'Test me',
+      name: 'testMe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Was driving a`
+  String get wasDrivingA {
+    return Intl.message(
+      'Was driving a',
+      name: 'wasDrivingA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get back {
+    return Intl.message(
+      'Back',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drive in`
+  String get drivein {
+    return Intl.message(
+      'Drive in',
+      name: 'drivein',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
