@@ -38,7 +38,7 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
 
     @override
   PreferredSizeWidget? buildAppbar() {
-    return null;
+      return  AppBar(iconTheme: const IconThemeData(color: Colors.blue),);
   }
 
   final TextEditingController _descriptionController = TextEditingController();

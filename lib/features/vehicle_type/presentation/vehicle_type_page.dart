@@ -34,7 +34,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
 
     @override
   PreferredSizeWidget? buildAppbar() {
-    return null;
+      return  AppBar(iconTheme: const IconThemeData(color: Colors.blue),);
   }
 
   @override

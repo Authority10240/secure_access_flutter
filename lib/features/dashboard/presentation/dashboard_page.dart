@@ -93,6 +93,9 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
                             stream: state.visitations,
                             builder: (context, snapshot){
                               List<QueryDocumentSnapshot<DashboardPageLoadVisitationsModel?>>? data = snapshot.data?.docs??[];
+                              if(snapshot == null){
+                                return preloaderWidget();
+                              }else{
                               return ListView.builder(
                                 itemCount: snapshot.data?.docs.length,
                                   itemBuilder: (context, index){
@@ -119,7 +122,7 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
                                       }
                                   },))),);
                               });
-                        }))
+                        }}))
                       ]
                   ),
                 ),

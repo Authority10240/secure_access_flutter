@@ -36,7 +36,7 @@ class _IdentificationTypePageState extends BasePageState<IdentificationTypePage,
 
     @override
   PreferredSizeWidget? buildAppbar() {
-    return null;
+   return  AppBar(iconTheme: const IconThemeData(color: Colors.blue),);
   }
 
   @override
@@ -113,6 +113,8 @@ class _IdentificationTypePageState extends BasePageState<IdentificationTypePage,
   AppLocalizations initLocalization() {
     return locator<AppLocalizations>();
   }
+
+
 
 
 }

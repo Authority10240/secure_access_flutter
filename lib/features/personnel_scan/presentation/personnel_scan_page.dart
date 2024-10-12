@@ -62,7 +62,7 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
 
     @override
   PreferredSizeWidget? buildAppbar() {
-    return null;
+      return  AppBar(iconTheme: const IconThemeData(color: Colors.blue),);
   }
 
   @override
