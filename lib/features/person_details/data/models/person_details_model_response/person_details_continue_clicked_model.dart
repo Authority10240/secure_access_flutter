@@ -15,8 +15,9 @@ class PersonDetailsContinueClickedModel with _$PersonDetailsContinueClickedModel
     required String? transportationType,
     required String? mobileNumber,
     required String? email,
-    required DateTime? dateTime,
-    required String? unitVisited
+    required String? date,
+    required String? unit,
+    required String? time
   }) = _PersonDetailsContinueClickedModel;
 
   factory PersonDetailsContinueClickedModel.fromJson(

@@ -4,6 +4,7 @@ import 'package:secure_access/core/base_classes/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secure_access/core/base_classes/base_state.dart';
+import 'package:secure_access/core/constants/date.dart';
 import 'package:secure_access/core/locator.dart';
 import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
@@ -19,9 +20,11 @@ import 'bloc/manual_vehicle_bloc.dart';
 
 
 class ManualVehiclePage extends BasePage {
-  const ManualVehiclePage({required this.referenceId, super.key});
+  const ManualVehiclePage({required this.id,required this.unit,required this.referenceId, super.key});
 
   final String referenceId;
+  final String unit;
+  final String id;
 
   @override
   _ManualVehiclePageState createState() => _ManualVehiclePageState();
@@ -142,6 +145,10 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
                             getBloc().add(ManualVehicleContinueClickedEvent(
                                 manualVehicleContinueClickedModel:
                                 ManualVehicleContinueClickedModel(
+                                  time: timeNow,
+                                  id: widget.id,
+                                  date: todaysDate,
+                                  unit: widget.unit,
                                     engineNumber: "",
                                     licenseNumber: _licenseController.text.trim(),
                                     regNumber: "",
@@ -150,6 +157,7 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
                                     make: _makeController.text.trim(),
                                     model:_modelController.text.trim(),
                                     identificationNumber: widget.referenceId,
+                                    description: _descriptionController.text.trim(),
                                 color: _colorController.text.trim())));
                           }
                         },

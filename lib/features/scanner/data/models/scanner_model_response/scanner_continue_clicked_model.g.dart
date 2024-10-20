@@ -17,6 +17,10 @@ _$ScannerContinueClickedModelImpl _$$ScannerContinueClickedModelImplFromJson(
       make: json['make'] as String?,
       model: json['model'] as String?,
       identificationNumber: json['identificationNumber'] as String?,
+      date: json['date'] as String?,
+      unitVisited: json['unitVisited'] as String?,
+      id: json['id'] as String?,
+      time: json['time'] as String?,
     );
 
 Map<String, dynamic> _$$ScannerContinueClickedModelImplToJson(
@@ -30,4 +34,8 @@ Map<String, dynamic> _$$ScannerContinueClickedModelImplToJson(
       'make': instance.make,
       'model': instance.model,
       'identificationNumber': instance.identificationNumber,
+      'date': instance.date,
+      'unitVisited': instance.unitVisited,
+      'id': instance.id,
+      'time': instance.time,
     };

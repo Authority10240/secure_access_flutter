@@ -21,7 +21,7 @@ class SecureAccessApp{
 
  static  void run(){
     return runApp(
-        GetMaterialApp(
+        const GetMaterialApp(
           localizationsDelegates:  [
             AppLocalizations.delegate,
           ],

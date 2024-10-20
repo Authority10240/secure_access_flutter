@@ -16,8 +16,13 @@ import 'package:secure_access/generated/l10n.dart';
 
 
 class VehicleTypePage extends BasePage {
-  const VehicleTypePage({required this.referenceId, super.key});
+  const VehicleTypePage({
+    required this.id,
+    required this.unit,
+    required this.referenceId, super.key});
   final String referenceId;
+  final String unit;
+  final String id;
 
   @override
   _VehicleTypePageState createState() => _VehicleTypePageState();
@@ -61,7 +66,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().car,
                       iconWidget: Icon(Icons.car_crash_outlined, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to( ScannerPage(referenceId: widget.referenceId,));
+                        Get.to( ScannerPage(id: widget.id,unit: widget.unit,referenceId: widget.referenceId,));
                       },
                     ),
 
@@ -69,7 +74,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().truck,
                       iconWidget: HeroIcon(HeroIcons.truck, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to( ScannerPage(referenceId: widget.referenceId,));
+                        Get.to( ScannerPage(id: widget.id,unit: widget.unit,referenceId: widget.referenceId,));
                       },
                     ),
 
@@ -77,7 +82,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().bike,
                       iconWidget: Icon(Icons.directions_bike_sharp, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to( ScannerPage(referenceId: widget.referenceId,));
+                        Get.to( ScannerPage(id: widget.id,unit: widget.unit,referenceId: widget.referenceId,));
                       },
                     ),
 
@@ -85,7 +90,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().bus,
                       iconWidget: Icon(Icons.bus_alert, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to( ScannerPage(referenceId: widget.referenceId,));
+                        Get.to( ScannerPage(id: widget.id,unit: widget.unit,referenceId: widget.referenceId,));
                       },
                     ),
 
@@ -93,7 +98,7 @@ class _VehicleTypePageState extends BasePageState<VehicleTypePage, VehicleTypeBl
                       caption: getLocalization().manual,
                       iconWidget: HeroIcon(HeroIcons.camera, size: 50, color: AppColorScheme.primary),
                       ontap: (){
-                        Get.to( ManualVehiclePage(referenceId: widget.referenceId,));
+                        Get.to( ManualVehiclePage(id :widget.id,unit: widget.unit,referenceId: widget.referenceId,));
                       },
                     ),
 

@@ -18,14 +18,9 @@ _$DashboardPageLoadVisitationsModelImpl
           transportationType: json['transportationType'] as String?,
           mobileNumber: json['mobileNumber'] as String?,
           email: json['email'] as String?,
-          dateTime: json['dateTime'] == null
-              ? null
-              : DateTime.parse(json['dateTime'] as String),
-          unitVisited: json['unitVisited'] as String?,
-          vehicle: json['vehicle'] == null
-              ? null
-              : DashboardPageLoadVisitationsVehicleModel.fromJson(
-                  json['vehicle'] as Map<String, dynamic>),
+          date: json['date'] as String?,
+          unit: json['unit'] as String?,
+          time: json['time'] as String?,
         );
 
 Map<String, dynamic> _$$DashboardPageLoadVisitationsModelImplToJson(
@@ -39,7 +34,7 @@ Map<String, dynamic> _$$DashboardPageLoadVisitationsModelImplToJson(
       'transportationType': instance.transportationType,
       'mobileNumber': instance.mobileNumber,
       'email': instance.email,
-      'dateTime': instance.dateTime?.toIso8601String(),
-      'unitVisited': instance.unitVisited,
-      'vehicle': instance.vehicle,
+      'date': instance.date,
+      'unit': instance.unit,
+      'time': instance.time,
     };

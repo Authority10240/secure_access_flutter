@@ -46,7 +46,8 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
   Widget buildView(BuildContext context) {
     return BlocConsumer<DashboardBloc, DashboardPageState>(
       listener: (context, state){
-        if(state is DashBoardPageLoadVisitationVehicleState){
+        if(state is DashBoardPageLoadVisitationVehicleState
+            ){
 
           if(state.dataState == DataState.loading) {
             preloaderWidgetOverlay(context);
@@ -86,26 +87,22 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
                         smallSpacer,
                         Center(child: Text(appLocalizations.whoHasBeenHereToday, style: textStyleDirectives(),)),
                         mediumSpacer,
-                        SizedBox(
-                          height: 500,
-                            child:
                         StreamBuilder<QuerySnapshot<DashboardPageLoadVisitationsModel?>>(
                             stream: state.visitations,
                             builder: (context, snapshot){
                               List<QueryDocumentSnapshot<DashboardPageLoadVisitationsModel?>>? data = snapshot.data?.docs??[];
-                              if(snapshot == null){
-                                return preloaderWidget();
-                              }else{
                               return ListView.builder(
-                                itemCount: snapshot.data?.docs.length,
+                                shrinkWrap: true,
+                                physics: const NeverScrollableScrollPhysics(),
+                                itemCount: snapshot.data?.docs.length??0,
                                   itemBuilder: (context, index){
                                   DashboardPageLoadVisitationsModel? visitation = snapshot.data?.docs.elementAt(index).data();
                                   String? visitationId  = snapshot.data?.docs.elementAt(index).id;
                                   return Card(elevation: 11,child: Container( child: ListTile(
-                                    leading: Text("Unit: ${visitation?.unitVisited??""}",style: textStyleSubHeading(),),
-                                    title: Text("Name: ${visitation?.firstName??""}\n"
-                                        "Surname: ${visitation?.lastName??""}",style: textStyleSubHeading(),),
-                                    subtitle: Text("Date: ${visitation?.dateTime!.toString().toFormattedDate()} Time:${visitation?.dateTime!.toString().toFormattedTime()}",),
+                                    leading: Text("Unit: ${visitation?.unit??""}",style: textStyleSubHeading(),),
+                                    title: Text("${appLocalizations.name}: ${visitation?.firstName??""}\n"
+                                        "${appLocalizations.surname}: ${visitation?.lastName??""}",style: textStyleSubHeading(),),
+                                    subtitle: Text("Date: ${visitation?.date!} Time:${visitation?.time}",),
                                     trailing: InkWell(
                                     child: Icon(
                                         visitation?.transportationType == TransportationType.driveIn.toString()?
@@ -116,13 +113,13 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
                                       if(visitation?.transportationType == TransportationType.driveIn.toString()) {
                                         getBloc().add(DashBoardPageLoadVisitationVehicleEvent(
                                             dashboardPageLoadVisitationsModel: visitation!,
-                                            visitationId: visitationId!));
+                                            visitationId: visitation.identificationNumber!));
                                       }else{
                                         Get.snackbar('Walk in', '${visitation?.firstName} ${visitation?.lastName} walked in');
                                       }
                                   },))),);
                               });
-                        }}))
+                        })
                       ]
                   ),
                 ),

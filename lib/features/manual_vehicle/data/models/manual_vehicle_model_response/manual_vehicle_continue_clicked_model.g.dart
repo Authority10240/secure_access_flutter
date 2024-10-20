@@ -17,8 +17,13 @@ _$ManualVehicleContinueClickedModelImpl
           expiryYear: json['expiryYear'] as String?,
           make: json['make'] as String?,
           model: json['model'] as String?,
+          description: json['description'] as String?,
           identificationNumber: json['identificationNumber'] as String?,
           color: json['color'] as String?,
+          unit: json['unit'] as String?,
+          date: json['date'] as String?,
+          id: json['id'] as String?,
+          time: json['time'] as String?,
         );
 
 Map<String, dynamic> _$$ManualVehicleContinueClickedModelImplToJson(
@@ -31,6 +36,11 @@ Map<String, dynamic> _$$ManualVehicleContinueClickedModelImplToJson(
       'expiryYear': instance.expiryYear,
       'make': instance.make,
       'model': instance.model,
+      'description': instance.description,
       'identificationNumber': instance.identificationNumber,
       'color': instance.color,
+      'unit': instance.unit,
+      'date': instance.date,
+      'id': instance.id,
+      'time': instance.time,
     };

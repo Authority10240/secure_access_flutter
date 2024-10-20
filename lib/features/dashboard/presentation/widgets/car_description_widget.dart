@@ -42,7 +42,7 @@ void carDescriptionDialog({
                       smallMediumSpacer,
                       Text(appLocalizations.description, style:  textStyleDirectives(),),
                       labelSpacer,
-                      Text(vehicle?.regNumber??'', style:  textStyleDescription(),),
+                      Text(vehicle?.description??'', style:  textStyleDescription(),),
 
                       smallMediumSpacer,
                       Text(appLocalizations.color, style:  textStyleDirectives(),),

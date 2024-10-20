@@ -16,5 +16,6 @@ class ScanQrState extends PersonnelScanPageState{
 
 class PersonnelScanContinueClickedState extends PersonnelScanPageState{
   final String? referenceId;
-  PersonnelScanContinueClickedState({this.referenceId,super.errorCode, super.errorMessage,super.idNUmber});
+  final String? idNumber;
+  PersonnelScanContinueClickedState({this.idNumber,this.referenceId,super.errorCode, super.errorMessage,super.idNUmber});
 }

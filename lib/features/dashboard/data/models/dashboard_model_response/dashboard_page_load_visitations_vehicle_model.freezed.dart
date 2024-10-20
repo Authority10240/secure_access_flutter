@@ -25,12 +25,16 @@ mixin _$DashboardPageLoadVisitationsVehicleModel {
   String? get engineNumber => throw _privateConstructorUsedError;
   String? get licenseNumber => throw _privateConstructorUsedError;
   String? get regNumber => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   String? get vinNumber => throw _privateConstructorUsedError;
   String? get expiryYear => throw _privateConstructorUsedError;
   String? get make => throw _privateConstructorUsedError;
   String? get model => throw _privateConstructorUsedError;
   String? get identificationNumber => throw _privateConstructorUsedError;
+  String? get date => throw _privateConstructorUsedError;
+  String? get unit => throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
+  String? get time => throw _privateConstructorUsedError;
 
   /// Serializes this DashboardPageLoadVisitationsVehicleModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -55,12 +59,16 @@ abstract class $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res> {
       {String? engineNumber,
       String? licenseNumber,
       String? regNumber,
+      String? description,
       String? vinNumber,
       String? expiryYear,
       String? make,
       String? model,
       String? identificationNumber,
-      String? color});
+      String? date,
+      String? unit,
+      String? color,
+      String? time});
 }
 
 /// @nodoc
@@ -83,12 +91,16 @@ class _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
     Object? engineNumber = freezed,
     Object? licenseNumber = freezed,
     Object? regNumber = freezed,
+    Object? description = freezed,
     Object? vinNumber = freezed,
     Object? expiryYear = freezed,
     Object? make = freezed,
     Object? model = freezed,
     Object? identificationNumber = freezed,
+    Object? date = freezed,
+    Object? unit = freezed,
     Object? color = freezed,
+    Object? time = freezed,
   }) {
     return _then(_value.copyWith(
       engineNumber: freezed == engineNumber
@@ -102,6 +114,10 @@ class _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
       regNumber: freezed == regNumber
           ? _value.regNumber
           : regNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       vinNumber: freezed == vinNumber
           ? _value.vinNumber
@@ -123,9 +139,21 @@ class _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
           ? _value.identificationNumber
           : identificationNumber // ignore: cast_nullable_to_non_nullable
               as String?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unit: freezed == unit
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
+              as String?,
+      time: freezed == time
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -144,12 +172,16 @@ abstract class _$$DashboardPageLoadVisitationsVehicleModelImplCopyWith<$Res>
       {String? engineNumber,
       String? licenseNumber,
       String? regNumber,
+      String? description,
       String? vinNumber,
       String? expiryYear,
       String? make,
       String? model,
       String? identificationNumber,
-      String? color});
+      String? date,
+      String? unit,
+      String? color,
+      String? time});
 }
 
 /// @nodoc
@@ -170,12 +202,16 @@ class __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>
     Object? engineNumber = freezed,
     Object? licenseNumber = freezed,
     Object? regNumber = freezed,
+    Object? description = freezed,
     Object? vinNumber = freezed,
     Object? expiryYear = freezed,
     Object? make = freezed,
     Object? model = freezed,
     Object? identificationNumber = freezed,
+    Object? date = freezed,
+    Object? unit = freezed,
     Object? color = freezed,
+    Object? time = freezed,
   }) {
     return _then(_$DashboardPageLoadVisitationsVehicleModelImpl(
       engineNumber: freezed == engineNumber
@@ -189,6 +225,10 @@ class __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>
       regNumber: freezed == regNumber
           ? _value.regNumber
           : regNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       vinNumber: freezed == vinNumber
           ? _value.vinNumber
@@ -210,9 +250,21 @@ class __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>
           ? _value.identificationNumber
           : identificationNumber // ignore: cast_nullable_to_non_nullable
               as String?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unit: freezed == unit
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
+              as String?,
+      time: freezed == time
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -227,12 +279,16 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
       {required this.engineNumber,
       required this.licenseNumber,
       required this.regNumber,
+      required this.description,
       required this.vinNumber,
       required this.expiryYear,
       required this.make,
       required this.model,
       required this.identificationNumber,
-      required this.color});
+      required this.date,
+      required this.unit,
+      required this.color,
+      required this.time});
 
   factory _$DashboardPageLoadVisitationsVehicleModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -245,6 +301,8 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
   @override
   final String? regNumber;
   @override
+  final String? description;
+  @override
   final String? vinNumber;
   @override
   final String? expiryYear;
@@ -255,11 +313,17 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
   @override
   final String? identificationNumber;
   @override
+  final String? date;
+  @override
+  final String? unit;
+  @override
   final String? color;
+  @override
+  final String? time;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DashboardPageLoadVisitationsVehicleModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, color: $color)';
+    return 'DashboardPageLoadVisitationsVehicleModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, description: $description, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, date: $date, unit: $unit, color: $color, time: $time)';
   }
 
   @override
@@ -271,12 +335,16 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
       ..add(DiagnosticsProperty('engineNumber', engineNumber))
       ..add(DiagnosticsProperty('licenseNumber', licenseNumber))
       ..add(DiagnosticsProperty('regNumber', regNumber))
+      ..add(DiagnosticsProperty('description', description))
       ..add(DiagnosticsProperty('vinNumber', vinNumber))
       ..add(DiagnosticsProperty('expiryYear', expiryYear))
       ..add(DiagnosticsProperty('make', make))
       ..add(DiagnosticsProperty('model', model))
       ..add(DiagnosticsProperty('identificationNumber', identificationNumber))
-      ..add(DiagnosticsProperty('color', color));
+      ..add(DiagnosticsProperty('date', date))
+      ..add(DiagnosticsProperty('unit', unit))
+      ..add(DiagnosticsProperty('color', color))
+      ..add(DiagnosticsProperty('time', time));
   }
 
   @override
@@ -290,6 +358,8 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
                 other.licenseNumber == licenseNumber) &&
             (identical(other.regNumber, regNumber) ||
                 other.regNumber == regNumber) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.vinNumber, vinNumber) ||
                 other.vinNumber == vinNumber) &&
             (identical(other.expiryYear, expiryYear) ||
@@ -298,7 +368,10 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
             (identical(other.model, model) || other.model == model) &&
             (identical(other.identificationNumber, identificationNumber) ||
                 other.identificationNumber == identificationNumber) &&
-            (identical(other.color, color) || other.color == color));
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.unit, unit) || other.unit == unit) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.time, time) || other.time == time));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -308,12 +381,16 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
       engineNumber,
       licenseNumber,
       regNumber,
+      description,
       vinNumber,
       expiryYear,
       make,
       model,
       identificationNumber,
-      color);
+      date,
+      unit,
+      color,
+      time);
 
   /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.
@@ -340,12 +417,16 @@ abstract class _DashboardPageLoadVisitationsVehicleModel
           {required final String? engineNumber,
           required final String? licenseNumber,
           required final String? regNumber,
+          required final String? description,
           required final String? vinNumber,
           required final String? expiryYear,
           required final String? make,
           required final String? model,
           required final String? identificationNumber,
-          required final String? color}) =
+          required final String? date,
+          required final String? unit,
+          required final String? color,
+          required final String? time}) =
       _$DashboardPageLoadVisitationsVehicleModelImpl;
 
   factory _DashboardPageLoadVisitationsVehicleModel.fromJson(
@@ -359,6 +440,8 @@ abstract class _DashboardPageLoadVisitationsVehicleModel
   @override
   String? get regNumber;
   @override
+  String? get description;
+  @override
   String? get vinNumber;
   @override
   String? get expiryYear;
@@ -369,7 +452,13 @@ abstract class _DashboardPageLoadVisitationsVehicleModel
   @override
   String? get identificationNumber;
   @override
+  String? get date;
+  @override
+  String? get unit;
+  @override
   String? get color;
+  @override
+  String? get time;
 
   /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.

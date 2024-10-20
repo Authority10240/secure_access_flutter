@@ -29,10 +29,9 @@ mixin _$DashboardPageLoadVisitationsModel {
   String? get transportationType => throw _privateConstructorUsedError;
   String? get mobileNumber => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
-  DateTime? get dateTime => throw _privateConstructorUsedError;
-  String? get unitVisited => throw _privateConstructorUsedError;
-  DashboardPageLoadVisitationsVehicleModel? get vehicle =>
-      throw _privateConstructorUsedError;
+  String? get date => throw _privateConstructorUsedError;
+  String? get unit => throw _privateConstructorUsedError;
+  String? get time => throw _privateConstructorUsedError;
 
   /// Serializes this DashboardPageLoadVisitationsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -61,11 +60,9 @@ abstract class $DashboardPageLoadVisitationsModelCopyWith<$Res> {
       String? transportationType,
       String? mobileNumber,
       String? email,
-      DateTime? dateTime,
-      String? unitVisited,
-      DashboardPageLoadVisitationsVehicleModel? vehicle});
-
-  $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res>? get vehicle;
+      String? date,
+      String? unit,
+      String? time});
 }
 
 /// @nodoc
@@ -92,9 +89,9 @@ class _$DashboardPageLoadVisitationsModelCopyWithImpl<$Res,
     Object? transportationType = freezed,
     Object? mobileNumber = freezed,
     Object? email = freezed,
-    Object? dateTime = freezed,
-    Object? unitVisited = freezed,
-    Object? vehicle = freezed,
+    Object? date = freezed,
+    Object? unit = freezed,
+    Object? time = freezed,
   }) {
     return _then(_value.copyWith(
       identificationNumber: freezed == identificationNumber
@@ -129,34 +126,19 @@ class _$DashboardPageLoadVisitationsModelCopyWithImpl<$Res,
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      dateTime: freezed == dateTime
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      unitVisited: freezed == unitVisited
-          ? _value.unitVisited
-          : unitVisited // ignore: cast_nullable_to_non_nullable
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
               as String?,
-      vehicle: freezed == vehicle
-          ? _value.vehicle
-          : vehicle // ignore: cast_nullable_to_non_nullable
-              as DashboardPageLoadVisitationsVehicleModel?,
+      unit: freezed == unit
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      time: freezed == time
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
-  }
-
-  /// Create a copy of DashboardPageLoadVisitationsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res>? get vehicle {
-    if (_value.vehicle == null) {
-      return null;
-    }
-
-    return $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res>(
-        _value.vehicle!, (value) {
-      return _then(_value.copyWith(vehicle: value) as $Val);
-    });
   }
 }
 
@@ -178,12 +160,9 @@ abstract class _$$DashboardPageLoadVisitationsModelImplCopyWith<$Res>
       String? transportationType,
       String? mobileNumber,
       String? email,
-      DateTime? dateTime,
-      String? unitVisited,
-      DashboardPageLoadVisitationsVehicleModel? vehicle});
-
-  @override
-  $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res>? get vehicle;
+      String? date,
+      String? unit,
+      String? time});
 }
 
 /// @nodoc
@@ -209,9 +188,9 @@ class __$$DashboardPageLoadVisitationsModelImplCopyWithImpl<$Res>
     Object? transportationType = freezed,
     Object? mobileNumber = freezed,
     Object? email = freezed,
-    Object? dateTime = freezed,
-    Object? unitVisited = freezed,
-    Object? vehicle = freezed,
+    Object? date = freezed,
+    Object? unit = freezed,
+    Object? time = freezed,
   }) {
     return _then(_$DashboardPageLoadVisitationsModelImpl(
       identificationNumber: freezed == identificationNumber
@@ -246,18 +225,18 @@ class __$$DashboardPageLoadVisitationsModelImplCopyWithImpl<$Res>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      dateTime: freezed == dateTime
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      unitVisited: freezed == unitVisited
-          ? _value.unitVisited
-          : unitVisited // ignore: cast_nullable_to_non_nullable
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
               as String?,
-      vehicle: freezed == vehicle
-          ? _value.vehicle
-          : vehicle // ignore: cast_nullable_to_non_nullable
-              as DashboardPageLoadVisitationsVehicleModel?,
+      unit: freezed == unit
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      time: freezed == time
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -276,9 +255,9 @@ class _$DashboardPageLoadVisitationsModelImpl
       required this.transportationType,
       required this.mobileNumber,
       required this.email,
-      required this.dateTime,
-      required this.unitVisited,
-      required this.vehicle});
+      required this.date,
+      required this.unit,
+      required this.time});
 
   factory _$DashboardPageLoadVisitationsModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -301,15 +280,15 @@ class _$DashboardPageLoadVisitationsModelImpl
   @override
   final String? email;
   @override
-  final DateTime? dateTime;
+  final String? date;
   @override
-  final String? unitVisited;
+  final String? unit;
   @override
-  final DashboardPageLoadVisitationsVehicleModel? vehicle;
+  final String? time;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DashboardPageLoadVisitationsModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, dateTime: $dateTime, unitVisited: $unitVisited, vehicle: $vehicle)';
+    return 'DashboardPageLoadVisitationsModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, date: $date, unit: $unit, time: $time)';
   }
 
   @override
@@ -325,9 +304,9 @@ class _$DashboardPageLoadVisitationsModelImpl
       ..add(DiagnosticsProperty('transportationType', transportationType))
       ..add(DiagnosticsProperty('mobileNumber', mobileNumber))
       ..add(DiagnosticsProperty('email', email))
-      ..add(DiagnosticsProperty('dateTime', dateTime))
-      ..add(DiagnosticsProperty('unitVisited', unitVisited))
-      ..add(DiagnosticsProperty('vehicle', vehicle));
+      ..add(DiagnosticsProperty('date', date))
+      ..add(DiagnosticsProperty('unit', unit))
+      ..add(DiagnosticsProperty('time', time));
   }
 
   @override
@@ -350,11 +329,9 @@ class _$DashboardPageLoadVisitationsModelImpl
             (identical(other.mobileNumber, mobileNumber) ||
                 other.mobileNumber == mobileNumber) &&
             (identical(other.email, email) || other.email == email) &&
-            (identical(other.dateTime, dateTime) ||
-                other.dateTime == dateTime) &&
-            (identical(other.unitVisited, unitVisited) ||
-                other.unitVisited == unitVisited) &&
-            (identical(other.vehicle, vehicle) || other.vehicle == vehicle));
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.unit, unit) || other.unit == unit) &&
+            (identical(other.time, time) || other.time == time));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -369,9 +346,9 @@ class _$DashboardPageLoadVisitationsModelImpl
       transportationType,
       mobileNumber,
       email,
-      dateTime,
-      unitVisited,
-      vehicle);
+      date,
+      unit,
+      time);
 
   /// Create a copy of DashboardPageLoadVisitationsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -394,18 +371,17 @@ class _$DashboardPageLoadVisitationsModelImpl
 abstract class _DashboardPageLoadVisitationsModel
     implements DashboardPageLoadVisitationsModel {
   const factory _DashboardPageLoadVisitationsModel(
-          {required final String? identificationNumber,
-          required final String? identificationType,
-          required final String? firstName,
-          required final String? middleName,
-          required final String? lastName,
-          required final String? transportationType,
-          required final String? mobileNumber,
-          required final String? email,
-          required final DateTime? dateTime,
-          required final String? unitVisited,
-          required final DashboardPageLoadVisitationsVehicleModel? vehicle}) =
-      _$DashboardPageLoadVisitationsModelImpl;
+      {required final String? identificationNumber,
+      required final String? identificationType,
+      required final String? firstName,
+      required final String? middleName,
+      required final String? lastName,
+      required final String? transportationType,
+      required final String? mobileNumber,
+      required final String? email,
+      required final String? date,
+      required final String? unit,
+      required final String? time}) = _$DashboardPageLoadVisitationsModelImpl;
 
   factory _DashboardPageLoadVisitationsModel.fromJson(
           Map<String, dynamic> json) =
@@ -428,11 +404,11 @@ abstract class _DashboardPageLoadVisitationsModel
   @override
   String? get email;
   @override
-  DateTime? get dateTime;
+  String? get date;
   @override
-  String? get unitVisited;
+  String? get unit;
   @override
-  DashboardPageLoadVisitationsVehicleModel? get vehicle;
+  String? get time;
 
   /// Create a copy of DashboardPageLoadVisitationsModel
   /// with the given fields replaced by the non-null parameter values.

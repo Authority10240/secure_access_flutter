@@ -14,7 +14,11 @@ class ScannerContinueClickedModel with _$ScannerContinueClickedModel {
     required String? expiryYear,
     required String? make,
     required String? model,
-    required String? identificationNumber
+    required String? identificationNumber,
+    required String? date,
+    required String? unitVisited,
+    required String? id,
+    required String? time
   }) = _ScannerContinueClickedModel;
 
   factory ScannerContinueClickedModel.fromJson(

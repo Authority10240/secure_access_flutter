@@ -14,8 +14,13 @@ class ManualVehicleContinueClickedModel with _$ManualVehicleContinueClickedModel
     required String? expiryYear,
     required String? make,
     required String? model,
+    required String? description,
     required String? identificationNumber,
     required String? color,
+    required String? unit,
+    required String? date,
+    required String? id,
+    required String? time
 
   }) = _ManualVehicleContinueClickedModel;
 

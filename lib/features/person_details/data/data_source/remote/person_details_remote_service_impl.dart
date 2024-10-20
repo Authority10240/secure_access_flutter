@@ -3,7 +3,9 @@ import 'package:injectable/injectable.dart';
 import 'package:secure_access/features/person_details/data/data_source/remote/person_details_remote_service.dart';
 import 'package:secure_access/features/person_details/data/models/person_details_model_response/person_details_continue_clicked_model.dart';
 
-const String visitation_details_collection = "visitations";
+import '../../../../../core/constants/database.dart';
+
+
 
 @Singleton(as: PersonDetailsRemoteService)
 class PersonDetailsRemoteServiceImpl extends PersonDetailsRemoteService{

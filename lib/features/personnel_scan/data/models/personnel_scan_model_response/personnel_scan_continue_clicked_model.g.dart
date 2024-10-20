@@ -18,10 +18,9 @@ _$PersonnelScanContinueClickedModelImpl
           transportationType: json['transportationType'] as String?,
           mobileNumber: json['mobileNumber'] as String?,
           email: json['email'] as String?,
-          dateTime: json['dateTime'] == null
-              ? null
-              : DateTime.parse(json['dateTime'] as String),
+          date: json['date'] as String?,
           unitVisited: json['unitVisited'] as String?,
+          time: json['time'] as String?,
         );
 
 Map<String, dynamic> _$$PersonnelScanContinueClickedModelImplToJson(
@@ -35,6 +34,7 @@ Map<String, dynamic> _$$PersonnelScanContinueClickedModelImplToJson(
       'transportationType': instance.transportationType,
       'mobileNumber': instance.mobileNumber,
       'email': instance.email,
-      'dateTime': instance.dateTime?.toIso8601String(),
+      'date': instance.date,
       'unitVisited': instance.unitVisited,
+      'time': instance.time,
     };

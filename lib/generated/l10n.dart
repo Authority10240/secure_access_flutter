@@ -1071,6 +1071,26 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Time:`
+  String get time {
+    return Intl.message(
+      'Time:',
+      name: 'time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date`
+  String get date {
+    return Intl.message(
+      'Date',
+      name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -52,7 +52,9 @@ class DashboardBloc
             )..dataState = DataState.error);
 
         },
-        params: DashboardPageLoadVisitationVehicleUseCaseParams(visitationId: event.visitationId));
+        params: DashboardPageLoadVisitationVehicleUseCaseParams(
+            visitationId: event.visitationId,
+            date: event.dashboardPageLoadVisitationsModel.date! ));
     }
 
 

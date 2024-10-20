@@ -4,6 +4,7 @@ import 'package:secure_access/core/base_classes/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secure_access/core/base_classes/base_state.dart';
+import 'package:secure_access/core/constants/date.dart';
 import 'package:secure_access/core/locator.dart';
 import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
@@ -18,9 +19,11 @@ import 'bloc/scanner_bloc.dart';
 
 
 class ScannerPage extends BasePage {
-  const ScannerPage({required this.referenceId,super.key});
+  const ScannerPage({required this.id ,required this.unit,required this.referenceId,super.key});
 
   final String referenceId;
+  final String unit;
+  final String id;
 
 
 
@@ -184,6 +187,10 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
                          if(_formKey.currentState!.validate()){
                            getBloc().add(ScannerContinueClickedEvent(
                                scannerContinueClickedModel: ScannerContinueClickedModel(
+                                 time: timeNow,
+                                 id: widget.id,
+                                   date: todaysDate ,
+                                 unitVisited: widget.unit ,
                                  identificationNumber: widget.referenceId,
                                    engineNumber: _engineController.text.trim(),
                                    licenseNumber: _licenseController.text.trim(),

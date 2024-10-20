@@ -17,9 +17,9 @@ class DashboardPageLoadVisitationsModel with _$DashboardPageLoadVisitationsModel
     required String? transportationType,
     required String? mobileNumber,
     required String? email,
-    required DateTime? dateTime,
-    required String? unitVisited,
-    required DashboardPageLoadVisitationsVehicleModel? vehicle
+    required String? date,
+    required String? unit,
+    required String? time
   }) = _DashboardPageLoadVisitationsModel;
 
   factory DashboardPageLoadVisitationsModel.fromJson(

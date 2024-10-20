@@ -23,7 +23,7 @@ flavors:
 
   prod:
     app:
-      name: "Secure Access prod"
+      name: "Secure Access"
 
     android:
       applicationId: "progressive.app.secure_access.prod"

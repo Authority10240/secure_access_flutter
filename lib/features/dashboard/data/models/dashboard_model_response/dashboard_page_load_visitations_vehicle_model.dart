@@ -10,12 +10,16 @@ class DashboardPageLoadVisitationsVehicleModel with _$DashboardPageLoadVisitatio
     required String? engineNumber,
     required String? licenseNumber,
     required String? regNumber,
+    required String? description,
     required String? vinNumber,
     required String? expiryYear,
     required String? make,
     required String? model,
     required String? identificationNumber,
-    required String? color
+    required String? date,
+    required String? unit,
+    required String? color,
+    required String? time
   }) = _DashboardPageLoadVisitationsVehicleModel;
 
   factory DashboardPageLoadVisitationsVehicleModel.fromJson(

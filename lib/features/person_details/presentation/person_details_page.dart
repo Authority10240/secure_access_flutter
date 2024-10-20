@@ -4,6 +4,7 @@ import 'package:secure_access/core/base_classes/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secure_access/core/base_classes/base_state.dart';
+import 'package:secure_access/core/constants/date.dart';
 import 'package:secure_access/core/locator.dart';
 import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
@@ -75,7 +76,7 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
             Get.snackbar(appLocalizations.visitationLoggedSuccessfully, state.referenceId!);
             Get.offAll(const DashboardPage());
           }else{
-            Get.off(VehicleTypePage(referenceId: state.referenceId!));
+            Get.off(VehicleTypePage(id: _idNumberController.text,unit: _unitController.text ,referenceId: state.referenceId!));
           }
         }
       },
@@ -172,8 +173,9 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
                         onPressed: (){
                           getBloc().add(PersonDetailsContinueClickedEvent(
                               personDetailsContinueClickedModel:PersonDetailsContinueClickedModel(
-                                unitVisited: _unitController.text.trim(),
-                                dateTime: DateTime.now(),
+                                unit: _unitController.text.trim(),
+                                time: timeNow,
+                                date: todaysDate,
                                   identificationNumber: _idNumberController.text.trim(),
                                   identificationType: IdentificationType.manual.toString() ,
                                   firstName: _nameController.text.trim(),

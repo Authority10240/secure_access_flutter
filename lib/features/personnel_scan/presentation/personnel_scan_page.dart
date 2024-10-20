@@ -5,6 +5,7 @@ import 'package:secure_access/core/base_classes/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secure_access/core/base_classes/base_state.dart';
+import 'package:secure_access/core/constants/date.dart';
 import 'package:secure_access/core/locator.dart';
 import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
@@ -84,7 +85,10 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
             Get.snackbar(appLocalizations.visitationLoggedSuccessfully, state.referenceId!);
             Get.offAll(const DashboardPage());
           }else{
-            Get.off(VehicleTypePage(referenceId: state.referenceId!));
+            Get.off(VehicleTypePage(
+              id: state.idNumber!,
+                unit: _unitController.text
+                ,referenceId: state.referenceId!));
           }
         }
 
@@ -175,7 +179,8 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
                              personnelScanContinueClickedModel:
                          PersonnelScanContinueClickedModel(
                            unitVisited: _unitController.text.trim(),
-                           dateTime: DateTime.now(),
+                           time: timeNow,
+                           date: todaysDate,
                              identificationNumber: state.idNUmber,
                              identificationType: widget.identificationType == IdentificationType.id ? "id": "passport",
                              firstName: _firstNameController.text.trim(),

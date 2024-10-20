@@ -7,5 +7,5 @@ abstract class DashboardService {
 
   Stream<QuerySnapshot<DashboardPageLoadVisitationsModel?>> dashboardPageLoadVisitations();
 
-  Future<DashboardPageLoadVisitationsVehicleModel> dashboardPageLoadVisitationVehicle({required String visitationId});
+  Future<DashboardPageLoadVisitationsVehicleModel> dashboardPageLoadVisitationVehicle({required String visitationId, required String date});
 }

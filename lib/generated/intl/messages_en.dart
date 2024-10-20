@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Password "),
         "createYourSecureAccount":
             MessageLookupByLibrary.simpleMessage("Create your secure account"),
+        "date": MessageLookupByLibrary.simpleMessage("Date"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
@@ -157,6 +158,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("Terms & Conditions "),
         "testMe": MessageLookupByLibrary.simpleMessage("Test me"),
+        "time": MessageLookupByLibrary.simpleMessage("Time:"),
         "truck": MessageLookupByLibrary.simpleMessage("Truck"),
         "unitVisited": MessageLookupByLibrary.simpleMessage("Unit visited"),
         "username": MessageLookupByLibrary.simpleMessage("Username "),
