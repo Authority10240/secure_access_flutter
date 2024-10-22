@@ -20,7 +20,9 @@ class ManualVehicleContinueClickedModel with _$ManualVehicleContinueClickedModel
     required String? unit,
     required String? date,
     required String? id,
-    required String? time
+    required String? time,
+    required String? year,
+    required String? month
 
   }) = _ManualVehicleContinueClickedModel;
 
