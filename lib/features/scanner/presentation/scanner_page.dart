@@ -187,6 +187,8 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
                          if(_formKey.currentState!.validate()){
                            getBloc().add(ScannerContinueClickedEvent(
                                scannerContinueClickedModel: ScannerContinueClickedModel(
+                                   year: DateTime.now().year.toString(),
+                                   month: DateTime.now().month.toString(),
                                  time: timeNow,
                                  id: widget.id,
                                    date: todaysDate ,

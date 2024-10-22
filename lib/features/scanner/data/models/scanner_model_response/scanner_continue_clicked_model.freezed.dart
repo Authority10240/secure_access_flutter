@@ -33,6 +33,8 @@ mixin _$ScannerContinueClickedModel {
   String? get unitVisited => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
+  String? get year => throw _privateConstructorUsedError;
+  String? get month => throw _privateConstructorUsedError;
 
   /// Serializes this ScannerContinueClickedModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -64,7 +66,9 @@ abstract class $ScannerContinueClickedModelCopyWith<$Res> {
       String? date,
       String? unitVisited,
       String? id,
-      String? time});
+      String? time,
+      String? year,
+      String? month});
 }
 
 /// @nodoc
@@ -95,6 +99,8 @@ class _$ScannerContinueClickedModelCopyWithImpl<$Res,
     Object? unitVisited = freezed,
     Object? id = freezed,
     Object? time = freezed,
+    Object? year = freezed,
+    Object? month = freezed,
   }) {
     return _then(_value.copyWith(
       engineNumber: freezed == engineNumber
@@ -145,6 +151,14 @@ class _$ScannerContinueClickedModelCopyWithImpl<$Res,
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      month: freezed == month
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -170,7 +184,9 @@ abstract class _$$ScannerContinueClickedModelImplCopyWith<$Res>
       String? date,
       String? unitVisited,
       String? id,
-      String? time});
+      String? time,
+      String? year,
+      String? month});
 }
 
 /// @nodoc
@@ -200,6 +216,8 @@ class __$$ScannerContinueClickedModelImplCopyWithImpl<$Res>
     Object? unitVisited = freezed,
     Object? id = freezed,
     Object? time = freezed,
+    Object? year = freezed,
+    Object? month = freezed,
   }) {
     return _then(_$ScannerContinueClickedModelImpl(
       engineNumber: freezed == engineNumber
@@ -250,6 +268,14 @@ class __$$ScannerContinueClickedModelImplCopyWithImpl<$Res>
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      month: freezed == month
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -270,7 +296,9 @@ class _$ScannerContinueClickedModelImpl
       required this.date,
       required this.unitVisited,
       required this.id,
-      required this.time});
+      required this.time,
+      required this.year,
+      required this.month});
 
   factory _$ScannerContinueClickedModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -300,10 +328,14 @@ class _$ScannerContinueClickedModelImpl
   final String? id;
   @override
   final String? time;
+  @override
+  final String? year;
+  @override
+  final String? month;
 
   @override
   String toString() {
-    return 'ScannerContinueClickedModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, date: $date, unitVisited: $unitVisited, id: $id, time: $time)';
+    return 'ScannerContinueClickedModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, date: $date, unitVisited: $unitVisited, id: $id, time: $time, year: $year, month: $month)';
   }
 
   @override
@@ -329,7 +361,9 @@ class _$ScannerContinueClickedModelImpl
             (identical(other.unitVisited, unitVisited) ||
                 other.unitVisited == unitVisited) &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.time, time) || other.time == time));
+            (identical(other.time, time) || other.time == time) &&
+            (identical(other.year, year) || other.year == year) &&
+            (identical(other.month, month) || other.month == month));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -347,7 +381,9 @@ class _$ScannerContinueClickedModelImpl
       date,
       unitVisited,
       id,
-      time);
+      time,
+      year,
+      month);
 
   /// Create a copy of ScannerContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.
@@ -380,7 +416,9 @@ abstract class _ScannerContinueClickedModel
       required final String? date,
       required final String? unitVisited,
       required final String? id,
-      required final String? time}) = _$ScannerContinueClickedModelImpl;
+      required final String? time,
+      required final String? year,
+      required final String? month}) = _$ScannerContinueClickedModelImpl;
 
   factory _ScannerContinueClickedModel.fromJson(Map<String, dynamic> json) =
       _$ScannerContinueClickedModelImpl.fromJson;
@@ -409,6 +447,10 @@ abstract class _ScannerContinueClickedModel
   String? get id;
   @override
   String? get time;
+  @override
+  String? get year;
+  @override
+  String? get month;
 
   /// Create a copy of ScannerContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.

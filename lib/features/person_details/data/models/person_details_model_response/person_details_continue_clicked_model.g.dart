@@ -21,6 +21,8 @@ _$PersonDetailsContinueClickedModelImpl
           date: json['date'] as String?,
           unit: json['unit'] as String?,
           time: json['time'] as String?,
+          year: json['year'] as String?,
+          month: json['month'] as String?,
         );
 
 Map<String, dynamic> _$$PersonDetailsContinueClickedModelImplToJson(
@@ -37,4 +39,6 @@ Map<String, dynamic> _$$PersonDetailsContinueClickedModelImplToJson(
       'date': instance.date,
       'unit': instance.unit,
       'time': instance.time,
+      'year': instance.year,
+      'month': instance.month,
     };

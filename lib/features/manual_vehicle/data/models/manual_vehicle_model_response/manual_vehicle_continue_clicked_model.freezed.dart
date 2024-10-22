@@ -35,6 +35,8 @@ mixin _$ManualVehicleContinueClickedModel {
   String? get date => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
+  String? get year => throw _privateConstructorUsedError;
+  String? get month => throw _privateConstructorUsedError;
 
   /// Serializes this ManualVehicleContinueClickedModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -68,7 +70,9 @@ abstract class $ManualVehicleContinueClickedModelCopyWith<$Res> {
       String? unit,
       String? date,
       String? id,
-      String? time});
+      String? time,
+      String? year,
+      String? month});
 }
 
 /// @nodoc
@@ -101,6 +105,8 @@ class _$ManualVehicleContinueClickedModelCopyWithImpl<$Res,
     Object? date = freezed,
     Object? id = freezed,
     Object? time = freezed,
+    Object? year = freezed,
+    Object? month = freezed,
   }) {
     return _then(_value.copyWith(
       engineNumber: freezed == engineNumber
@@ -159,6 +165,14 @@ class _$ManualVehicleContinueClickedModelCopyWithImpl<$Res,
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      month: freezed == month
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -186,7 +200,9 @@ abstract class _$$ManualVehicleContinueClickedModelImplCopyWith<$Res>
       String? unit,
       String? date,
       String? id,
-      String? time});
+      String? time,
+      String? year,
+      String? month});
 }
 
 /// @nodoc
@@ -218,6 +234,8 @@ class __$$ManualVehicleContinueClickedModelImplCopyWithImpl<$Res>
     Object? date = freezed,
     Object? id = freezed,
     Object? time = freezed,
+    Object? year = freezed,
+    Object? month = freezed,
   }) {
     return _then(_$ManualVehicleContinueClickedModelImpl(
       engineNumber: freezed == engineNumber
@@ -276,6 +294,14 @@ class __$$ManualVehicleContinueClickedModelImplCopyWithImpl<$Res>
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      month: freezed == month
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -299,7 +325,9 @@ class _$ManualVehicleContinueClickedModelImpl
       required this.unit,
       required this.date,
       required this.id,
-      required this.time});
+      required this.time,
+      required this.year,
+      required this.month});
 
   factory _$ManualVehicleContinueClickedModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -333,10 +361,14 @@ class _$ManualVehicleContinueClickedModelImpl
   final String? id;
   @override
   final String? time;
+  @override
+  final String? year;
+  @override
+  final String? month;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ManualVehicleContinueClickedModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, description: $description, identificationNumber: $identificationNumber, color: $color, unit: $unit, date: $date, id: $id, time: $time)';
+    return 'ManualVehicleContinueClickedModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, description: $description, identificationNumber: $identificationNumber, color: $color, unit: $unit, date: $date, id: $id, time: $time, year: $year, month: $month)';
   }
 
   @override
@@ -357,7 +389,9 @@ class _$ManualVehicleContinueClickedModelImpl
       ..add(DiagnosticsProperty('unit', unit))
       ..add(DiagnosticsProperty('date', date))
       ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('time', time));
+      ..add(DiagnosticsProperty('time', time))
+      ..add(DiagnosticsProperty('year', year))
+      ..add(DiagnosticsProperty('month', month));
   }
 
   @override
@@ -385,7 +419,9 @@ class _$ManualVehicleContinueClickedModelImpl
             (identical(other.unit, unit) || other.unit == unit) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.time, time) || other.time == time));
+            (identical(other.time, time) || other.time == time) &&
+            (identical(other.year, year) || other.year == year) &&
+            (identical(other.month, month) || other.month == month));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -405,7 +441,9 @@ class _$ManualVehicleContinueClickedModelImpl
       unit,
       date,
       id,
-      time);
+      time,
+      year,
+      month);
 
   /// Create a copy of ManualVehicleContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.
@@ -441,7 +479,9 @@ abstract class _ManualVehicleContinueClickedModel
       required final String? unit,
       required final String? date,
       required final String? id,
-      required final String? time}) = _$ManualVehicleContinueClickedModelImpl;
+      required final String? time,
+      required final String? year,
+      required final String? month}) = _$ManualVehicleContinueClickedModelImpl;
 
   factory _ManualVehicleContinueClickedModel.fromJson(
           Map<String, dynamic> json) =
@@ -475,6 +515,10 @@ abstract class _ManualVehicleContinueClickedModel
   String? get id;
   @override
   String? get time;
+  @override
+  String? get year;
+  @override
+  String? get month;
 
   /// Create a copy of ManualVehicleContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.

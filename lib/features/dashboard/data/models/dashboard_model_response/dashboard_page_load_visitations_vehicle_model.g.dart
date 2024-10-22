@@ -23,6 +23,8 @@ _$DashboardPageLoadVisitationsVehicleModelImpl
           unit: json['unit'] as String?,
           color: json['color'] as String?,
           time: json['time'] as String?,
+          year: json['year'] as String?,
+          month: json['month'] as String?,
         );
 
 Map<String, dynamic> _$$DashboardPageLoadVisitationsVehicleModelImplToJson(
@@ -41,4 +43,6 @@ Map<String, dynamic> _$$DashboardPageLoadVisitationsVehicleModelImplToJson(
       'unit': instance.unit,
       'color': instance.color,
       'time': instance.time,
+      'year': instance.year,
+      'month': instance.month,
     };

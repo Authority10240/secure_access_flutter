@@ -32,6 +32,8 @@ mixin _$DashboardPageLoadVisitationsModel {
   String? get date => throw _privateConstructorUsedError;
   String? get unit => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
+  String? get year => throw _privateConstructorUsedError;
+  String? get month => throw _privateConstructorUsedError;
 
   /// Serializes this DashboardPageLoadVisitationsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -62,7 +64,9 @@ abstract class $DashboardPageLoadVisitationsModelCopyWith<$Res> {
       String? email,
       String? date,
       String? unit,
-      String? time});
+      String? time,
+      String? year,
+      String? month});
 }
 
 /// @nodoc
@@ -92,6 +96,8 @@ class _$DashboardPageLoadVisitationsModelCopyWithImpl<$Res,
     Object? date = freezed,
     Object? unit = freezed,
     Object? time = freezed,
+    Object? year = freezed,
+    Object? month = freezed,
   }) {
     return _then(_value.copyWith(
       identificationNumber: freezed == identificationNumber
@@ -138,6 +144,14 @@ class _$DashboardPageLoadVisitationsModelCopyWithImpl<$Res,
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      month: freezed == month
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -162,7 +176,9 @@ abstract class _$$DashboardPageLoadVisitationsModelImplCopyWith<$Res>
       String? email,
       String? date,
       String? unit,
-      String? time});
+      String? time,
+      String? year,
+      String? month});
 }
 
 /// @nodoc
@@ -191,6 +207,8 @@ class __$$DashboardPageLoadVisitationsModelImplCopyWithImpl<$Res>
     Object? date = freezed,
     Object? unit = freezed,
     Object? time = freezed,
+    Object? year = freezed,
+    Object? month = freezed,
   }) {
     return _then(_$DashboardPageLoadVisitationsModelImpl(
       identificationNumber: freezed == identificationNumber
@@ -237,6 +255,14 @@ class __$$DashboardPageLoadVisitationsModelImplCopyWithImpl<$Res>
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      month: freezed == month
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -257,7 +283,9 @@ class _$DashboardPageLoadVisitationsModelImpl
       required this.email,
       required this.date,
       required this.unit,
-      required this.time});
+      required this.time,
+      required this.year,
+      required this.month});
 
   factory _$DashboardPageLoadVisitationsModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -285,10 +313,14 @@ class _$DashboardPageLoadVisitationsModelImpl
   final String? unit;
   @override
   final String? time;
+  @override
+  final String? year;
+  @override
+  final String? month;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DashboardPageLoadVisitationsModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, date: $date, unit: $unit, time: $time)';
+    return 'DashboardPageLoadVisitationsModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, date: $date, unit: $unit, time: $time, year: $year, month: $month)';
   }
 
   @override
@@ -306,7 +338,9 @@ class _$DashboardPageLoadVisitationsModelImpl
       ..add(DiagnosticsProperty('email', email))
       ..add(DiagnosticsProperty('date', date))
       ..add(DiagnosticsProperty('unit', unit))
-      ..add(DiagnosticsProperty('time', time));
+      ..add(DiagnosticsProperty('time', time))
+      ..add(DiagnosticsProperty('year', year))
+      ..add(DiagnosticsProperty('month', month));
   }
 
   @override
@@ -331,7 +365,9 @@ class _$DashboardPageLoadVisitationsModelImpl
             (identical(other.email, email) || other.email == email) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.unit, unit) || other.unit == unit) &&
-            (identical(other.time, time) || other.time == time));
+            (identical(other.time, time) || other.time == time) &&
+            (identical(other.year, year) || other.year == year) &&
+            (identical(other.month, month) || other.month == month));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -348,7 +384,9 @@ class _$DashboardPageLoadVisitationsModelImpl
       email,
       date,
       unit,
-      time);
+      time,
+      year,
+      month);
 
   /// Create a copy of DashboardPageLoadVisitationsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -381,7 +419,9 @@ abstract class _DashboardPageLoadVisitationsModel
       required final String? email,
       required final String? date,
       required final String? unit,
-      required final String? time}) = _$DashboardPageLoadVisitationsModelImpl;
+      required final String? time,
+      required final String? year,
+      required final String? month}) = _$DashboardPageLoadVisitationsModelImpl;
 
   factory _DashboardPageLoadVisitationsModel.fromJson(
           Map<String, dynamic> json) =
@@ -409,6 +449,10 @@ abstract class _DashboardPageLoadVisitationsModel
   String? get unit;
   @override
   String? get time;
+  @override
+  String? get year;
+  @override
+  String? get month;
 
   /// Create a copy of DashboardPageLoadVisitationsModel
   /// with the given fields replaced by the non-null parameter values.

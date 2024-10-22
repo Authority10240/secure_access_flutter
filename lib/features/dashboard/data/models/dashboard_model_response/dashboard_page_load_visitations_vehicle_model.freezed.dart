@@ -35,6 +35,8 @@ mixin _$DashboardPageLoadVisitationsVehicleModel {
   String? get unit => throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
+  String? get year => throw _privateConstructorUsedError;
+  String? get month => throw _privateConstructorUsedError;
 
   /// Serializes this DashboardPageLoadVisitationsVehicleModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -68,7 +70,9 @@ abstract class $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res> {
       String? date,
       String? unit,
       String? color,
-      String? time});
+      String? time,
+      String? year,
+      String? month});
 }
 
 /// @nodoc
@@ -101,6 +105,8 @@ class _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
     Object? unit = freezed,
     Object? color = freezed,
     Object? time = freezed,
+    Object? year = freezed,
+    Object? month = freezed,
   }) {
     return _then(_value.copyWith(
       engineNumber: freezed == engineNumber
@@ -155,6 +161,14 @@ class _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      month: freezed == month
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -181,7 +195,9 @@ abstract class _$$DashboardPageLoadVisitationsVehicleModelImplCopyWith<$Res>
       String? date,
       String? unit,
       String? color,
-      String? time});
+      String? time,
+      String? year,
+      String? month});
 }
 
 /// @nodoc
@@ -212,6 +228,8 @@ class __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>
     Object? unit = freezed,
     Object? color = freezed,
     Object? time = freezed,
+    Object? year = freezed,
+    Object? month = freezed,
   }) {
     return _then(_$DashboardPageLoadVisitationsVehicleModelImpl(
       engineNumber: freezed == engineNumber
@@ -266,6 +284,14 @@ class __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      month: freezed == month
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -288,7 +314,9 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
       required this.date,
       required this.unit,
       required this.color,
-      required this.time});
+      required this.time,
+      required this.year,
+      required this.month});
 
   factory _$DashboardPageLoadVisitationsVehicleModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -320,10 +348,14 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
   final String? color;
   @override
   final String? time;
+  @override
+  final String? year;
+  @override
+  final String? month;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DashboardPageLoadVisitationsVehicleModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, description: $description, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, date: $date, unit: $unit, color: $color, time: $time)';
+    return 'DashboardPageLoadVisitationsVehicleModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, description: $description, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, date: $date, unit: $unit, color: $color, time: $time, year: $year, month: $month)';
   }
 
   @override
@@ -344,7 +376,9 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
       ..add(DiagnosticsProperty('date', date))
       ..add(DiagnosticsProperty('unit', unit))
       ..add(DiagnosticsProperty('color', color))
-      ..add(DiagnosticsProperty('time', time));
+      ..add(DiagnosticsProperty('time', time))
+      ..add(DiagnosticsProperty('year', year))
+      ..add(DiagnosticsProperty('month', month));
   }
 
   @override
@@ -371,7 +405,9 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
             (identical(other.date, date) || other.date == date) &&
             (identical(other.unit, unit) || other.unit == unit) &&
             (identical(other.color, color) || other.color == color) &&
-            (identical(other.time, time) || other.time == time));
+            (identical(other.time, time) || other.time == time) &&
+            (identical(other.year, year) || other.year == year) &&
+            (identical(other.month, month) || other.month == month));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -390,7 +426,9 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
       date,
       unit,
       color,
-      time);
+      time,
+      year,
+      month);
 
   /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.
@@ -426,7 +464,9 @@ abstract class _DashboardPageLoadVisitationsVehicleModel
           required final String? date,
           required final String? unit,
           required final String? color,
-          required final String? time}) =
+          required final String? time,
+          required final String? year,
+          required final String? month}) =
       _$DashboardPageLoadVisitationsVehicleModelImpl;
 
   factory _DashboardPageLoadVisitationsVehicleModel.fromJson(
@@ -459,6 +499,10 @@ abstract class _DashboardPageLoadVisitationsVehicleModel
   String? get color;
   @override
   String? get time;
+  @override
+  String? get year;
+  @override
+  String? get month;
 
   /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.

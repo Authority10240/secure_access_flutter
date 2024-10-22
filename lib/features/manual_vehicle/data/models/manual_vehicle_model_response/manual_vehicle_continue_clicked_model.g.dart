@@ -24,6 +24,8 @@ _$ManualVehicleContinueClickedModelImpl
           date: json['date'] as String?,
           id: json['id'] as String?,
           time: json['time'] as String?,
+          year: json['year'] as String?,
+          month: json['month'] as String?,
         );
 
 Map<String, dynamic> _$$ManualVehicleContinueClickedModelImplToJson(
@@ -43,4 +45,6 @@ Map<String, dynamic> _$$ManualVehicleContinueClickedModelImplToJson(
       'date': instance.date,
       'id': instance.id,
       'time': instance.time,
+      'year': instance.year,
+      'month': instance.month,
     };

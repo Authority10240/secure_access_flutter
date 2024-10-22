@@ -21,6 +21,8 @@ _$PersonnelScanContinueClickedModelImpl
           date: json['date'] as String?,
           unitVisited: json['unitVisited'] as String?,
           time: json['time'] as String?,
+          year: json['year'] as String?,
+          month: json['month'] as String?,
         );
 
 Map<String, dynamic> _$$PersonnelScanContinueClickedModelImplToJson(
@@ -37,4 +39,6 @@ Map<String, dynamic> _$$PersonnelScanContinueClickedModelImplToJson(
       'date': instance.date,
       'unitVisited': instance.unitVisited,
       'time': instance.time,
+      'year': instance.year,
+      'month': instance.month,
     };
