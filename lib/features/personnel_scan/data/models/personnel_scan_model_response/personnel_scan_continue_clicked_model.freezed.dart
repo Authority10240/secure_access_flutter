@@ -34,6 +34,9 @@ mixin _$PersonnelScanContinueClickedModel {
   String? get time => throw _privateConstructorUsedError;
   String? get year => throw _privateConstructorUsedError;
   String? get month => throw _privateConstructorUsedError;
+  String? get outTime => throw _privateConstructorUsedError;
+  String? get outDate => throw _privateConstructorUsedError;
+  DateTime? get timeStamp => throw _privateConstructorUsedError;
 
   /// Serializes this PersonnelScanContinueClickedModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -66,7 +69,10 @@ abstract class $PersonnelScanContinueClickedModelCopyWith<$Res> {
       String? unitVisited,
       String? time,
       String? year,
-      String? month});
+      String? month,
+      String? outTime,
+      String? outDate,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -98,6 +104,9 @@ class _$PersonnelScanContinueClickedModelCopyWithImpl<$Res,
     Object? time = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_value.copyWith(
       identificationNumber: freezed == identificationNumber
@@ -152,6 +161,18 @@ class _$PersonnelScanContinueClickedModelCopyWithImpl<$Res,
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -178,7 +199,10 @@ abstract class _$$PersonnelScanContinueClickedModelImplCopyWith<$Res>
       String? unitVisited,
       String? time,
       String? year,
-      String? month});
+      String? month,
+      String? outTime,
+      String? outDate,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -209,6 +233,9 @@ class __$$PersonnelScanContinueClickedModelImplCopyWithImpl<$Res>
     Object? time = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_$PersonnelScanContinueClickedModelImpl(
       identificationNumber: freezed == identificationNumber
@@ -263,6 +290,18 @@ class __$$PersonnelScanContinueClickedModelImplCopyWithImpl<$Res>
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -285,7 +324,10 @@ class _$PersonnelScanContinueClickedModelImpl
       required this.unitVisited,
       required this.time,
       required this.year,
-      required this.month});
+      required this.month,
+      required this.outTime,
+      required this.outDate,
+      required this.timeStamp});
 
   factory _$PersonnelScanContinueClickedModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -317,10 +359,16 @@ class _$PersonnelScanContinueClickedModelImpl
   final String? year;
   @override
   final String? month;
+  @override
+  final String? outTime;
+  @override
+  final String? outDate;
+  @override
+  final DateTime? timeStamp;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PersonnelScanContinueClickedModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, date: $date, unitVisited: $unitVisited, time: $time, year: $year, month: $month)';
+    return 'PersonnelScanContinueClickedModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, date: $date, unitVisited: $unitVisited, time: $time, year: $year, month: $month, outTime: $outTime, outDate: $outDate, timeStamp: $timeStamp)';
   }
 
   @override
@@ -340,7 +388,10 @@ class _$PersonnelScanContinueClickedModelImpl
       ..add(DiagnosticsProperty('unitVisited', unitVisited))
       ..add(DiagnosticsProperty('time', time))
       ..add(DiagnosticsProperty('year', year))
-      ..add(DiagnosticsProperty('month', month));
+      ..add(DiagnosticsProperty('month', month))
+      ..add(DiagnosticsProperty('outTime', outTime))
+      ..add(DiagnosticsProperty('outDate', outDate))
+      ..add(DiagnosticsProperty('timeStamp', timeStamp));
   }
 
   @override
@@ -368,7 +419,11 @@ class _$PersonnelScanContinueClickedModelImpl
                 other.unitVisited == unitVisited) &&
             (identical(other.time, time) || other.time == time) &&
             (identical(other.year, year) || other.year == year) &&
-            (identical(other.month, month) || other.month == month));
+            (identical(other.month, month) || other.month == month) &&
+            (identical(other.outTime, outTime) || other.outTime == outTime) &&
+            (identical(other.outDate, outDate) || other.outDate == outDate) &&
+            (identical(other.timeStamp, timeStamp) ||
+                other.timeStamp == timeStamp));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -387,7 +442,10 @@ class _$PersonnelScanContinueClickedModelImpl
       unitVisited,
       time,
       year,
-      month);
+      month,
+      outTime,
+      outDate,
+      timeStamp);
 
   /// Create a copy of PersonnelScanContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.
@@ -410,19 +468,23 @@ class _$PersonnelScanContinueClickedModelImpl
 abstract class _PersonnelScanContinueClickedModel
     implements PersonnelScanContinueClickedModel {
   const factory _PersonnelScanContinueClickedModel(
-      {required final String? identificationNumber,
-      required final String? identificationType,
-      required final String? firstName,
-      required final String? middleName,
-      required final String? lastName,
-      required final String? transportationType,
-      required final String? mobileNumber,
-      required final String? email,
-      required final String? date,
-      required final String? unitVisited,
-      required final String? time,
-      required final String? year,
-      required final String? month}) = _$PersonnelScanContinueClickedModelImpl;
+          {required final String? identificationNumber,
+          required final String? identificationType,
+          required final String? firstName,
+          required final String? middleName,
+          required final String? lastName,
+          required final String? transportationType,
+          required final String? mobileNumber,
+          required final String? email,
+          required final String? date,
+          required final String? unitVisited,
+          required final String? time,
+          required final String? year,
+          required final String? month,
+          required final String? outTime,
+          required final String? outDate,
+          required final DateTime? timeStamp}) =
+      _$PersonnelScanContinueClickedModelImpl;
 
   factory _PersonnelScanContinueClickedModel.fromJson(
           Map<String, dynamic> json) =
@@ -454,6 +516,12 @@ abstract class _PersonnelScanContinueClickedModel
   String? get year;
   @override
   String? get month;
+  @override
+  String? get outTime;
+  @override
+  String? get outDate;
+  @override
+  DateTime? get timeStamp;
 
   /// Create a copy of PersonnelScanContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.

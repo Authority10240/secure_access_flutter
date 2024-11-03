@@ -1091,6 +1091,36 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Checked in`
+  String get checkedIn {
+    return Intl.message(
+      'Checked in',
+      name: 'checkedIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unit`
+  String get unit {
+    return Intl.message(
+      'Unit',
+      name: 'unit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Checked out`
+  String get checkedOut {
+    return Intl.message(
+      'Checked out',
+      name: 'checkedOut',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

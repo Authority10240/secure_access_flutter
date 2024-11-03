@@ -173,6 +173,9 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
                         onPressed: (){
                           getBloc().add(PersonDetailsContinueClickedEvent(
                               personDetailsContinueClickedModel:PersonDetailsContinueClickedModel(
+                                  timeStamp: DateTime.now(),
+                                  outDate: '',
+                                  outTime: '',
                                   year: DateTime.now().year.toString(),
                                   month: DateTime.now().month.toString(),
                                 unit: _unitController.text.trim(),

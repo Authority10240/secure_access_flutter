@@ -29,11 +29,14 @@ mixin _$DashboardPageLoadVisitationsModel {
   String? get transportationType => throw _privateConstructorUsedError;
   String? get mobileNumber => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
+  String? get outTime => throw _privateConstructorUsedError;
+  String? get outDate => throw _privateConstructorUsedError;
   String? get date => throw _privateConstructorUsedError;
   String? get unit => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
   String? get year => throw _privateConstructorUsedError;
   String? get month => throw _privateConstructorUsedError;
+  DateTime? get timeStamp => throw _privateConstructorUsedError;
 
   /// Serializes this DashboardPageLoadVisitationsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -62,11 +65,14 @@ abstract class $DashboardPageLoadVisitationsModelCopyWith<$Res> {
       String? transportationType,
       String? mobileNumber,
       String? email,
+      String? outTime,
+      String? outDate,
       String? date,
       String? unit,
       String? time,
       String? year,
-      String? month});
+      String? month,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -93,11 +99,14 @@ class _$DashboardPageLoadVisitationsModelCopyWithImpl<$Res,
     Object? transportationType = freezed,
     Object? mobileNumber = freezed,
     Object? email = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
     Object? date = freezed,
     Object? unit = freezed,
     Object? time = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_value.copyWith(
       identificationNumber: freezed == identificationNumber
@@ -132,6 +141,14 @@ class _$DashboardPageLoadVisitationsModelCopyWithImpl<$Res,
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -152,6 +169,10 @@ class _$DashboardPageLoadVisitationsModelCopyWithImpl<$Res,
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -174,11 +195,14 @@ abstract class _$$DashboardPageLoadVisitationsModelImplCopyWith<$Res>
       String? transportationType,
       String? mobileNumber,
       String? email,
+      String? outTime,
+      String? outDate,
       String? date,
       String? unit,
       String? time,
       String? year,
-      String? month});
+      String? month,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -204,11 +228,14 @@ class __$$DashboardPageLoadVisitationsModelImplCopyWithImpl<$Res>
     Object? transportationType = freezed,
     Object? mobileNumber = freezed,
     Object? email = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
     Object? date = freezed,
     Object? unit = freezed,
     Object? time = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_$DashboardPageLoadVisitationsModelImpl(
       identificationNumber: freezed == identificationNumber
@@ -243,6 +270,14 @@ class __$$DashboardPageLoadVisitationsModelImplCopyWithImpl<$Res>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -263,6 +298,10 @@ class __$$DashboardPageLoadVisitationsModelImplCopyWithImpl<$Res>
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -281,11 +320,14 @@ class _$DashboardPageLoadVisitationsModelImpl
       required this.transportationType,
       required this.mobileNumber,
       required this.email,
+      required this.outTime,
+      required this.outDate,
       required this.date,
       required this.unit,
       required this.time,
       required this.year,
-      required this.month});
+      required this.month,
+      required this.timeStamp});
 
   factory _$DashboardPageLoadVisitationsModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -308,6 +350,10 @@ class _$DashboardPageLoadVisitationsModelImpl
   @override
   final String? email;
   @override
+  final String? outTime;
+  @override
+  final String? outDate;
+  @override
   final String? date;
   @override
   final String? unit;
@@ -317,10 +363,12 @@ class _$DashboardPageLoadVisitationsModelImpl
   final String? year;
   @override
   final String? month;
+  @override
+  final DateTime? timeStamp;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DashboardPageLoadVisitationsModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, date: $date, unit: $unit, time: $time, year: $year, month: $month)';
+    return 'DashboardPageLoadVisitationsModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, outTime: $outTime, outDate: $outDate, date: $date, unit: $unit, time: $time, year: $year, month: $month, timeStamp: $timeStamp)';
   }
 
   @override
@@ -336,11 +384,14 @@ class _$DashboardPageLoadVisitationsModelImpl
       ..add(DiagnosticsProperty('transportationType', transportationType))
       ..add(DiagnosticsProperty('mobileNumber', mobileNumber))
       ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('outTime', outTime))
+      ..add(DiagnosticsProperty('outDate', outDate))
       ..add(DiagnosticsProperty('date', date))
       ..add(DiagnosticsProperty('unit', unit))
       ..add(DiagnosticsProperty('time', time))
       ..add(DiagnosticsProperty('year', year))
-      ..add(DiagnosticsProperty('month', month));
+      ..add(DiagnosticsProperty('month', month))
+      ..add(DiagnosticsProperty('timeStamp', timeStamp));
   }
 
   @override
@@ -363,11 +414,15 @@ class _$DashboardPageLoadVisitationsModelImpl
             (identical(other.mobileNumber, mobileNumber) ||
                 other.mobileNumber == mobileNumber) &&
             (identical(other.email, email) || other.email == email) &&
+            (identical(other.outTime, outTime) || other.outTime == outTime) &&
+            (identical(other.outDate, outDate) || other.outDate == outDate) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.unit, unit) || other.unit == unit) &&
             (identical(other.time, time) || other.time == time) &&
             (identical(other.year, year) || other.year == year) &&
-            (identical(other.month, month) || other.month == month));
+            (identical(other.month, month) || other.month == month) &&
+            (identical(other.timeStamp, timeStamp) ||
+                other.timeStamp == timeStamp));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -382,11 +437,14 @@ class _$DashboardPageLoadVisitationsModelImpl
       transportationType,
       mobileNumber,
       email,
+      outTime,
+      outDate,
       date,
       unit,
       time,
       year,
-      month);
+      month,
+      timeStamp);
 
   /// Create a copy of DashboardPageLoadVisitationsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -409,19 +467,23 @@ class _$DashboardPageLoadVisitationsModelImpl
 abstract class _DashboardPageLoadVisitationsModel
     implements DashboardPageLoadVisitationsModel {
   const factory _DashboardPageLoadVisitationsModel(
-      {required final String? identificationNumber,
-      required final String? identificationType,
-      required final String? firstName,
-      required final String? middleName,
-      required final String? lastName,
-      required final String? transportationType,
-      required final String? mobileNumber,
-      required final String? email,
-      required final String? date,
-      required final String? unit,
-      required final String? time,
-      required final String? year,
-      required final String? month}) = _$DashboardPageLoadVisitationsModelImpl;
+          {required final String? identificationNumber,
+          required final String? identificationType,
+          required final String? firstName,
+          required final String? middleName,
+          required final String? lastName,
+          required final String? transportationType,
+          required final String? mobileNumber,
+          required final String? email,
+          required final String? outTime,
+          required final String? outDate,
+          required final String? date,
+          required final String? unit,
+          required final String? time,
+          required final String? year,
+          required final String? month,
+          required final DateTime? timeStamp}) =
+      _$DashboardPageLoadVisitationsModelImpl;
 
   factory _DashboardPageLoadVisitationsModel.fromJson(
           Map<String, dynamic> json) =
@@ -444,6 +506,10 @@ abstract class _DashboardPageLoadVisitationsModel
   @override
   String? get email;
   @override
+  String? get outTime;
+  @override
+  String? get outDate;
+  @override
   String? get date;
   @override
   String? get unit;
@@ -453,6 +519,8 @@ abstract class _DashboardPageLoadVisitationsModel
   String? get year;
   @override
   String? get month;
+  @override
+  DateTime? get timeStamp;
 
   /// Create a copy of DashboardPageLoadVisitationsModel
   /// with the given fields replaced by the non-null parameter values.

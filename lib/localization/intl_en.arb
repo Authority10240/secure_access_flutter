@@ -104,7 +104,10 @@
   "back": "Back",
   "drivein": "Drive in",
   "time": "Time:",
-  "date": "Date"
+  "date": "Date",
+  "checkedIn":"Checked in",
+  "unit": "Unit",
+  "checkedOut": "Checked out"
 
 
 

@@ -19,7 +19,10 @@ class PersonnelScanContinueClickedModel with _$PersonnelScanContinueClickedModel
     required String? unitVisited,
     required String? time,
     required String? year,
-    required String? month
+    required String? month,
+    required String? outTime,
+    required String? outDate,
+    required DateTime? timeStamp
   }) = _PersonnelScanContinueClickedModel;
 
   factory PersonnelScanContinueClickedModel.fromJson(

@@ -33,10 +33,13 @@ mixin _$ManualVehicleContinueClickedModel {
   String? get color => throw _privateConstructorUsedError;
   String? get unit => throw _privateConstructorUsedError;
   String? get date => throw _privateConstructorUsedError;
+  String? get outTime => throw _privateConstructorUsedError;
+  String? get outDate => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
   String? get year => throw _privateConstructorUsedError;
   String? get month => throw _privateConstructorUsedError;
+  DateTime? get timeStamp => throw _privateConstructorUsedError;
 
   /// Serializes this ManualVehicleContinueClickedModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -69,10 +72,13 @@ abstract class $ManualVehicleContinueClickedModelCopyWith<$Res> {
       String? color,
       String? unit,
       String? date,
+      String? outTime,
+      String? outDate,
       String? id,
       String? time,
       String? year,
-      String? month});
+      String? month,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -103,10 +109,13 @@ class _$ManualVehicleContinueClickedModelCopyWithImpl<$Res,
     Object? color = freezed,
     Object? unit = freezed,
     Object? date = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
     Object? id = freezed,
     Object? time = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_value.copyWith(
       engineNumber: freezed == engineNumber
@@ -157,6 +166,14 @@ class _$ManualVehicleContinueClickedModelCopyWithImpl<$Res,
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -173,6 +190,10 @@ class _$ManualVehicleContinueClickedModelCopyWithImpl<$Res,
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -199,10 +220,13 @@ abstract class _$$ManualVehicleContinueClickedModelImplCopyWith<$Res>
       String? color,
       String? unit,
       String? date,
+      String? outTime,
+      String? outDate,
       String? id,
       String? time,
       String? year,
-      String? month});
+      String? month,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -232,10 +256,13 @@ class __$$ManualVehicleContinueClickedModelImplCopyWithImpl<$Res>
     Object? color = freezed,
     Object? unit = freezed,
     Object? date = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
     Object? id = freezed,
     Object? time = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_$ManualVehicleContinueClickedModelImpl(
       engineNumber: freezed == engineNumber
@@ -286,6 +313,14 @@ class __$$ManualVehicleContinueClickedModelImplCopyWithImpl<$Res>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -302,6 +337,10 @@ class __$$ManualVehicleContinueClickedModelImplCopyWithImpl<$Res>
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -324,10 +363,13 @@ class _$ManualVehicleContinueClickedModelImpl
       required this.color,
       required this.unit,
       required this.date,
+      required this.outTime,
+      required this.outDate,
       required this.id,
       required this.time,
       required this.year,
-      required this.month});
+      required this.month,
+      required this.timeStamp});
 
   factory _$ManualVehicleContinueClickedModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -358,6 +400,10 @@ class _$ManualVehicleContinueClickedModelImpl
   @override
   final String? date;
   @override
+  final String? outTime;
+  @override
+  final String? outDate;
+  @override
   final String? id;
   @override
   final String? time;
@@ -365,10 +411,12 @@ class _$ManualVehicleContinueClickedModelImpl
   final String? year;
   @override
   final String? month;
+  @override
+  final DateTime? timeStamp;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ManualVehicleContinueClickedModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, description: $description, identificationNumber: $identificationNumber, color: $color, unit: $unit, date: $date, id: $id, time: $time, year: $year, month: $month)';
+    return 'ManualVehicleContinueClickedModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, description: $description, identificationNumber: $identificationNumber, color: $color, unit: $unit, date: $date, outTime: $outTime, outDate: $outDate, id: $id, time: $time, year: $year, month: $month, timeStamp: $timeStamp)';
   }
 
   @override
@@ -388,10 +436,13 @@ class _$ManualVehicleContinueClickedModelImpl
       ..add(DiagnosticsProperty('color', color))
       ..add(DiagnosticsProperty('unit', unit))
       ..add(DiagnosticsProperty('date', date))
+      ..add(DiagnosticsProperty('outTime', outTime))
+      ..add(DiagnosticsProperty('outDate', outDate))
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('time', time))
       ..add(DiagnosticsProperty('year', year))
-      ..add(DiagnosticsProperty('month', month));
+      ..add(DiagnosticsProperty('month', month))
+      ..add(DiagnosticsProperty('timeStamp', timeStamp));
   }
 
   @override
@@ -418,32 +469,40 @@ class _$ManualVehicleContinueClickedModelImpl
             (identical(other.color, color) || other.color == color) &&
             (identical(other.unit, unit) || other.unit == unit) &&
             (identical(other.date, date) || other.date == date) &&
+            (identical(other.outTime, outTime) || other.outTime == outTime) &&
+            (identical(other.outDate, outDate) || other.outDate == outDate) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.time, time) || other.time == time) &&
             (identical(other.year, year) || other.year == year) &&
-            (identical(other.month, month) || other.month == month));
+            (identical(other.month, month) || other.month == month) &&
+            (identical(other.timeStamp, timeStamp) ||
+                other.timeStamp == timeStamp));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      engineNumber,
-      licenseNumber,
-      regNumber,
-      vinNumber,
-      expiryYear,
-      make,
-      model,
-      description,
-      identificationNumber,
-      color,
-      unit,
-      date,
-      id,
-      time,
-      year,
-      month);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        engineNumber,
+        licenseNumber,
+        regNumber,
+        vinNumber,
+        expiryYear,
+        make,
+        model,
+        description,
+        identificationNumber,
+        color,
+        unit,
+        date,
+        outTime,
+        outDate,
+        id,
+        time,
+        year,
+        month,
+        timeStamp
+      ]);
 
   /// Create a copy of ManualVehicleContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.
@@ -466,22 +525,26 @@ class _$ManualVehicleContinueClickedModelImpl
 abstract class _ManualVehicleContinueClickedModel
     implements ManualVehicleContinueClickedModel {
   const factory _ManualVehicleContinueClickedModel(
-      {required final String? engineNumber,
-      required final String? licenseNumber,
-      required final String? regNumber,
-      required final String? vinNumber,
-      required final String? expiryYear,
-      required final String? make,
-      required final String? model,
-      required final String? description,
-      required final String? identificationNumber,
-      required final String? color,
-      required final String? unit,
-      required final String? date,
-      required final String? id,
-      required final String? time,
-      required final String? year,
-      required final String? month}) = _$ManualVehicleContinueClickedModelImpl;
+          {required final String? engineNumber,
+          required final String? licenseNumber,
+          required final String? regNumber,
+          required final String? vinNumber,
+          required final String? expiryYear,
+          required final String? make,
+          required final String? model,
+          required final String? description,
+          required final String? identificationNumber,
+          required final String? color,
+          required final String? unit,
+          required final String? date,
+          required final String? outTime,
+          required final String? outDate,
+          required final String? id,
+          required final String? time,
+          required final String? year,
+          required final String? month,
+          required final DateTime? timeStamp}) =
+      _$ManualVehicleContinueClickedModelImpl;
 
   factory _ManualVehicleContinueClickedModel.fromJson(
           Map<String, dynamic> json) =
@@ -512,6 +575,10 @@ abstract class _ManualVehicleContinueClickedModel
   @override
   String? get date;
   @override
+  String? get outTime;
+  @override
+  String? get outDate;
+  @override
   String? get id;
   @override
   String? get time;
@@ -519,6 +586,8 @@ abstract class _ManualVehicleContinueClickedModel
   String? get year;
   @override
   String? get month;
+  @override
+  DateTime? get timeStamp;
 
   /// Create a copy of ManualVehicleContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.

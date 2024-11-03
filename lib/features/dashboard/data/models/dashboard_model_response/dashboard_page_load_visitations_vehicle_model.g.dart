@@ -22,9 +22,14 @@ _$DashboardPageLoadVisitationsVehicleModelImpl
           date: json['date'] as String?,
           unit: json['unit'] as String?,
           color: json['color'] as String?,
+          outTime: json['outTime'] as String?,
+          outDate: json['outDate'] as String?,
           time: json['time'] as String?,
           year: json['year'] as String?,
           month: json['month'] as String?,
+          timeStamp: json['timeStamp'] == null
+              ? null
+              : DateTime.parse(json['timeStamp'] as String),
         );
 
 Map<String, dynamic> _$$DashboardPageLoadVisitationsVehicleModelImplToJson(
@@ -42,7 +47,10 @@ Map<String, dynamic> _$$DashboardPageLoadVisitationsVehicleModelImplToJson(
       'date': instance.date,
       'unit': instance.unit,
       'color': instance.color,
+      'outTime': instance.outTime,
+      'outDate': instance.outDate,
       'time': instance.time,
       'year': instance.year,
       'month': instance.month,
+      'timeStamp': instance.timeStamp?.toIso8601String(),
     };

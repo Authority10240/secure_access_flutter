@@ -32,8 +32,11 @@ mixin _$PersonDetailsContinueClickedModel {
   String? get date => throw _privateConstructorUsedError;
   String? get unit => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
+  String? get outTime => throw _privateConstructorUsedError;
+  String? get outDate => throw _privateConstructorUsedError;
   String? get year => throw _privateConstructorUsedError;
   String? get month => throw _privateConstructorUsedError;
+  DateTime? get timeStamp => throw _privateConstructorUsedError;
 
   /// Serializes this PersonDetailsContinueClickedModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -65,8 +68,11 @@ abstract class $PersonDetailsContinueClickedModelCopyWith<$Res> {
       String? date,
       String? unit,
       String? time,
+      String? outTime,
+      String? outDate,
       String? year,
-      String? month});
+      String? month,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -96,8 +102,11 @@ class _$PersonDetailsContinueClickedModelCopyWithImpl<$Res,
     Object? date = freezed,
     Object? unit = freezed,
     Object? time = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_value.copyWith(
       identificationNumber: freezed == identificationNumber
@@ -144,6 +153,14 @@ class _$PersonDetailsContinueClickedModelCopyWithImpl<$Res,
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       year: freezed == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -152,6 +169,10 @@ class _$PersonDetailsContinueClickedModelCopyWithImpl<$Res,
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -177,8 +198,11 @@ abstract class _$$PersonDetailsContinueClickedModelImplCopyWith<$Res>
       String? date,
       String? unit,
       String? time,
+      String? outTime,
+      String? outDate,
       String? year,
-      String? month});
+      String? month,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -207,8 +231,11 @@ class __$$PersonDetailsContinueClickedModelImplCopyWithImpl<$Res>
     Object? date = freezed,
     Object? unit = freezed,
     Object? time = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_$PersonDetailsContinueClickedModelImpl(
       identificationNumber: freezed == identificationNumber
@@ -255,6 +282,14 @@ class __$$PersonDetailsContinueClickedModelImplCopyWithImpl<$Res>
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       year: freezed == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -263,6 +298,10 @@ class __$$PersonDetailsContinueClickedModelImplCopyWithImpl<$Res>
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -284,8 +323,11 @@ class _$PersonDetailsContinueClickedModelImpl
       required this.date,
       required this.unit,
       required this.time,
+      required this.outTime,
+      required this.outDate,
       required this.year,
-      required this.month});
+      required this.month,
+      required this.timeStamp});
 
   factory _$PersonDetailsContinueClickedModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -314,13 +356,19 @@ class _$PersonDetailsContinueClickedModelImpl
   @override
   final String? time;
   @override
+  final String? outTime;
+  @override
+  final String? outDate;
+  @override
   final String? year;
   @override
   final String? month;
+  @override
+  final DateTime? timeStamp;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PersonDetailsContinueClickedModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, date: $date, unit: $unit, time: $time, year: $year, month: $month)';
+    return 'PersonDetailsContinueClickedModel(identificationNumber: $identificationNumber, identificationType: $identificationType, firstName: $firstName, middleName: $middleName, lastName: $lastName, transportationType: $transportationType, mobileNumber: $mobileNumber, email: $email, date: $date, unit: $unit, time: $time, outTime: $outTime, outDate: $outDate, year: $year, month: $month, timeStamp: $timeStamp)';
   }
 
   @override
@@ -339,8 +387,11 @@ class _$PersonDetailsContinueClickedModelImpl
       ..add(DiagnosticsProperty('date', date))
       ..add(DiagnosticsProperty('unit', unit))
       ..add(DiagnosticsProperty('time', time))
+      ..add(DiagnosticsProperty('outTime', outTime))
+      ..add(DiagnosticsProperty('outDate', outDate))
       ..add(DiagnosticsProperty('year', year))
-      ..add(DiagnosticsProperty('month', month));
+      ..add(DiagnosticsProperty('month', month))
+      ..add(DiagnosticsProperty('timeStamp', timeStamp));
   }
 
   @override
@@ -366,8 +417,12 @@ class _$PersonDetailsContinueClickedModelImpl
             (identical(other.date, date) || other.date == date) &&
             (identical(other.unit, unit) || other.unit == unit) &&
             (identical(other.time, time) || other.time == time) &&
+            (identical(other.outTime, outTime) || other.outTime == outTime) &&
+            (identical(other.outDate, outDate) || other.outDate == outDate) &&
             (identical(other.year, year) || other.year == year) &&
-            (identical(other.month, month) || other.month == month));
+            (identical(other.month, month) || other.month == month) &&
+            (identical(other.timeStamp, timeStamp) ||
+                other.timeStamp == timeStamp));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -385,8 +440,11 @@ class _$PersonDetailsContinueClickedModelImpl
       date,
       unit,
       time,
+      outTime,
+      outDate,
       year,
-      month);
+      month,
+      timeStamp);
 
   /// Create a copy of PersonDetailsContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.
@@ -409,19 +467,23 @@ class _$PersonDetailsContinueClickedModelImpl
 abstract class _PersonDetailsContinueClickedModel
     implements PersonDetailsContinueClickedModel {
   const factory _PersonDetailsContinueClickedModel(
-      {required final String? identificationNumber,
-      required final String? identificationType,
-      required final String? firstName,
-      required final String? middleName,
-      required final String? lastName,
-      required final String? transportationType,
-      required final String? mobileNumber,
-      required final String? email,
-      required final String? date,
-      required final String? unit,
-      required final String? time,
-      required final String? year,
-      required final String? month}) = _$PersonDetailsContinueClickedModelImpl;
+          {required final String? identificationNumber,
+          required final String? identificationType,
+          required final String? firstName,
+          required final String? middleName,
+          required final String? lastName,
+          required final String? transportationType,
+          required final String? mobileNumber,
+          required final String? email,
+          required final String? date,
+          required final String? unit,
+          required final String? time,
+          required final String? outTime,
+          required final String? outDate,
+          required final String? year,
+          required final String? month,
+          required final DateTime? timeStamp}) =
+      _$PersonDetailsContinueClickedModelImpl;
 
   factory _PersonDetailsContinueClickedModel.fromJson(
           Map<String, dynamic> json) =
@@ -450,9 +512,15 @@ abstract class _PersonDetailsContinueClickedModel
   @override
   String? get time;
   @override
+  String? get outTime;
+  @override
+  String? get outDate;
+  @override
   String? get year;
   @override
   String? get month;
+  @override
+  DateTime? get timeStamp;
 
   /// Create a copy of PersonDetailsContinueClickedModel
   /// with the given fields replaced by the non-null parameter values.

@@ -20,7 +20,10 @@ class ScannerContinueClickedModel with _$ScannerContinueClickedModel {
     required String? id,
     required String? time,
     required String? year,
-    required String? month
+    required String? month,
+    required String? outTime,
+    required String? outDate,
+    required DateTime timeStamp
   }) = _ScannerContinueClickedModel;
 
   factory ScannerContinueClickedModel.fromJson(

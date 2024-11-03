@@ -178,6 +178,9 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
                          getBloc().add(PersonnelScanContinueClickedEvent(
                              personnelScanContinueClickedModel:
                          PersonnelScanContinueClickedModel(
+                             timeStamp: DateTime.now(),
+                             outDate: '',
+                             outTime: '',
                              year: DateTime.now().year.toString(),
                              month: DateTime.now().month.toString(),
                            unitVisited: _unitController.text.trim(),

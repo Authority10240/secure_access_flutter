@@ -23,6 +23,11 @@ _$PersonnelScanContinueClickedModelImpl
           time: json['time'] as String?,
           year: json['year'] as String?,
           month: json['month'] as String?,
+          outTime: json['outTime'] as String?,
+          outDate: json['outDate'] as String?,
+          timeStamp: json['timeStamp'] == null
+              ? null
+              : DateTime.parse(json['timeStamp'] as String),
         );
 
 Map<String, dynamic> _$$PersonnelScanContinueClickedModelImplToJson(
@@ -41,4 +46,7 @@ Map<String, dynamic> _$$PersonnelScanContinueClickedModelImplToJson(
       'time': instance.time,
       'year': instance.year,
       'month': instance.month,
+      'outTime': instance.outTime,
+      'outDate': instance.outDate,
+      'timeStamp': instance.timeStamp?.toIso8601String(),
     };

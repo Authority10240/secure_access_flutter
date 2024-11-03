@@ -22,10 +22,15 @@ _$ManualVehicleContinueClickedModelImpl
           color: json['color'] as String?,
           unit: json['unit'] as String?,
           date: json['date'] as String?,
+          outTime: json['outTime'] as String?,
+          outDate: json['outDate'] as String?,
           id: json['id'] as String?,
           time: json['time'] as String?,
           year: json['year'] as String?,
           month: json['month'] as String?,
+          timeStamp: json['timeStamp'] == null
+              ? null
+              : DateTime.parse(json['timeStamp'] as String),
         );
 
 Map<String, dynamic> _$$ManualVehicleContinueClickedModelImplToJson(
@@ -43,8 +48,11 @@ Map<String, dynamic> _$$ManualVehicleContinueClickedModelImplToJson(
       'color': instance.color,
       'unit': instance.unit,
       'date': instance.date,
+      'outTime': instance.outTime,
+      'outDate': instance.outDate,
       'id': instance.id,
       'time': instance.time,
       'year': instance.year,
       'month': instance.month,
+      'timeStamp': instance.timeStamp?.toIso8601String(),
     };

@@ -40,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Capture visitor\'s passport details"),
         "car": MessageLookupByLibrary.simpleMessage("Car"),
         "carDetails": MessageLookupByLibrary.simpleMessage("Car details:"),
+        "checkedIn": MessageLookupByLibrary.simpleMessage("Checked in"),
+        "checkedOut": MessageLookupByLibrary.simpleMessage("Checked out"),
         "color": MessageLookupByLibrary.simpleMessage("Color"),
         "complexName": MessageLookupByLibrary.simpleMessage("Complex name"),
         "confirmPassword":
@@ -160,6 +162,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "testMe": MessageLookupByLibrary.simpleMessage("Test me"),
         "time": MessageLookupByLibrary.simpleMessage("Time:"),
         "truck": MessageLookupByLibrary.simpleMessage("Truck"),
+        "unit": MessageLookupByLibrary.simpleMessage("Unit"),
         "unitVisited": MessageLookupByLibrary.simpleMessage("Unit visited"),
         "username": MessageLookupByLibrary.simpleMessage("Username "),
         "vehicle": MessageLookupByLibrary.simpleMessage("Vehicle"),

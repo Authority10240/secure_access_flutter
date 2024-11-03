@@ -34,9 +34,12 @@ mixin _$DashboardPageLoadVisitationsVehicleModel {
   String? get date => throw _privateConstructorUsedError;
   String? get unit => throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
+  String? get outTime => throw _privateConstructorUsedError;
+  String? get outDate => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
   String? get year => throw _privateConstructorUsedError;
   String? get month => throw _privateConstructorUsedError;
+  DateTime? get timeStamp => throw _privateConstructorUsedError;
 
   /// Serializes this DashboardPageLoadVisitationsVehicleModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -70,9 +73,12 @@ abstract class $DashboardPageLoadVisitationsVehicleModelCopyWith<$Res> {
       String? date,
       String? unit,
       String? color,
+      String? outTime,
+      String? outDate,
       String? time,
       String? year,
-      String? month});
+      String? month,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -104,9 +110,12 @@ class _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
     Object? date = freezed,
     Object? unit = freezed,
     Object? color = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
     Object? time = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_value.copyWith(
       engineNumber: freezed == engineNumber
@@ -157,6 +166,14 @@ class _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
@@ -169,6 +186,10 @@ class _$DashboardPageLoadVisitationsVehicleModelCopyWithImpl<$Res,
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -195,9 +216,12 @@ abstract class _$$DashboardPageLoadVisitationsVehicleModelImplCopyWith<$Res>
       String? date,
       String? unit,
       String? color,
+      String? outTime,
+      String? outDate,
       String? time,
       String? year,
-      String? month});
+      String? month,
+      DateTime? timeStamp});
 }
 
 /// @nodoc
@@ -227,9 +251,12 @@ class __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>
     Object? date = freezed,
     Object? unit = freezed,
     Object? color = freezed,
+    Object? outTime = freezed,
+    Object? outDate = freezed,
     Object? time = freezed,
     Object? year = freezed,
     Object? month = freezed,
+    Object? timeStamp = freezed,
   }) {
     return _then(_$DashboardPageLoadVisitationsVehicleModelImpl(
       engineNumber: freezed == engineNumber
@@ -280,6 +307,14 @@ class __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as String?,
+      outTime: freezed == outTime
+          ? _value.outTime
+          : outTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      outDate: freezed == outDate
+          ? _value.outDate
+          : outDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
@@ -292,6 +327,10 @@ class __$$DashboardPageLoadVisitationsVehicleModelImplCopyWithImpl<$Res>
           ? _value.month
           : month // ignore: cast_nullable_to_non_nullable
               as String?,
+      timeStamp: freezed == timeStamp
+          ? _value.timeStamp
+          : timeStamp // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -314,9 +353,12 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
       required this.date,
       required this.unit,
       required this.color,
+      required this.outTime,
+      required this.outDate,
       required this.time,
       required this.year,
-      required this.month});
+      required this.month,
+      required this.timeStamp});
 
   factory _$DashboardPageLoadVisitationsVehicleModelImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -347,15 +389,21 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
   @override
   final String? color;
   @override
+  final String? outTime;
+  @override
+  final String? outDate;
+  @override
   final String? time;
   @override
   final String? year;
   @override
   final String? month;
+  @override
+  final DateTime? timeStamp;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DashboardPageLoadVisitationsVehicleModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, description: $description, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, date: $date, unit: $unit, color: $color, time: $time, year: $year, month: $month)';
+    return 'DashboardPageLoadVisitationsVehicleModel(engineNumber: $engineNumber, licenseNumber: $licenseNumber, regNumber: $regNumber, description: $description, vinNumber: $vinNumber, expiryYear: $expiryYear, make: $make, model: $model, identificationNumber: $identificationNumber, date: $date, unit: $unit, color: $color, outTime: $outTime, outDate: $outDate, time: $time, year: $year, month: $month, timeStamp: $timeStamp)';
   }
 
   @override
@@ -376,9 +424,12 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
       ..add(DiagnosticsProperty('date', date))
       ..add(DiagnosticsProperty('unit', unit))
       ..add(DiagnosticsProperty('color', color))
+      ..add(DiagnosticsProperty('outTime', outTime))
+      ..add(DiagnosticsProperty('outDate', outDate))
       ..add(DiagnosticsProperty('time', time))
       ..add(DiagnosticsProperty('year', year))
-      ..add(DiagnosticsProperty('month', month));
+      ..add(DiagnosticsProperty('month', month))
+      ..add(DiagnosticsProperty('timeStamp', timeStamp));
   }
 
   @override
@@ -405,9 +456,13 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
             (identical(other.date, date) || other.date == date) &&
             (identical(other.unit, unit) || other.unit == unit) &&
             (identical(other.color, color) || other.color == color) &&
+            (identical(other.outTime, outTime) || other.outTime == outTime) &&
+            (identical(other.outDate, outDate) || other.outDate == outDate) &&
             (identical(other.time, time) || other.time == time) &&
             (identical(other.year, year) || other.year == year) &&
-            (identical(other.month, month) || other.month == month));
+            (identical(other.month, month) || other.month == month) &&
+            (identical(other.timeStamp, timeStamp) ||
+                other.timeStamp == timeStamp));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -426,9 +481,12 @@ class _$DashboardPageLoadVisitationsVehicleModelImpl
       date,
       unit,
       color,
+      outTime,
+      outDate,
       time,
       year,
-      month);
+      month,
+      timeStamp);
 
   /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.
@@ -464,9 +522,12 @@ abstract class _DashboardPageLoadVisitationsVehicleModel
           required final String? date,
           required final String? unit,
           required final String? color,
+          required final String? outTime,
+          required final String? outDate,
           required final String? time,
           required final String? year,
-          required final String? month}) =
+          required final String? month,
+          required final DateTime? timeStamp}) =
       _$DashboardPageLoadVisitationsVehicleModelImpl;
 
   factory _DashboardPageLoadVisitationsVehicleModel.fromJson(
@@ -498,11 +559,17 @@ abstract class _DashboardPageLoadVisitationsVehicleModel
   @override
   String? get color;
   @override
+  String? get outTime;
+  @override
+  String? get outDate;
+  @override
   String? get time;
   @override
   String? get year;
   @override
   String? get month;
+  @override
+  DateTime? get timeStamp;
 
   /// Create a copy of DashboardPageLoadVisitationsVehicleModel
   /// with the given fields replaced by the non-null parameter values.

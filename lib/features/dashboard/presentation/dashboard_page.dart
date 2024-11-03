@@ -98,11 +98,11 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
                                   itemBuilder: (context, index){
                                   DashboardPageLoadVisitationsModel? visitation = snapshot.data?.docs.elementAt(index).data();
                                   String? visitationId  = snapshot.data?.docs.elementAt(index).id;
-                                  return Card(elevation: 11,child: Container( child: ListTile(
-                                    leading: Text("Unit: ${visitation?.unit??""}",style: textStyleSubHeading(),),
+                                  return InkWell(child: Card(elevation: 11,child: Container( child: ListTile(
+                                    leading: Text("${appLocalizations.unit}: ${visitation?.unit??""}",style: textStyleSubHeading(),),
                                     title: Text("${appLocalizations.name}: ${visitation?.firstName??""}\n"
                                         "${appLocalizations.surname}: ${visitation?.lastName??""}",style: textStyleSubHeading(),),
-                                    subtitle: Text("Date: ${visitation?.date!} Time:${visitation?.time}",),
+                                    subtitle: Text("${appLocalizations.time} ${visitation?.time} - ${visitation?.date!} ",),
                                     trailing: InkWell(
                                     child: Icon(
                                         visitation?.transportationType == TransportationType.driveIn.toString()?
@@ -117,7 +117,7 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
                                       }else{
                                         Get.snackbar('Walk in', '${visitation?.firstName} ${visitation?.lastName} walked in');
                                       }
-                                  },))),);
+                                  },))),));
                               });
                         })
                       ]

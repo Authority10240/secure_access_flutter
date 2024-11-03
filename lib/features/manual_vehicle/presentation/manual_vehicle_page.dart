@@ -145,6 +145,9 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
                             getBloc().add(ManualVehicleContinueClickedEvent(
                                 manualVehicleContinueClickedModel:
                                 ManualVehicleContinueClickedModel(
+                                  timeStamp: DateTime.now(),
+                                  outDate: '',
+                                  outTime: '',
                                   year: DateTime.now().year.toString(),
                                   month: DateTime.now().month.toString(),
                                   time: timeNow,

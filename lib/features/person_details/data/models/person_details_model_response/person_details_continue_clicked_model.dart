@@ -18,8 +18,11 @@ class PersonDetailsContinueClickedModel with _$PersonDetailsContinueClickedModel
     required String? date,
     required String? unit,
     required String? time,
+    required String? outTime,
+    required String? outDate,
     required String? year,
-    required String? month
+    required String? month,
+    required DateTime? timeStamp
   }) = _PersonDetailsContinueClickedModel;
 
   factory PersonDetailsContinueClickedModel.fromJson(
