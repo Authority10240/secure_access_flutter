@@ -3,7 +3,7 @@
     "project_number": "850404688205",
     "firebase_url": "https://safe-access-499b9-default-rtdb.firebaseio.com",
     "project_id": "safe-access-499b9",
-    "storage_bucket": "safe-access-499b9.appspot.com"
+    "storage_bucket": "safe-access-499b9.firebasestorage.app"
   },
   "client": [
     {
@@ -87,6 +87,139 @@
         "mobilesdk_app_id": "1:850404688205:android:982192b26d39445f47f704",
         "android_client_info": {
           "package_name": "progressive.app.secure_access.uat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhGU9Oah2pd9oXYLdMgpe-bZJoUxaComk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850404688205:android:149b0e74ac36b77c47f704",
+        "android_client_info": {
+          "package_name": "progressive.app.secure_access_administrator.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhGU9Oah2pd9oXYLdMgpe-bZJoUxaComk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850404688205:android:1b8036e8b417c31d47f704",
+        "android_client_info": {
+          "package_name": "progressive.app.secure_access_administrator.prod"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhGU9Oah2pd9oXYLdMgpe-bZJoUxaComk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850404688205:android:4910cf70b292036a47f704",
+        "android_client_info": {
+          "package_name": "progressive.app.secure_access_administrator.uat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhGU9Oah2pd9oXYLdMgpe-bZJoUxaComk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850404688205:android:14eb284cac967dc047f704",
+        "android_client_info": {
+          "package_name": "qubit.firebase.secure_access_residential"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhGU9Oah2pd9oXYLdMgpe-bZJoUxaComk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850404688205:android:5b74a5508ac8c80c47f704",
+        "android_client_info": {
+          "package_name": "qubit.flutter.secure_access_resident.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhGU9Oah2pd9oXYLdMgpe-bZJoUxaComk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850404688205:android:9eac3667c68f5ca747f704",
+        "android_client_info": {
+          "package_name": "qubit.flutter.secure_access_resident.prod"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhGU9Oah2pd9oXYLdMgpe-bZJoUxaComk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850404688205:android:89908ffac8be6cac47f704",
+        "android_client_info": {
+          "package_name": "qubit.flutter.secure_access_resident.uat"
         }
       },
       "oauth_client": [],

@@ -14,7 +14,7 @@ class ScanQrEvent extends ScannerPageEvent{
 
 class ScannerContinueClickedEvent extends ScannerPageEvent{
 
-   final ScannerContinueClickedModel scannerContinueClickedModel;
+   final SecureAccessVisitationsVehicleModel scannerContinueClickedModel;
 
 
    ScannerContinueClickedEvent({required this.scannerContinueClickedModel});

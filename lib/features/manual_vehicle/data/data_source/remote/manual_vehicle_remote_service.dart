@@ -1,6 +1,7 @@
-import 'package:secure_access/features/manual_vehicle/data/models/manual_vehicle_model_response/manual_vehicle_continue_clicked_model.dart';
+
+import 'package:secure_access_repository/models/secure_access_visitations_vehicle_model/secure_access_visitations_vehicle_model.dart';
 
 abstract class ManualVehicleRemoteService {
 
-  Future<String> manualVehicleContinueClicked({required ManualVehicleContinueClickedModel manualVehicleContinueClickedModel});
+  Future<String> manualVehicleContinueClicked({required SecureAccessVisitationsVehicleModel manualVehicleContinueClickedModel});
 }

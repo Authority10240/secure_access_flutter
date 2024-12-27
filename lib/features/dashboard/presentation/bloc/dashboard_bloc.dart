@@ -5,10 +5,9 @@ import 'package:secure_access/core/base_classes/base_event.dart';
 import 'package:secure_access/core/base_classes/base_state.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
-import 'package:secure_access/features/dashboard/data/models/dashboard_model_response/dashboard_page_load_visitations_vehicle_model.dart';
-import 'package:secure_access/features/dashboard/data/models/dashboard_model_response/dashboard_page_load_vistations_model.dart';
 import 'package:secure_access/features/dashboard/domain/use_cases/dashboard_usecase/dashboard_page_load_visitation_vehicle_usecase.dart';
 import 'package:secure_access/features/dashboard/domain/use_cases/dashboard_usecase/dashboard_page_load_visitations_usecase.dart';
+import 'package:secure_access_repository/models/repository_models.dart';
 
 
 part 'dashboard_event.dart';

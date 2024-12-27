@@ -11,12 +11,12 @@ import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
 import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
-import 'package:secure_access/features/dashboard/data/models/dashboard_model_response/dashboard_page_load_vistations_model.dart';
 import 'package:secure_access/features/dashboard/presentation/widgets/car_description_widget.dart';
 import 'package:secure_access/features/dashboard/presentation/widgets/transport_type_card.dart';
 import 'package:secure_access/features/identification_type/presentation/identification_type_page.dart';
 import 'package:secure_access/generated/l10n.dart';
 import 'package:get/get.dart';
+import 'package:secure_access_repository/models/repository_models.dart';
 import 'bloc/dashboard_bloc.dart';
 
 
@@ -87,16 +87,16 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
                         smallSpacer,
                         Center(child: Text(appLocalizations.whoHasBeenHereToday, style: textStyleDirectives(),)),
                         mediumSpacer,
-                        StreamBuilder<QuerySnapshot<DashboardPageLoadVisitationsModel?>>(
+                        StreamBuilder<QuerySnapshot<SecureAccessVisitationsModel?>>(
                             stream: state.visitations,
                             builder: (context, snapshot){
-                              List<QueryDocumentSnapshot<DashboardPageLoadVisitationsModel?>>? data = snapshot.data?.docs??[];
+                              List<QueryDocumentSnapshot<SecureAccessVisitationsModel?>>? data = snapshot.data?.docs??[];
                               return ListView.builder(
                                 shrinkWrap: true,
                                 physics: const NeverScrollableScrollPhysics(),
                                 itemCount: snapshot.data?.docs.length??0,
                                   itemBuilder: (context, index){
-                                  DashboardPageLoadVisitationsModel? visitation = snapshot.data?.docs.elementAt(index).data();
+                                  SecureAccessVisitationsModel? visitation = snapshot.data?.docs.elementAt(index).data();
                                   String? visitationId  = snapshot.data?.docs.elementAt(index).id;
                                   return InkWell(child: Card(elevation: 11,child: Container( child: ListTile(
                                     leading: Text("${appLocalizations.unit}: ${visitation?.unit??""}",style: textStyleSubHeading(),),
@@ -113,7 +113,7 @@ class _DashboardPageState extends BasePageState<DashboardPage, DashboardBloc> {
                                       if(visitation?.transportationType == TransportationType.driveIn.toString()) {
                                         getBloc().add(DashBoardPageLoadVisitationVehicleEvent(
                                             dashboardPageLoadVisitationsModel: visitation!,
-                                            visitationId: visitation.identificationNumber!));
+                                            visitationId: visitation.identificationsNumber!));
                                       }else{
                                         Get.snackbar('Walk in', '${visitation?.firstName} ${visitation?.lastName} walked in');
                                       }

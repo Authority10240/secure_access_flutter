@@ -12,10 +12,10 @@ import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
 import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
-import 'package:secure_access/features/person_details/data/models/person_details_model_response/person_details_continue_clicked_model.dart';
 import 'package:secure_access/features/person_details/presentation/bloc/person_details_bloc.dart';
 import 'package:secure_access/features/vehicle_type/presentation/vehicle_type_page.dart';
 import 'package:secure_access/generated/l10n.dart';
+import 'package:secure_access_repository/models/secure_access_visitation_model/secure_access_visitations_model.dart';
 
 
 enum IdentificationType{
@@ -172,7 +172,7 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
                         isActive: true,
                         onPressed: (){
                           getBloc().add(PersonDetailsContinueClickedEvent(
-                              personDetailsContinueClickedModel:PersonDetailsContinueClickedModel(
+                              personDetailsContinueClickedModel:SecureAccessVisitationsModel(
                                   timeStamp: DateTime.now(),
                                   outDate: '',
                                   outTime: '',
@@ -181,14 +181,14 @@ class _PersonDetailsPageState extends BasePageState<PersonDetailsPage, PersonDet
                                 unit: _unitController.text.trim(),
                                 time: timeNow,
                                 date: todaysDate,
-                                  identificationNumber: _idNumberController.text.trim(),
+                                  identificationsNumber: _idNumberController.text.trim(),
                                   identificationType: IdentificationType.manual.toString() ,
                                   firstName: _nameController.text.trim(),
                                   middleName:_surnameController.text.trim(),
                                   lastName: _surnameController.text.trim(),
                                   transportationType: widget.transportationType.toString(),
                                   mobileNumber: _phoneController.text.trim(),
-                                  email: _emailController.text.trim()) ));
+                                  email: _emailController.text.trim(), id:null, ) ));
                         },
                         buttonText: getLocalization().wcontinue),
 

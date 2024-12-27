@@ -2,8 +2,8 @@
 import 'package:secure_access/core/base_classes/base_usecase.dart';
 import 'package:injectable/injectable.dart';
 import 'package:secure_access/core/failures/base_failure.dart';
-import 'package:secure_access/features/person_details/data/models/person_details_model_response/person_details_continue_clicked_model.dart';
 import 'package:secure_access/features/person_details/domain/repository/person_details_repository/person_details_continue_clicked_repository.dart';
+import 'package:secure_access_repository/models/secure_access_visitation_model/secure_access_visitations_model.dart';
 
 @Injectable()
 class PersonDetailsContinueClickedUseCase extends BaseUseCase<PersonDetailsContinueClickedUseCaseParams, String>{
@@ -29,5 +29,5 @@ class PersonDetailsContinueClickedUseCaseParams extends BaseUseCaseParams{
 
    PersonDetailsContinueClickedUseCaseParams({required this.personDetailsContinueClickedModel});
 
-  final PersonDetailsContinueClickedModel personDetailsContinueClickedModel;
+  final SecureAccessVisitationsModel personDetailsContinueClickedModel;
 }

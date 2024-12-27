@@ -48,6 +48,8 @@ dependencies:
   cached_network_image: ^3.4.1
   freezed: ^2.5.7
   cloud_firestore: ^5.4.1
+  secure_access_repository:
+    git: "https://github.com/Authority10240/secure_access-repository.git"
 
 
 

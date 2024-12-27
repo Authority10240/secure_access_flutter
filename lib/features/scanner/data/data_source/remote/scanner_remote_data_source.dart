@@ -1,6 +1,7 @@
-import 'package:secure_access/features/scanner/data/models/scanner_model_response/scanner_continue_clicked_model.dart';
+
+import 'package:secure_access_repository/models/secure_access_visitations_vehicle_model/secure_access_visitations_vehicle_model.dart';
 
 abstract class ScannerRemoteDataSource{
 
-  Future<String> scannerContinueClicked({required ScannerContinueClickedModel scannerContinueClickedModel});
+  Future<String> scannerContinueClicked({required SecureAccessVisitationsVehicleModel scannerContinueClickedModel});
 }

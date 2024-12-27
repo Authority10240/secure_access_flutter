@@ -2,8 +2,8 @@
 import 'package:secure_access/core/base_classes/base_usecase.dart';
 import 'package:injectable/injectable.dart';
 import 'package:secure_access/core/failures/base_failure.dart';
-import 'package:secure_access/features/personnel_scan/data/models/personnel_scan_model_response/personnel_scan_continue_clicked_model.dart';
 import 'package:secure_access/features/personnel_scan/domain/repository/personnel_scan_repository/personnel_scan_continue_clicked_repository.dart';
+import 'package:secure_access_repository/models/secure_access_visitation_model/secure_access_visitations_model.dart';
 
 @Injectable()
 class PersonnelScanContinueClickedUseCase extends BaseUseCase<PersonnelScanContinueClickedUseCaseParams, String>{
@@ -26,6 +26,6 @@ class PersonnelScanContinueClickedUseCase extends BaseUseCase<PersonnelScanConti
 class PersonnelScanContinueClickedUseCaseParams extends BaseUseCaseParams{
 
   PersonnelScanContinueClickedUseCaseParams({required this.personnelScanContinueClickedModel});
-  final PersonnelScanContinueClickedModel personnelScanContinueClickedModel;
+  final SecureAccessVisitationsModel personnelScanContinueClickedModel;
 
 }

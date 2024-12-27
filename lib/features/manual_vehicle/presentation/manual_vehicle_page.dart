@@ -12,8 +12,8 @@ import 'package:secure_access/core/widgets/custom_form_button.dart';
 import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
 import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
-import 'package:secure_access/features/manual_vehicle/data/models/manual_vehicle_model_response/manual_vehicle_continue_clicked_model.dart';
 import 'package:secure_access/generated/l10n.dart';
+import 'package:secure_access_repository/models/secure_access_visitations_vehicle_model/secure_access_visitations_vehicle_model.dart';
 
 import 'bloc/manual_vehicle_bloc.dart';
 
@@ -144,7 +144,7 @@ class _ManualVehiclePageState extends BasePageState<ManualVehiclePage, ManualVeh
                           if(_formKey.currentState!.validate()){
                             getBloc().add(ManualVehicleContinueClickedEvent(
                                 manualVehicleContinueClickedModel:
-                                ManualVehicleContinueClickedModel(
+                                SecureAccessVisitationsVehicleModel(
                                   timeStamp: DateTime.now(),
                                   outDate: '',
                                   outTime: '',

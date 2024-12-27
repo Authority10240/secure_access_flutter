@@ -5,7 +5,7 @@ abstract class PersonDetailsPageEvent extends BaseEvent {}
 
 class PersonDetailsContinueClickedEvent extends PersonDetailsPageEvent{
 
-  final PersonDetailsContinueClickedModel personDetailsContinueClickedModel;
+  final SecureAccessVisitationsModel personDetailsContinueClickedModel;
 
   PersonDetailsContinueClickedEvent({required this.personDetailsContinueClickedModel});
 }

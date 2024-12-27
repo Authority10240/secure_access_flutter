@@ -13,8 +13,8 @@ import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
 import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
 import 'package:secure_access/features/identification_type/presentation/identification_type_page.dart';
-import 'package:secure_access/features/scanner/data/models/scanner_model_response/scanner_continue_clicked_model.dart';
 import 'package:secure_access/generated/l10n.dart';
+import 'package:secure_access_repository/models/secure_access_visitations_vehicle_model/secure_access_visitations_vehicle_model.dart';
 import 'bloc/scanner_bloc.dart';
 
 
@@ -186,7 +186,8 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
                        onPressed: (){
                          if(_formKey.currentState!.validate()){
                            getBloc().add(ScannerContinueClickedEvent(
-                               scannerContinueClickedModel: ScannerContinueClickedModel(
+                               scannerContinueClickedModel: SecureAccessVisitationsVehicleModel(
+
                                    timeStamp: DateTime.now(),
                                    outDate: '',
                                    outTime: '',
@@ -195,7 +196,7 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
                                  time: timeNow,
                                  id: widget.id,
                                    date: todaysDate ,
-                                 unitVisited: widget.unit ,
+                                 unit: widget.unit ,
                                  identificationNumber: widget.referenceId,
                                    engineNumber: _engineController.text.trim(),
                                    licenseNumber: _licenseController.text.trim(),
@@ -203,7 +204,8 @@ class _ScannerPageState extends BasePageState<ScannerPage, ScannerBloc> {
                                    vinNumber: _vinController.text.trim(),
                                    expiryYear: _yearController.text.trim(),
                                    make: state.make,
-                                   model: state.model)));
+                                   model: state.model, description: state.description,
+                                   color: state.vin)));
                          }
                        },
                        buttonText: getLocalization().wcontinue),

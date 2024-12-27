@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:injectable/injectable.dart';
 import 'package:secure_access/features/personnel_scan/data/data_source/remote/personnel_scan_remote_service.dart';
-import 'package:secure_access/features/personnel_scan/data/models/personnel_scan_model_response/personnel_scan_continue_clicked_model.dart';
+import 'package:secure_access_repository/models/secure_access_visitation_model/secure_access_visitations_model.dart';
 
 import '../../../../../core/constants/database.dart';
 
@@ -12,8 +12,8 @@ class PersonnelScanRemoteServiceImpl extends PersonnelScanRemoteService{
 
   PersonnelScanRemoteServiceImpl({required this.firebaseFirestore}){
     _visitationsRef = firebaseFirestore.collection(visitation_details_collection)
-        .withConverter<PersonnelScanContinueClickedModel>(
-        fromFirestore: (snapShot,_)=> PersonnelScanContinueClickedModel.fromJson(snapShot.data()!),
+        .withConverter<SecureAccessVisitationsModel>(
+        fromFirestore: (snapShot,_)=> SecureAccessVisitationsModel.fromJson(snapShot.data()!),
         toFirestore:(personnelScanContinueClickedModel, _ )=> personnelScanContinueClickedModel.toJson());
   }
 
@@ -21,7 +21,7 @@ class PersonnelScanRemoteServiceImpl extends PersonnelScanRemoteService{
   late  CollectionReference _visitationsRef;
 
   @override
-  Future<String> personnelScanContinueClicked({required PersonnelScanContinueClickedModel personnelScanContinueClickedModel}) async{
+  Future<String> personnelScanContinueClicked({required SecureAccessVisitationsModel personnelScanContinueClickedModel}) async{
     try{
       DocumentReference documentReference = await _visitationsRef.add(personnelScanContinueClickedModel);
       return documentReference.id;

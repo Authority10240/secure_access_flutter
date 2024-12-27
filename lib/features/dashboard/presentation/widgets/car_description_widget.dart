@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:secure_access/core/sizes.dart';
 import 'package:secure_access/core/text_styles.dart';
 import 'package:secure_access/core/widgets/custom_form_button.dart';
-import 'package:secure_access/features/dashboard/data/models/dashboard_model_response/dashboard_page_load_visitations_vehicle_model.dart';
 import 'package:get/get.dart';
-import 'package:secure_access/features/dashboard/data/models/dashboard_model_response/dashboard_page_load_vistations_model.dart';
 import 'package:secure_access/generated/l10n.dart';
+import 'package:secure_access_repository/models/repository_models.dart';
 void carDescriptionDialog({
-  required DashboardPageLoadVisitationsVehicleModel vehicle,
-  required DashboardPageLoadVisitationsModel visitation,
+  required SecureAccessVisitationsVehicleModel vehicle,
+  required SecureAccessVisitationsModel visitation,
   required AppLocalizations appLocalizations}){
 
   Get.dialog(

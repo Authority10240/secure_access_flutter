@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -51,11 +48,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBhGU9Oah2pd9oXYLdMgpe-bZJoUxaComk',
-    appId: '1:850404688205:android:f24a61ce04ad8e3047f704',
+    appId: '1:850404688205:android:61b454326165c29947f704',
     messagingSenderId: '850404688205',
     projectId: 'safe-access-499b9',
     databaseURL: 'https://safe-access-499b9-default-rtdb.firebaseio.com',
-    storageBucket: 'safe-access-499b9.appspot.com',
+    storageBucket: 'safe-access-499b9.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -64,7 +61,19 @@ class DefaultFirebaseOptions {
     messagingSenderId: '850404688205',
     projectId: 'safe-access-499b9',
     databaseURL: 'https://safe-access-499b9-default-rtdb.firebaseio.com',
-    storageBucket: 'safe-access-499b9.appspot.com',
+    storageBucket: 'safe-access-499b9.firebasestorage.app',
     iosBundleId: 'progressive.app.secureAccess',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyAKcKUvJlWyxajSJ5nFURbgqPyHd3iBIAc',
+    appId: '1:850404688205:web:9c6c46804faf546547f704',
+    messagingSenderId: '850404688205',
+    projectId: 'safe-access-499b9',
+    authDomain: 'safe-access-499b9.firebaseapp.com',
+    databaseURL: 'https://safe-access-499b9-default-rtdb.firebaseio.com',
+    storageBucket: 'safe-access-499b9.firebasestorage.app',
+    measurementId: 'G-FY6GG2XEQY',
+  );
+
 }

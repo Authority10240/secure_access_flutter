@@ -14,9 +14,9 @@ import 'package:secure_access/core/widgets/custom_text_field.dart';
 import 'package:secure_access/core/widgets/preloader_widget.dart';
 import 'package:secure_access/features/dashboard/presentation/dashboard_page.dart';
 import 'package:secure_access/features/person_details/presentation/person_details_page.dart';
-import 'package:secure_access/features/personnel_scan/data/models/personnel_scan_model_response/personnel_scan_continue_clicked_model.dart';
 import 'package:secure_access/features/vehicle_type/presentation/vehicle_type_page.dart';
 import 'package:secure_access/generated/l10n.dart';
+import 'package:secure_access_repository/models/secure_access_visitation_model/secure_access_visitations_model.dart';
 
 import 'bloc/personnel_scan_bloc.dart';
 
@@ -177,23 +177,24 @@ class _PersonnelScanPageState extends BasePageState<PersonnelScanPage, Personnel
                        onPressed: (){
                          getBloc().add(PersonnelScanContinueClickedEvent(
                              personnelScanContinueClickedModel:
-                         PersonnelScanContinueClickedModel(
+                             SecureAccessVisitationsModel(
                              timeStamp: DateTime.now(),
                              outDate: '',
                              outTime: '',
                              year: DateTime.now().year.toString(),
                              month: DateTime.now().month.toString(),
-                           unitVisited: _unitController.text.trim(),
+                           unit: _unitController.text.trim(),
                            time: timeNow,
                            date: todaysDate,
-                             identificationNumber: state.idNUmber,
+                             identificationsNumber: state.idNUmber,
                              identificationType: widget.identificationType == IdentificationType.id ? "id": "passport",
                              firstName: _firstNameController.text.trim(),
                              middleName: _middleNameController.text.trim(),
                              lastName: _middleNameController.text.trim(),
                              transportationType: "",
                              mobileNumber: _mobileController.text.trim(),
-                             email: _emailController.text.trim())
+                             email: _emailController.text.trim(),
+                                 id: null)
                          )
                          );
                        },

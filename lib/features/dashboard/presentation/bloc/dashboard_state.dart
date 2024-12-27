@@ -4,7 +4,7 @@ sealed  class DashboardPageState extends BaseState {
 
   DashboardPageState({this.visitations, super.errorCode, super.errorMessage});
 
-  Stream<QuerySnapshot<DashboardPageLoadVisitationsModel?>>? visitations;
+  Stream<QuerySnapshot<SecureAccessVisitationsModel?>>? visitations;
 }
 
 class DashboardPageInitState extends DashboardPageState {}
@@ -19,8 +19,8 @@ class DashBoardPageLogsState extends DashboardPageState{
 }
 
 class DashBoardPageLoadVisitationVehicleState extends DashboardPageState{
-   final DashboardPageLoadVisitationsVehicleModel? dashboardPageLoadVisitationsVehicleModel;
-   final DashboardPageLoadVisitationsModel? dashboardPageLoadVisitationsModel;
+   final SecureAccessVisitationsVehicleModel? dashboardPageLoadVisitationsVehicleModel;
+   final SecureAccessVisitationsModel? dashboardPageLoadVisitationsModel;
   DashBoardPageLoadVisitationVehicleState({
     this.dashboardPageLoadVisitationsModel,
     this.dashboardPageLoadVisitationsVehicleModel,

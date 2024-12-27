@@ -2,8 +2,8 @@
 import 'package:secure_access/core/base_classes/base_usecase.dart';
 import 'package:injectable/injectable.dart';
 import 'package:secure_access/core/failures/base_failure.dart';
-import 'package:secure_access/features/manual_vehicle/data/models/manual_vehicle_model_response/manual_vehicle_continue_clicked_model.dart';
 import 'package:secure_access/features/manual_vehicle/domain/repository/manual_vehicle_repository/manual_vehicle_continue_clicked_repository.dart';
+import 'package:secure_access_repository/models/secure_access_visitations_vehicle_model/secure_access_visitations_vehicle_model.dart';
 
 @Injectable()
 class ManualVehicleContinueClickedUseCase extends BaseUseCase<ManualVehicleContinueClickedUseCaseParams, String>{
@@ -27,7 +27,7 @@ class ManualVehicleContinueClickedUseCase extends BaseUseCase<ManualVehicleConti
 
 class ManualVehicleContinueClickedUseCaseParams extends BaseUseCaseParams{
 
-  final ManualVehicleContinueClickedModel manualVehicleContinueClickedModel;
+  final SecureAccessVisitationsVehicleModel manualVehicleContinueClickedModel;
 
   ManualVehicleContinueClickedUseCaseParams({required this.manualVehicleContinueClickedModel});
 }

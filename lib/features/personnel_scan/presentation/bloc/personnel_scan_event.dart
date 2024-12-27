@@ -14,5 +14,5 @@ class PersonnelScanContinueClickedEvent extends PersonnelScanPageEvent{
 
   PersonnelScanContinueClickedEvent({required this.personnelScanContinueClickedModel});
 
-  final PersonnelScanContinueClickedModel personnelScanContinueClickedModel;
+  final SecureAccessVisitationsModel personnelScanContinueClickedModel;
 }

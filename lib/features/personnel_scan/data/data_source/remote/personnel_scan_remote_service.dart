@@ -1,6 +1,6 @@
-import 'package:secure_access/features/personnel_scan/data/models/personnel_scan_model_response/personnel_scan_continue_clicked_model.dart';
+import 'package:secure_access_repository/models/repository_models.dart';
 
 abstract class PersonnelScanRemoteService {
 
-  Future<String> personnelScanContinueClicked({required PersonnelScanContinueClickedModel personnelScanContinueClickedModel});
+  Future<String> personnelScanContinueClicked({required SecureAccessVisitationsModel personnelScanContinueClickedModel});
 }

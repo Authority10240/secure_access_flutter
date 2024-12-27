@@ -3,8 +3,8 @@ import 'package:injectable/injectable.dart';
 import 'package:secure_access/core/base_classes/back_end_calls.dart';
 import 'package:secure_access/core/failures/base_failure.dart';
 import 'package:secure_access/features/dashboard/data/data_source/remote/dashboard_service.dart';
-import 'package:secure_access/features/dashboard/data/models/dashboard_model_response/dashboard_page_load_visitations_vehicle_model.dart';
 import 'package:secure_access/features/dashboard/domain/repository/dashboard_repository/dashboard_page_load_visitation_vehicle_repository.dart';
+import 'package:secure_access_repository/models/secure_access_visitations_vehicle_model/secure_access_visitations_vehicle_model.dart';
 
 @Injectable(as: DashboardPageLoadVisitationVehicleRepository)
 class DashboardPageLoadVisitationVehicleRepositoryImpl extends DashboardPageLoadVisitationVehicleRepository {
@@ -15,7 +15,7 @@ class DashboardPageLoadVisitationVehicleRepositoryImpl extends DashboardPageLoad
   @override
   Future<void> call({
     DashboardPageLoadVisitationVehicleRepositoryParams? params,
-    required Function(DashboardPageLoadVisitationsVehicleModel? model)? onSuccess,
+    required Function(SecureAccessVisitationsVehicleModel? model)? onSuccess,
     required Function(BaseFailure? error)? onError})async {
    await safeBackEndCalls(
        apiRequest: dashboardService.dashboardPageLoadVisitationVehicle

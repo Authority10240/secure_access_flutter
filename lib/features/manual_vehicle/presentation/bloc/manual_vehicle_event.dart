@@ -4,7 +4,7 @@ abstract class ManualVehiclePageEvent extends BaseEvent {}
 
 
 class ManualVehicleContinueClickedEvent extends ManualVehiclePageEvent{
-  final ManualVehicleContinueClickedModel manualVehicleContinueClickedModel;
+  final SecureAccessVisitationsVehicleModel manualVehicleContinueClickedModel;
 
   ManualVehicleContinueClickedEvent({required this.manualVehicleContinueClickedModel});
 }
